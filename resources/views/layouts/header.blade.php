@@ -22,7 +22,7 @@
                 </div>
                 <div class="d-flex align-items-center">
                     <div class="d-flex align-items-center">
-                       <a href="" class="login_to_">
+                       <a href="{{route("login")}}" class="login_to_">
                             <img src="{{asset("frontend/IMAGE/icons/login.svg")}}" alt="">
                             <span class="log_slogan">Sistemə daxil ol</span>
                        </a>
@@ -41,19 +41,21 @@
         <div class="container">
             <div class="d-flex align-items-center justify-content-between">
                 <div>
-                    <div><a href=""><img src="{{asset("frontend/IMAGE/icons/logo.svg")}}" alt=""></a></div>
+                    <div><a href="{{route("home")}}"><img src="{{asset("frontend/IMAGE/icons/logo.svg")}}" alt=""></a></div>
                 </div>
                 <div class="d-flex align-items-center">
                     <ul class="nav-list">
-                        <li><a href="">Ana Səhifə</a></li>
-                        <li><a href="">Haqqımızda</a></li>
+                        <li><a href="{{route("home")}}">Ana Səhifə</a></li>
+                        <li><a href="{{route("about")}}">Haqqımızda</a></li>
                         <li><a href="">Xidmətlər</a></li>
                         <li><a href="">Rieltorlar</a></li>
                         <li><a href="">Media</a></li>
                         <li><a href="">Əlaqə</a></li>
                     </ul>
                     <div class="area--contract">
-                        <button class="system-clickable">Müqavilə Göndər</button>
+                        <div class="send--contract">
+                            <button class="system-clickable system-clickable-color-1">Müqavilə Göndər</button>
+                        </div>
                         {{-- <div class="search--contract"> --}}
                             <button type="button" class="search--contract" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fas fa-search text-white"></i></button>
                         {{-- </div> --}}

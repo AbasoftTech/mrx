@@ -13,6 +13,6 @@ use App\Http\Controllers\MainController;
 |
 */
 
-Route::get("/",[MainController::class,"index"]);
-Route::get("/about",[MainController::class,"about"]);
-
+Route::get("/", [MainController::class, "index"])->name('home');
+Route::get("/about", [MainController::class, "about"])->name("about");
+Route::get("/login", [MainController::class, "login"])->name("login");
