@@ -3,14 +3,14 @@
         <div class="grid-footer-full">
             <div class="grid-footer-left">
                 <div><a href=""><img src="{{asset("frontend/IMAGE/icons/logo.svg")}}" alt=""></a></div>
-                <div class="align-self-end">
+                <div class="">
                     <a href="" class="me-4"><i class="fab fa-facebook-f"></i></a>
                     <a href="" class="me-4"><i class="fab fa-instagram"></i></a>
                     <a href="" class="me-4"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
             <div class="grid-footer-right">
-                <div>
+                <div class="mt-4 mt-sm-0">
                     <a href="">Haqqımızda</a>
                     <a href="">Xidmətlər</a>
                     <a href="">İstifadəçi Razılaşması</a>
@@ -20,17 +20,17 @@
                     <a href="">Media</a>
                     <a href="">Sistemə Giriş</a>
                 </div>
-                <div>
+                <div class="mt-4 mt-sm-4">
                     <div class="footer-g-contact">
                         <div class="footer-g-contact-title">Bizimlə Əlaqə</div>
                         <div class="color7A">
-                            <div class="desktop-phone">
+                            <div class="desktop--phone">
                                 <span><i class="fas fa-phone-alt"></i></span>
                                 <span>*8555 —  (+994 50) 322 85 55</span>
                             </div>
                             <div class="mobile--phone">
                                 <span><i class="fas fa-phone-alt"></i></span>
-                                <span><a href="tel:*8555">*8555</a>—  <a href="tel:(+994 50) 322 85 55">(+994 50) 322 85 55</a></span>
+                                <span><a href="tel:*8555" class="color7A">*8555</a>—  <a href="tel:(+994 50) 322 85 55" class="color7A">(+994 50) 322 85 55</a></span>
                             </div>
                             <div>
                                 <span><i class="fas fa-envelope"></i></span>

@@ -16,3 +16,6 @@ use App\Http\Controllers\MainController;
 Route::get("/", [MainController::class, "index"])->name('home');
 Route::get("/about", [MainController::class, "about"])->name("about");
 Route::get("/login", [MainController::class, "login"])->name("login");
+Route::get("/signup", [MainController::class, "signup"])->name("signup");
+Route::get("/news", [MainController::class, "news"])->name("news");
+Route::get("/services", [MainController::class, "services"])->name("services");

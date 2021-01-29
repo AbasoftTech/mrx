@@ -18,4 +18,16 @@ class MainController extends Controller
     {
         return view("login");
     }
+    public function signup()
+    {
+        return view("signup");
+    }
+    public function news()
+    {
+        return view("news");
+    }
+    public function services()
+    {
+        return view("services");
+    }
 }

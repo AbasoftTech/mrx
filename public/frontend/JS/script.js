@@ -2,13 +2,14 @@
 var indexOwl = $('.owl-carousel.owl-index-carousel');
 $('.owl-carousel.owl-index-carousel').owlCarousel({
     loop: true,
-    autoplay: true,
+    // autoplay: true,
+    items: 1,
     responsive: {
         0: {
             items: 1
         },
         600: {
-            items: 3
+            items: 1
         },
         1000: {
             items: 1,
@@ -40,7 +41,8 @@ $('.owl-carousel.owl-media-carousel').owlCarousel({
     margin: 19,
     responsive: {
         0: {
-            items: 1
+            items: 1,
+            dotsEach: 2
         },
         600: {
             items: 2
@@ -48,6 +50,7 @@ $('.owl-carousel.owl-media-carousel').owlCarousel({
         1000: {
             items: 3,
             dots: true,
+            dotsEach: 2,
             nav: true,
             navText: ["<img src='frontend/IMAGE/icons/arrow.svg'>", "<img src='frontend/IMAGE/icons/arrow.svg'>"]
         }
@@ -62,30 +65,23 @@ function focusOn() {
     document.getElementsByClassName('code_contract')[0].classList.add('code_visible');
     document.getElementsByClassName('search--contract--input-box')[0].style.paddingLeft = '70px';
 }
-// search contract input focus script
+// ===search contract input focus script===
 var x, i, j, l, ll, selElmnt, a, b, c;
-/*look for any elements with the class "custom-select":*/
 x = document.getElementsByClassName("custom-select-c");
 l = x.length;
 for (i = 0; i < l; i++) {
     selElmnt = x[i].getElementsByTagName("select")[0];
     ll = selElmnt.length;
-    /*for each element, create a new DIV that will act as the selected item:*/
     a = document.createElement("DIV");
     a.setAttribute("class", "select-selected");
     a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
     x[i].appendChild(a);
-    /*for each element, create a new DIV that will contain the option list:*/
     b = document.createElement("DIV");
     b.setAttribute("class", "select-items select-hide");
     for (j = 1; j < ll; j++) {
-        /*for each option in the original select element,
-        create a new DIV that will act as an option item:*/
         c = document.createElement("DIV");
         c.innerHTML = selElmnt.options[j].innerHTML;
         c.addEventListener("click", function (e) {
-            /*when an item is clicked, update the original select box,
-            and the selected item:*/
             var y, i, k, s, h, sl, yl;
             s = this.parentNode.parentNode.getElementsByTagName("select")[0];
             sl = s.length;
@@ -109,8 +105,6 @@ for (i = 0; i < l; i++) {
     }
     x[i].appendChild(b);
     a.addEventListener("click", function (e) {
-        /*when the select box is clicked, close any other select boxes,
-        and open/close the current select box:*/
         e.stopPropagation();
         closeAllSelect(this);
         this.nextSibling.classList.toggle("select-hide");
@@ -119,8 +113,6 @@ for (i = 0; i < l; i++) {
 }
 
 function closeAllSelect(elmnt) {
-    /*a function that will close all select boxes in the document,
-    except the current select box:*/
     var x, y, i, xl, yl, arrNo = [];
     x = document.getElementsByClassName("select-items");
     y = document.getElementsByClassName("select-selected");
@@ -141,3 +133,50 @@ function closeAllSelect(elmnt) {
 }
 
 document.addEventListener("click", closeAllSelect);
+// ===search contract input focus script===
+
+var insert = document.getElementsByClassName('insert-number');
+$(function () {
+    $(".insert-number").keyup(function () {
+        if (this.value.length > 3) {
+            this.value = this.value.slice(0, 2);
+        }
+        // if (insert[0].value.length > 3) {
+        //     insert[0].value.length = insert[0].value.slice(0, 4);
+        // }
+        if (this.value.length == this.maxLength) {
+            var $next = $(this).next('.insert-number');
+            if ($next.length)
+                $(this).next('.insert-number').focus();
+            else
+                $(this).blur();
+        }
+    });
+
+})
+
+
+var burger = document.getElementsByClassName('burger-menu-holder')[0];
+var burgerLine = document.getElementsByClassName('burger-menu-line');
+var burgerCollapse = document.getElementsByClassName('burger-collapse')[0];
+
+
+
+document.body.addEventListener("click", () => {
+    burgerLine[1].classList.remove('burger-menu-line1-after')
+    burgerLine[2].classList.remove('burger-menu-line2-after')
+    burgerCollapse.classList.remove('burger-collapsed')
+}, false);
+
+burger.addEventListener("click", (e) => {
+    if (!burgerLine[1].classList.contains("burger-menu-line1-after") && !burgerLine[1].classList.contains("burger-menu-line1-after")) {
+        burgerLine[1].classList.add('burger-menu-line1-after')
+        burgerLine[2].classList.add('burger-menu-line2-after');
+        burgerCollapse.classList.add('burger-collapsed')
+    } else {
+        burgerLine[1].classList.remove('burger-menu-line1-after')
+        burgerLine[2].classList.remove('burger-menu-line2-after')
+        burgerCollapse.classList.remove('burger-collapsed')
+    }
+    e.stopPropagation();
+}, false)

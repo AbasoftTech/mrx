@@ -10,7 +10,7 @@
                     <div class="container">
                         <div class="owl-index-text-box">
                             <h1 class="owl-index-title">Lorem ipsum dolor sit amet cons one!</h1>
-                            <p class="owl-index-subtitle">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                            <p class="owl-index-subtitle">Consectetur adipiscing elit, sed do eiusmod tempor <br> incididunt ut labore et dolore magna aliqua. <br> Ut enim ad minim veniam, quis <br> nostrud exercitation ullamco.</p>
                         </div>
                     </div>
                 </div>
@@ -36,7 +36,7 @@
                 </div>
             </div>
         </div>
-        <div class="container">
+        <div class="container pe-3 pe-sm-0 d-flex justify-content-end d-sm-block">
             <div class="count">
                 <div class="total-count">/ 03</div>
                 <div class="per-count">01</div>
@@ -54,14 +54,17 @@
         <div class="container">
             <div class="about--us-container">
                 <div class="about--us-container-left-child">
-                    <h2 class="block--title">Haqqımızda</h2>
+                    <h2 class="block--title d-none d-lg-block">Haqqımızda</h2>
                     <p class="about--us--subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est.</p>
                     <div class="about--us--more--details"><a href="">— Daha Ətraflı</a></div>
                 </div>
                 <div class="about--us-container-right-child">
-                    <img src="{{asset("frontend/IMAGE/icons/play.svg")}}"  class="play-now" alt="">
-                   <img src="{{asset("frontend/IMAGE/about-us-img.png")}}" alt="">
+                    <div class="play-now">
+                        <img src="{{asset("frontend/IMAGE/icons/play.svg")}}" alt="">
+                    </div>
+                    <img src="{{asset("frontend/IMAGE/about-us-img.png")}}" alt="">
                 </div>
+                <h2 class="block--title block--title-mobile">Haqqımızda</h2>
             </div>
         </div>
     </div>

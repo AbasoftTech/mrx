@@ -12,7 +12,6 @@
     </div>
     <div class="container">
         <h1 class="block--title">Haqqımızda</h1>
-        new word
         <div class="about-page-block">
             <div class="about-page-left">
                 <p>
