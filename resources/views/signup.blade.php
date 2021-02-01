@@ -71,7 +71,7 @@
                             </label>
                         </div>
                         <div class="mt-4 text-center">
-                            <button class="system-clickable system-clickable-color-2">Daxil Ol!</button>
+                            <button class="system-clickable system-clickable-color-2">Qeydiyyatdan keç</button>
                             <a href="" class="forget-password">Şifrəni unutmuşam</a>
                         </div>
                     </div>
