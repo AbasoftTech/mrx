@@ -30,4 +30,12 @@ class MainController extends Controller
     {
         return view("services");
     }
+    public function myinfo()
+    {
+        return view("myinfo");
+    }
+    public function rieltors()
+    {
+        return view("rieltors");
+    }
 }

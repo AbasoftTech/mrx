@@ -28,6 +28,11 @@ a {
 
 /*========= fonts =========*/
 @font-face {
+    src: url(../FONTS/poppins/Poppins-Regular.ttf);
+    font-family: Poppins_r;
+}
+
+@font-face {
     src: url(../FONTS/poppins/Poppins-Medium.ttf);
     font-family: Poppins_m;
 }
@@ -55,6 +60,11 @@ a {
 @font-face {
     src: url(../FONTS/raleway/Raleway-Bold.ttf);
     font-family: Raleway_b;
+}
+
+@font-face {
+    src: url(../FONTS/raleway/Raleway-Regular.ttf);
+    font-family: Raleway_r;
 }
 
 /*========= fonts =========*/
@@ -920,6 +930,10 @@ section#indexContent {
 
 /*========= news =========*/
 /*========= services =========*/
+#services {
+    padding-bottom: 58px
+}
+
 .grid-card-services {
     display: grid;
     grid-template-columns: repeat(6, 183px);
@@ -936,16 +950,55 @@ section#indexContent {
     width: 183px;
     text-align: center;
     height: 52px;
-    padding: 13px 12px;
+    padding: 13px 0;
     cursor: pointer;
-    transition: .3s all ease-in-out;
+    transition: .4s all ease-in-out;
 }
 
 .grid-card-services .item:hover {
     background-color: #0074E1;
+    color: #fff;
+    transform: translateY(-10px);
+}
+
+.grid-services-content {
+    margin-top: 35px;
+    display: none;
+}
+
+.grid-services-content-active {
+    display: block;
+}
+
+.grid-services-text {
+    font-size: 18px;
+    font-family: Raleway_m;
+    line-height: 31.5px;
+    color: #7A7A7A;
+    margin-top: 14px !important;
 }
 
 /*========= services =========*/
+/*========= myinfo =========*/
+.grid-profile-tablist {
+    display: grid;
+    grid-template-columns: repeat(4, 200px);
+}
+
+.grid-profile-tab {
+    font-family: 21px;
+    font-family: Poppins_r;
+    line-height: 31.5px;
+    color: #7A7A7A;
+    cursor: pointer;
+}
+
+.grid-profile-tab-active {
+    color: #0074E1;
+    font-family: Poppins_sb;
+}
+
+/*========= myinfo =========*/
 /*========= login =========*/
 .log-reg-form input {
     color: #A9A9A9;
@@ -965,7 +1018,7 @@ section#indexContent {
     line-height: 21px;
 }
 
-.custom-select-c {
+.custom-select-prefix {
     border-radius: 4px;
     position: relative;
     font-family: Gilroy-m !important;
@@ -973,7 +1026,7 @@ section#indexContent {
     border: 1px solid #C7C7C7;
 }
 
-.custom-select-c select {
+.custom-select-prefix select {
     display: none;
 }
 
@@ -981,7 +1034,7 @@ section#indexContent {
     background-color: #fff;
 }
 
-.select-selected:after {
+.custom-select-prefix .select-selected:after {
     position: absolute;
     content: "";
     top: 20px;
@@ -1174,8 +1227,41 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 /*========= login =========*/
+/*========= rieltors =========*/
+#rieltors {
+    padding-bottom: 136px;
+}
 
-/*========= media queries =========*/
+.grid-rieltors {
+    display: grid;
+    grid-template-columns: repeat(6, 183px);
+    border-radius: 8px;
+    grid-column-gap: 14px;
+
+}
+
+.rieltor-grid-img {
+    height: 183px;
+}
+
+.rieltor-grid-info {
+    background-color: #fff;
+    padding: 11px 14px
+}
+
+.rieltor-grid-name {
+    font-family: Poppins_b;
+}
+
+.rieltor-grid-place {
+    font-family: Ralway_r;
+    font-size: 12px;
+    color: #FDB330
+}
+
+/*========= rieltors =========*/
+
+/*=========================== media queries ==========================*/
 @media(min-width: 1200px) {
     .search--contract:hover+.hover-holder .toggle--contract {
         visibility: visible;

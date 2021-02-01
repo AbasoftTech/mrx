@@ -65,12 +65,17 @@ function focusOn() {
     document.getElementsByClassName('code_contract')[0].classList.add('code_visible');
     document.getElementsByClassName('search--contract--input-box')[0].style.paddingLeft = '70px';
 }
-// ===search contract input focus script===
-var x, i, j, l, ll, selElmnt, a, b, c;
+// search contract input focus script
+
+// ===custom select===
+var insert = document.getElementsByClassName('insert-number');
+
+var x, i, j, l, ll, selElmnt, a, b, c, ins = 0;
 x = document.getElementsByClassName("custom-select-c");
 l = x.length;
 for (i = 0; i < l; i++) {
     selElmnt = x[i].getElementsByTagName("select")[0];
+    // console.log(x[i], 'sleect');
     ll = selElmnt.length;
     a = document.createElement("DIV");
     a.setAttribute("class", "select-selected");
@@ -82,7 +87,13 @@ for (i = 0; i < l; i++) {
         c = document.createElement("DIV");
         c.innerHTML = selElmnt.options[j].innerHTML;
         c.addEventListener("click", function (e) {
-            var y, i, k, s, h, sl, yl;
+            if (insert) {
+                insert[ins].focus();
+            }
+            var y, i, k, s, h, sl, yl, newinput;
+            newinput = document.createElement('DIV');
+            console.log(newinput);
+            x[j - 1].appendChild(newinput)
             s = this.parentNode.parentNode.getElementsByTagName("select")[0];
             sl = s.length;
             h = this.parentNode.previousSibling;
@@ -133,9 +144,8 @@ function closeAllSelect(elmnt) {
 }
 
 document.addEventListener("click", closeAllSelect);
-// ===search contract input focus script===
+// ===custom select===
 
-var insert = document.getElementsByClassName('insert-number');
 $(function () {
     $(".insert-number").keyup(function () {
         if (this.value.length > 3) {
@@ -144,8 +154,15 @@ $(function () {
         // if (insert[0].value.length > 3) {
         //     insert[0].value.length = insert[0].value.slice(0, 4);
         // }
+
         if (this.value.length == this.maxLength) {
             var $next = $(this).next('.insert-number');
+            $next.keydown(function (e) {
+                var key = e.key
+                if (key == 'Backspace' && this.value.length == 0) {
+                    $(this).prev('.insert-number').focus();
+                }
+            })
             if ($next.length)
                 $(this).next('.insert-number').focus();
             else
@@ -161,7 +178,7 @@ var burgerLine = document.getElementsByClassName('burger-menu-line');
 var burgerCollapse = document.getElementsByClassName('burger-collapse')[0];
 
 
-
+// ===burger collapse===
 document.body.addEventListener("click", () => {
     burgerLine[1].classList.remove('burger-menu-line1-after')
     burgerLine[2].classList.remove('burger-menu-line2-after')
@@ -180,3 +197,24 @@ burger.addEventListener("click", (e) => {
     }
     e.stopPropagation();
 }, false)
+// ===burger collapse===
+
+
+// ===services tab ===
+var serviceTab = document.querySelectorAll(".grid-card-services .item");
+
+if (serviceTab) {
+    for (i = 0; i < serviceTab.length; i++) {
+        serviceTab[i].addEventListener('click', function (e) {
+            e.preventDefault();
+            var serviceContent = document.getElementsByClassName("grid-services-content");
+            for (j = 0; j < serviceContent.length; j++) {
+                var tabId = e.target.getAttribute('data-id')
+                serviceContent[j].classList.remove("grid-services-content-active")
+                var new_content = document.getElementById(tabId);
+                new_content.classList.add("grid-services-content-active");
+            }
+        })
+    }
+}
+// ===services tab ===

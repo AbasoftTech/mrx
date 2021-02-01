@@ -21,7 +21,7 @@
                                 <div class="label-text text-center text-lg-start">Nömrə</div>
                                 <div class="mt-2 d-flex align-items-center justify-content-center justify-lg-content-start">
                                     <label for="">
-                                        <div class="custom-select-c" style="width:200px;">
+                                        <div class="custom-select-c custom-select-prefix" style="width:200px;">
                                             <select>
                                                 <option value="1">050</option>
                                                 <option value="1">051</option>
