@@ -13,7 +13,7 @@
     <div class="container">
         <div class="log-reg-holder">
             <div class="log-reg-left">
-                <h1 class="block--title">Daxil Ol</h1>
+                <h1 class="block--title">Qeydiyyat</h1>
                 <form action="" class="log-reg-form">
                     <div class="d-flex flex-column">
                         <div class="mt-4 d-flex flex-column flex-sm-column flex-lg-column flex-row justify-content-between justify-content-lg-start">
@@ -29,7 +29,7 @@
                                 <div class="label-text text-center text-lg-start">Nömrə</div>
                                 <div class="mt-2 d-flex align-items-center justify-content-center justify-content-lg-start">
                                     <label for="">
-                                        <div class="custom-select-c" style="width:200px;">
+                                        <div class="custom-select-c custom-select-prefix" style="width:200px;">
                                             <select>
                                                 <option value="1">050</option>
                                                 <option value="1">051</option>
