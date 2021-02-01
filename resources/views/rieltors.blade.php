@@ -47,7 +47,7 @@
     <div class="container">
         <div class="grid-rieltors">
             <div class="grid-rieltor-item">
-                <div class="rieltor-grid-img"><img src="" alt=""></div>
+                <div class="rieltor-grid-img"><img src="{{asset('frontend/IMAGE/')}}" alt=""></div>
                 <div class="rieltor-grid-info">
                     <span class="rieltor-grid-name">Əli Abbasov</span>
                     <div class="rieltor-grid-place">
