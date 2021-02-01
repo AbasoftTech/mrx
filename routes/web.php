@@ -21,3 +21,8 @@ Route::get("/news", [MainController::class, "news"])->name("news");
 Route::get("/services", [MainController::class, "services"])->name("services");
 Route::get("/myinfo", [MainController::class, "myinfo"])->name("myinfo");
 Route::get("/rieltors", [MainController::class, "rieltors"])->name("rieltors");
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
