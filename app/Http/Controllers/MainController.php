@@ -38,4 +38,8 @@ class MainController extends Controller
     {
         return view("rieltors");
     }
+    public function rieltorpage()
+    {
+        return view("rieltor-page");
+    }
 }

@@ -11,47 +11,47 @@
         </div>
     </div>
     <div class="container">
-        <div class="grid-card-services">
-            <div class="item" data-id="0">
+        <div class="grid-card-services tablist">
+            <div class="item tab tab-active" data-id="0">
                 Birinci Xidmət
             </div>
-            <div class="item" data-id="1">
+            <div class="item tab" data-id="1">
                 İkinci Xidmət
             </div>
-            <div class="item" data-id="2">
+            <div class="item tab" data-id="2">
                 Üçüncü Xidmət
             </div>
-            <div class="item" data-id="3">
+            <div class="item tab" data-id="3">
                 Dördüncü Xidmət
             </div>
-            <div class="item" data-id="4">
+            <div class="item tab" data-id="4">
                 Beşinci Xidmət
             </div>
-            <div class="item" data-id="5">
+            <div class="item tab" data-id="5">
                 Altıncı Xidmət
             </div>
         </div>
-        <div class="grid-services-content grid-services-content-active" id="0">
+        <div class="grid-services-content tab-content content-active" id="0">
             <h1 class="block--title">Birinci Xidmət</h1>
             <p class="grid-services-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est.</p>
         </div>
-        <div class="grid-services-content" id="1">
+        <div class="grid-services-content tab-content" id="1">
             <h1 class="block--title">Ikinci Xidmət</h1>
             <p class="grid-services-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est.</p>
         </div>
-        <div class="grid-services-content" id="2">
+        <div class="grid-services-content tab-content" id="2">
             <h1 class="block--title">Üçüncü Xidmət</h1>
             <p class="grid-services-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est.</p>
         </div>
-        <div class="grid-services-content" id="3">
+        <div class="grid-services-content tab-content" id="3">
             <h1 class="block--title">Dördüncü Xidmət</h1>
             <p class="grid-services-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est.</p>
         </div>
-        <div class="grid-services-content" id="4">
+        <div class="grid-services-content tab-content" id="4">
             <h1 class="block--title">Üçüncü Xidmət</h1>
             <p class="grid-services-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est.</p>
         </div>
-        <div class="grid-services-content" id="5">
+        <div class="grid-services-content tab-content" id="5">
             <h1 class="block--title">Üçüncü Xidmət</h1>
             <p class="grid-services-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est.</p>
         </div>

@@ -7,7 +7,7 @@
             <span class="me-3"><img src="{{asset('frontend/IMAGE/icons/breadcrumb-arrow.svg')}}" alt=""></span>
             <a href="" class="breadcrumb-mrx-link">Hesab</a>
             <span class="me-3"><img src="{{asset('frontend/IMAGE/icons/breadcrumb-arrow.svg')}}" alt=""></span>
-            <a class="breadcrumb-mrx-link breadcrumb-mrx-link-current">Rieltorlar</a>
+            <a class="breadcrumb-mrx-link breadcrumb-mrx-link-current">Xidmətlər</a>
         </div>
     </div>
     <div class="container">
@@ -50,54 +50,54 @@
     <div class="container">
         <div class="grid-rieltors">
             <div class="grid-rieltor-item">
-                <div class="rieltor-grid-img"><a href="{{route("rieltorpage")}}"><img src="{{asset('frontend/IMAGE/icons/top-10.svg')}}" alt="" class="rieltor-grid-badge"><img src="{{asset('frontend/IMAGE/rieltor-1.png')}}" alt=""></a></a></div>
+                <div class="rieltor-grid-img"><img src="{{asset('frontend/IMAGE/icons/top-10.svg')}}" alt="" class="rieltor-grid-badge"><img src="{{asset('frontend/IMAGE/rieltor-1.png')}}" alt=""></div>
                 <div class="rieltor-grid-info">
-                    <a href="{{route("rieltorpage")}}" class="rieltor-grid-name">Əli Abbasov</a>
+                    <span class="rieltor-grid-name">Əli Abbasov</span>
                     <div class="rieltor-grid-place">
                         3-cu yer
                     </div>
                 </div>
             </div>
             <div class="grid-rieltor-item">
-                <div class="rieltor-grid-img"><a href="{{route("rieltorpage")}}"><img src="{{asset('frontend/IMAGE/icons/top-10.svg')}}" alt="" class="rieltor-grid-badge"><img src="{{asset('frontend/IMAGE/rieltor-2.png')}}" alt=""></a></div>
+                <div class="rieltor-grid-img"><img src="{{asset('frontend/IMAGE/icons/top-10.svg')}}" alt="" class="rieltor-grid-badge"><img src="{{asset('frontend/IMAGE/rieltor-2.png')}}" alt=""></div>
                 <div class="rieltor-grid-info">
-                    <a href="{{route("rieltorpage")}}" class="rieltor-grid-name"></a>
+                    <span class="rieltor-grid-name"></span>
                     <div class="rieltor-grid-place">
 
                     </div>
                 </div>
             </div>
             <div class="grid-rieltor-item">
-                <div class="rieltor-grid-img"><a href="{{route("rieltorpage")}}"><img src="{{asset('frontend/IMAGE/icons/top-10.svg')}}" alt="" class="rieltor-grid-badge"><img src="{{asset('frontend/IMAGE/rieltor-3.png')}}" alt=""></a></div>
+                <div class="rieltor-grid-img"><img src="{{asset('frontend/IMAGE/icons/top-10.svg')}}" alt="" class="rieltor-grid-badge"><img src="{{asset('frontend/IMAGE/rieltor-3.png')}}" alt=""></div>
                 <div class="rieltor-grid-info">
-                    <a href="{{route("rieltorpage")}}" class="rieltor-grid-name"></a>
+                    <span class="rieltor-grid-name"></span>
                     <div class="rieltor-grid-place">
 
                     </div>
                 </div>
             </div>
             <div class="grid-rieltor-item">
-                <div class="rieltor-grid-img"><a href="{{route("rieltorpage")}}"><img src="{{asset('frontend/IMAGE/icons/top-10.svg')}}" alt="" class="rieltor-grid-badge"><img src="{{asset('frontend/IMAGE/rieltor-4.png')}}" alt=""></a></div>
+                <div class="rieltor-grid-img"><img src="{{asset('frontend/IMAGE/icons/top-10.svg')}}" alt="" class="rieltor-grid-badge"><img src="{{asset('frontend/IMAGE/rieltor-4.png')}}" alt=""></div>
                 <div class="rieltor-grid-info">
-                    <a href="{{route("rieltorpage")}}" class="rieltor-grid-name">Ceyhun Heydərov</a>
+                    <span class="rieltor-grid-name">Ceyhun Heydərov</span>
                     <div class="rieltor-grid-place">
                         3-cu yer
                     </div>
                 </div>
             </div>
             <div class="grid-rieltor-item">
-                <div class="rieltor-grid-img"><a href="{{route("rieltorpage")}}"><img src="{{asset('frontend/IMAGE/icons/top-10.svg')}}" alt="" class="rieltor-grid-badge"><img src="{{asset('frontend/IMAGE/rieltor-5.png')}}" alt=""></a></div>
+                <div class="rieltor-grid-img"><img src="{{asset('frontend/IMAGE/icons/top-10.svg')}}" alt="" class="rieltor-grid-badge"><img src="{{asset('frontend/IMAGE/rieltor-5.png')}}" alt=""></div>
                 <div class="rieltor-grid-info">
-                    <a href="{{route("rieltorpage")}}" class="rieltor-grid-name"></a>
+                    <span class="rieltor-grid-name"></span>
                     <div class="rieltor-grid-place">
 
                     </div>
                 </div>
             </div>
             <div class="grid-rieltor-item">
-                <div class="rieltor-grid-img"><a href="{{route("rieltorpage")}}"><img src="{{asset('frontend/IMAGE/icons/top-10.svg')}}" alt="" class="rieltor-grid-badge"><img src="" alt=""></div>
+                <div class="rieltor-grid-img"><img src="{{asset('frontend/IMAGE/icons/top-10.svg')}}" alt="" class="rieltor-grid-badge"><img src="" alt=""></div>
                 <div class="rieltor-grid-info">
-                    <a href="{{route("rieltorpage")}}" class="rieltor-grid-name"></a>
+                    <span class="rieltor-grid-name"></span>
                     <div class="rieltor-grid-place">
 
                     </div>

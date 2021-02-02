@@ -67,6 +67,14 @@ a {
     font-family: Raleway_r;
 }
 
+.owl-dots button {
+    outline: 0 !important;
+}
+
+.owl-nav button {
+    outline: 0 !important;
+}
+
 /*========= fonts =========*/
 
 /*========= website textinput and buttons =========*/
@@ -165,6 +173,17 @@ a.next-page {
 }
 
 /*========= website pagination =========*/
+/*========= website tablist =========*/
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.content-active {
+    display: block;
+}
+
+/*========= website tablist =========*/
 
 /*========= header =========*/
 .header-mobile {
@@ -588,7 +607,8 @@ section#indexContent {
 }
 
 .owl-index-carousel .owl-dots,
-.owl-media-carousel .owl-dots {
+.owl-media-carousel .owl-dots,
+.owl-rieltor-carousel .owl-dots {
     position: absolute;
     width: 28%;
     left: 0;
@@ -606,7 +626,8 @@ section#indexContent {
 }
 
 .owl-index-carousel .owl-dots button:not(:last-child),
-.owl-media-carousel .owl-dots button:not(:last-child) {
+.owl-media-carousel .owl-dots button:not(:last-child),
+.owl-rieltor-carousel .owl-dots button:not(:last-child) {
     margin-right: 15px;
     outline: 0
 }
@@ -616,7 +637,8 @@ section#indexContent {
 }
 
 .owl-index-carousel .owl-dots button span,
-.owl-media-carousel .owl-dots button span {
+.owl-media-carousel .owl-dots button span,
+.owl-rieltor-carousel .owl-dots button span {
     width: 10px;
     height: 10px;
     display: block;
@@ -627,11 +649,13 @@ section#indexContent {
     background-color: #747178;
 }
 
-.owl-media-carousel .owl-dots button span {
-    background: #0074e193;
+.owl-media-carousel .owl-dots button span,
+.owl-rieltor-carousel .owl-dots button span {
+    background: #a3beda93;
 }
 
-.owl-media-carousel .owl-dots button.active span {
+.owl-media-carousel .owl-dots button.active span,
+.owl-rieltor-carousel .owl-dots button.active span {
     background-color: #0074E1;
 }
 
@@ -961,12 +985,16 @@ section#indexContent {
     transform: translateY(-10px);
 }
 
+/* .grid-card-services .tab.tab-active {
+    background-color: #0074E1;
+
+} */
 .grid-services-content {
     margin-top: 35px;
     display: none;
 }
 
-.grid-services-content-active {
+.grid-services-content.content-active {
     display: block;
 }
 
@@ -1242,29 +1270,219 @@ input[type=number]::-webkit-outer-spin-button {
     grid-template-columns: repeat(6, 183px);
     border-radius: 8px;
     grid-column-gap: 14px;
+    margin-top: 37px;
+}
 
+.choose-rieltor-area {
+    margin-top: 22px;
+}
+
+.grid-rieltor-item {
+    border-radius: 8px;
 }
 
 .rieltor-grid-img {
     height: 183px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.rieltor-grid-img img {
+    width: 100%;
+}
+
+.rieltor-grid-img img.loader {
+    width: 50px;
+}
+
+.rieltor-grid-badge {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: 30px !important;
 }
 
 .rieltor-grid-info {
     background-color: #fff;
-    padding: 11px 14px
+    padding: 11px 14px;
+    height: 61px;
+    border-radius: 0 0 8px 8px;
 }
 
 .rieltor-grid-name {
     font-family: Poppins_b;
+    color: #414141
 }
 
 .rieltor-grid-place {
-    font-family: Ralway_r;
+    font-family: Raleway_r;
     font-size: 12px;
     color: #FDB330
 }
 
 /*========= rieltors =========*/
+
+/*========= rieltors-page =========*/
+.rieltor-area {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 24px 20px 50px 30px !important
+}
+
+.rieltor-area-right {
+    display: flex;
+    flex-direction: column;
+    width: 540px;
+    margin-left: 53px;
+}
+
+.rieltor-page-img {
+    width: 250px;
+    border-radius: 50%;
+}
+
+.rieltor-page-img img {
+    border-radius: 50%;
+    width: 100%;
+}
+
+.rieltor-name {
+    font-family: Poppins_b;
+    font-size: 36px;
+}
+
+.rieltor-place {
+    font-size: 18px;
+    font-family: Raleway_sb;
+    color: #F79E02;
+    margin-top: 7px;
+}
+
+.rieltor-page-tablist {
+    display: grid;
+    grid-template-columns: 170px 200px 100px;
+    margin-top: 14px;
+}
+
+.rieltor-page-tab {
+    color: #7A7A7A;
+    font-family: Poppins_r;
+    font-size: 21px;
+    line-height: 31px;
+    cursor: pointer;
+}
+
+.tablist .rieltor-page-tab.tab.tab-active {
+    font-family: Poppins_sb;
+    color: #0074E1;
+}
+
+.rieltor-page-tab-content {
+    margin-top: 25px;
+}
+
+.rieltor-page-tab-content>div {
+    margin-top: 15px;
+}
+
+.rieltor-page-info-title {
+    font-family: Raleway_m;
+    font-size: 14px;
+    line-height: 31.5px;
+    color: #7A7A7A
+}
+
+.rieltor-page-info-title,
+.rieltor-page-info-title-value {
+    font-family: Raleway_m;
+    line-height: 31.5px;
+}
+
+.rieltor-page-info-title {
+    font-size: 14px;
+    color: #7A7A7A
+}
+
+.rieltor-page-info-title-value {
+    font-size: 18px;
+    color: #414141;
+    margin-top: -10px;
+}
+
+.grid-gallery {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(5, 153px);
+    grid-gap: 20px;
+}
+
+.serial-card {
+    margin-top: 48px;
+}
+
+.card-serial-title {
+    font-family: Poppins_sb;
+    font-size: 24px;
+    COLOR: #414141
+}
+
+.owl-rieltor-carousel {
+    margin-top: 24px;
+}
+
+.owl-rieltor-carousel .owl-nav button.owl-next {
+    transform: rotate(180deg);
+    margin-left: 20px;
+}
+
+.owl-rieltor-carousel .owl-nav button:hover {
+    filter: invert(100%) sepia(7%) saturate(13%) hue-rotate(22deg) brightness(91%) contrast(106%);
+    -webkit-filter: invert(100%) sepia(7%) saturate(13%) hue-rotate(22deg) brightness(91%) contrast(106%);
+}
+
+.owl-rieltor-carousel .owl-nav {
+    margin-top: 30px;
+}
+
+.owl-rieltor-count {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: flex-end;
+    font-family: Poppins_b;
+    top: -22px
+}
+
+.owl-rieltor-count::after {
+    content: "";
+    position: absolute;
+    width: 110px;
+    height: 2px;
+    right: 22px;
+    background-color: #A9A9A9;
+}
+
+.current-owl-page {
+    color: #414141;
+    margin-right: 120px;
+}
+
+.total-owl-page {
+    color: #A9A9A9;
+}
+
+.owl-rieltor-carousel .owl-nav {
+    bottom: -47px
+}
+
+.owl-rieltor-carousel .owl-dots {
+    bottom: 0;
+}
+
+/*========= rieltors-page =========*/
 
 /*=========================== media queries ==========================*/
 @media(min-width: 1200px) {

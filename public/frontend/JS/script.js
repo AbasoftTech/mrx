@@ -57,6 +57,43 @@ $('.owl-carousel.owl-media-carousel').owlCarousel({
     }
 })
 // media slider
+var owlRieltor = $('.owl-carousel.owl-rieltor-carousel');
+$('.owl-carousel.owl-rieltor-carousel').owlCarousel({
+    loop: true,
+    margin: 19,
+    responsive: {
+        0: {
+            items: 1,
+            // dotsEach: 2
+        },
+        600: {
+            items: 2
+        },
+        1000: {
+            items: 6,
+            dots: true,
+            dotsEach: 3,
+            nav: true,
+            navText: ["<img src='frontend/IMAGE/icons/arrow-rieltor.svg'>", "<img src='frontend/IMAGE/icons/arrow-rieltor.svg'>"]
+        }
+    }
+})
+owlRieltor.on('changed.owl.carousel', function (e) {
+    // console.log("currentRelated: ", e.relatedTarget.current())
+    // console.log("current: ", e.item.index - 1) //same
+    // console.log("total: ", e.item.count) //total
+    if (!e.namespace) {
+        return;
+    }
+    var slides = e.relatedTarget;
+    // $('.count').text(slides.relative(slides.current()) + 1 + '/' + slides.items().length);
+    document.getElementsByClassName('total-owl-page')[0].innerText = `${e.item.count}`
+    document.getElementsByClassName('current-owl-page')[0].innerText = `${slides.relative(slides.current())+1}`
+    // document.getElementsByClassName('total-count')[0].innerText = `/ 0${e.item.count}`
+    // document.getElementsByClassName('per-count')[0].innerText = `0${e.relatedTarget.current() -1}`
+})
+var at = owlRieltor[0].children[0].children[0].children.length - 12
+document.getElementsByClassName('total-owl-page')[0].innerText = at
 
 // search contract input focus script
 document.getElementsByClassName('search--contract--input-box')[0].addEventListener('focus', focusOn);
@@ -121,6 +158,11 @@ for (i = 0; i < l; i++) {
         this.nextSibling.classList.toggle("select-hide");
         this.classList.toggle("select-arrow-active");
     });
+    // if (x[i].classList.contains('select-arrow-active')) {
+
+    //     console.log('var')
+    // }
+
 }
 
 function closeAllSelect(elmnt) {
@@ -135,12 +177,22 @@ function closeAllSelect(elmnt) {
         } else {
             y[i].classList.remove("select-arrow-active");
         }
+
+
     }
     for (i = 0; i < xl; i++) {
         if (arrNo.indexOf(i)) {
             x[i].classList.add("select-hide");
         }
+        // console.log(x[i], y[i])
+        // if (y[i].classList.contains('select-arrow-active')) {
+
+        //     console.log('dsjdn')
+        // }
     }
+    // var g = document.getElementsByClassName('select-selected')[0];
+    // if (g.classList.contains('select-arrow-active')) {
+    // }
 }
 
 document.addEventListener("click", closeAllSelect);
@@ -200,21 +252,35 @@ burger.addEventListener("click", (e) => {
 // ===burger collapse===
 
 
-// ===services tab ===
-var serviceTab = document.querySelectorAll(".grid-card-services .item");
+// === tab ===
+var tab = document.querySelectorAll(".tablist > .tab");
 
-if (serviceTab) {
-    for (i = 0; i < serviceTab.length; i++) {
-        serviceTab[i].addEventListener('click', function (e) {
+if (tab) {
+    for (i = 0; i < tab.length; i++) {
+        tab[i].addEventListener('click', function (e) {
             e.preventDefault();
-            var serviceContent = document.getElementsByClassName("grid-services-content");
-            for (j = 0; j < serviceContent.length; j++) {
+            var active_tab = document.getElementsByClassName("tab-active");
+            active_tab[0].className = active_tab[0].className.replace("tab-active", " ");
+            this.classList.add("tab-active");
+            var tabContent = document.getElementsByClassName("tab-content");
+            for (j = 0; j < tabContent.length; j++) {
                 var tabId = e.target.getAttribute('data-id')
-                serviceContent[j].classList.remove("grid-services-content-active")
+                tabContent[j].classList.remove("content-active")
                 var new_content = document.getElementById(tabId);
-                new_content.classList.add("grid-services-content-active");
+                new_content.classList.add("content-active");
             }
         })
     }
 }
-// ===services tab ===
+// === tab ===
+
+
+// ===check rieltor img ===
+var rieltorImg = document.querySelectorAll(".rieltor-grid-img img");
+for (i = 0; i < rieltorImg.length; i++) {
+    if (rieltorImg[i].src == "http://127.0.0.1:8000/rieltors") {
+        rieltorImg[i].src = 'http://127.0.0.1:8000/frontend/IMAGE/icons/loader.svg';
+        rieltorImg[i].classList.add('loader')
+    }
+}
+// ===check rieltor img ===
