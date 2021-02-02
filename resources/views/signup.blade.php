@@ -18,7 +18,7 @@
                     <div class="d-flex flex-column">
                         <div class="mt-4 d-flex flex-column flex-sm-column flex-lg-column flex-row justify-content-between justify-content-lg-start">
                             <div class="mt-4 d-flex justify-content-center justify-content-lg-start">
-                                <label for="" class="text-center text-lg-start">
+                                <label for="" class="text-center text-lg-start w-100">
                                     <span class="label-text text-center- text-lg-left">Ad və soyad</span>
                                     <div class="mt-2">
                                         <input type="text" class="system-input">
@@ -38,7 +38,7 @@
                                             </select>
                                         </div>
                                     </label>
-                                    <label for="">
+                                    <label for="" class="num-label">
                                         <input type="number" class="insert-number" maxlength="3" pattern="[0-9]" name="" id="1">
                                         <input type="number" class="insert-number" maxlength="2" pattern="[0-9]" name="" id="2">
                                         <input type="number" class="insert-number" maxlength="2" pattern="[0-9]" name="" id="3">
@@ -46,7 +46,7 @@
                                 </div>
                             </div>
                             <div class="mt-4 d-flex justify-content-center justify-content-lg-start">
-                                <label for="" class="text-center text-lg-start">
+                                <label for="" class="text-center text-lg-start w-100">
                                     <span class="label-text text-center- text-lg-left">Şifrə</span>
                                     <div class="mt-2">
                                         <input type="text" class="system-input">
@@ -55,7 +55,7 @@
                                 </label>
                             </div>
                             <div class="mt-4 d-flex justify-content-center justify-content-lg-start">
-                                <label for="" class="text-center text-lg-start">
+                                <label for="" class="text-center text-lg-start w-100">
                                     <span class="label-text text-center- text-lg-left">Şifrənin təkrarı</span>
                                     <div class="mt-2">
                                         <input type="text" class="system-input">
