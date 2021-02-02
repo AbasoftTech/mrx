@@ -23,10 +23,18 @@
                     </div>
                     <div class="d-flex align-items-center">
                         <div class="d-flex align-items-center">
+                            @if (Auth::guard('normal_users')->user() == null) 
                            <a href="{{route("login")}}" class="login_to_">
                                 <img src="{{asset("frontend/IMAGE/icons/login.svg")}}" alt="">
                                 <span class="log_slogan">Sistemə daxil ol</span>
                            </a>
+                           @else
+                           <form action="{{route('logout')}}" method="post">
+                               @csrf
+                               <button class="btn btn-warning">Logout</button>
+                           </form>
+                           
+                           @endif 
                         </div>
                         <div class="form--lang">
                             <form action="">
@@ -95,10 +103,19 @@
             <div>
                 <div class="d-flex align-items-center justify-content-between">
                     <div class="d-flex align-items-center">
+                  
+                    @if (Auth::guard('normal_users')->user() == null) 
                        <a href="{{route("login")}}" class="login_to_">
                             <img src="{{asset("frontend/IMAGE/icons/login.svg")}}" alt="">
                             <span class="log_slogan">Sistemə daxil ol</span>
                        </a>
+                    @else
+                    <form action="{{route('logout')}}" method="post">
+                        @csrf
+                        <button class="btn btn-warning">Logout</button>
+                    </form>
+                    
+                    @endif   
                     </div>
                     <div class="form--lang">
                         <form action="">

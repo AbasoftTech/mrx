@@ -14,14 +14,25 @@
         <div class="log-reg-holder">
             <div class="log-reg-left">
                 <h1 class="block--title">Qeydiyyat</h1>
-                <form action="" class="log-reg-form">
+                
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+                <form action="{{route('register')}}" method="POST" class="log-reg-form">
+                    @csrf
                     <div class="d-flex flex-column">
                         <div class="mt-4 d-flex flex-column flex-sm-column flex-lg-column flex-row justify-content-between justify-content-lg-start">
                             <div class="mt-4 d-flex justify-content-center justify-content-lg-start">
                                 <label for="" class="text-center text-lg-start w-100">
                                     <span class="label-text text-center- text-lg-left">Ad və soyad</span>
                                     <div class="mt-2">
-                                        <input type="text" class="system-input">
+                                        <input name="fullname" type="text" class="system-input">
                                     </div>
                                 </label>
                             </div>
@@ -30,18 +41,19 @@
                                 <div class="mt-2 d-flex align-items-center justify-content-center justify-content-lg-start">
                                     <label for="">
                                         <div class="custom-select-c custom-select-prefix" style="width:200px;">
-                                            <select>
-                                                <option value="1">050</option>
-                                                <option value="1">051</option>
-                                                <option value="2">050</option>
-                                                <option value="3">055</option>
+                                            <select name="prefix">
+                                                <option value="050">050</option>
+                                                <option value="051">051</option>
+                                                <option value="055">055</option>
+                                                <option value="070">070</option>
+                                                <option value="077">077</option>
                                             </select>
                                         </div>
                                     </label>
                                     <label for="" class="num-label">
-                                        <input type="number" class="insert-number" maxlength="3" pattern="[0-9]" name="" id="1">
-                                        <input type="number" class="insert-number" maxlength="2" pattern="[0-9]" name="" id="2">
-                                        <input type="number" class="insert-number" maxlength="2" pattern="[0-9]" name="" id="3">
+                                        <input name="top" type="number" class="insert-number" maxlength="3" pattern="[0-9]" name="" id="1">
+                                        <input name="middle" type="number" class="insert-number" maxlength="2" pattern="[0-9]" name="" id="2">
+                                        <input name="below" type="number" class="insert-number" maxlength="2" pattern="[0-9]" name="" id="3">
                                     </label>
                                 </div>
                             </div>
@@ -49,7 +61,7 @@
                                 <label for="" class="text-center text-lg-start w-100">
                                     <span class="label-text text-center- text-lg-left">Şifrə</span>
                                     <div class="mt-2">
-                                        <input type="text" class="system-input">
+                                        <input type="password" name="password" class="system-input">
                                     </div>
                                     <div class="alert-password">Şifrə ən az 8 simvoldan ibarət olmalıdır</div>
                                 </label>
@@ -58,14 +70,14 @@
                                 <label for="" class="text-center text-lg-start w-100">
                                     <span class="label-text text-center- text-lg-left">Şifrənin təkrarı</span>
                                     <div class="mt-2">
-                                        <input type="text" class="system-input">
+                                        <input name="password_confirmation" type="password" class="system-input">
                                     </div>
                                 </label>
                             </div>
                         </div>
                         <div>
                             <label class="custom-checkbox">
-                                <input type="checkbox" class="user-radio-input"  name="radio">
+                                <input type="checkbox" class="user-radio-input"  name="check">
                                 <span class="checkmark"></span>
                                 <span style="checkbox-text">İstifadəçi Şərtləri</span>
                             </label>

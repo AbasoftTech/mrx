@@ -14,7 +14,17 @@
         <div class="log-reg-holder">
             <div class="log-reg-left">
                 <h1 class="block--title">Daxil Ol</h1>
-                <form action="" class="log-reg-form">
+                @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+                <form action="{{route('login')}}" method="POST" class="log-reg-form">
+                    @csrf
                     <div class="d-flex flex-column">
                         <div class="mt-4 d-flex flex-column flex-sm-column flex-lg-column flex-row justify-content-between justify-content-lg-start">
                             <div>
@@ -22,18 +32,19 @@
                                 <div class="mt-2 d-flex align-items-center justify-content-center justify-lg-content-start">
                                     <label for="">
                                         <div class="custom-select-c custom-select-prefix" style="width:200px;">
-                                            <select>
-                                                <option value="1">050</option>
-                                                <option value="1">051</option>
-                                                <option value="2">050</option>
-                                                <option value="3">055</option>
+                                            <select name="main_phone_number">
+                                                <option value="050">050</option>
+                                                <option value="051">051</option>
+                                                <option value="055">055</option>
+                                                <option value="070">070</option>
+                                                <option value="077">077</option>
                                             </select>
                                         </div>
                                     </label>
                                     <label for="" class="num-label">
-                                        <input type="number" class="insert-number" maxlength="3" pattern="[0-9]" name="" id="1">
-                                        <input type="number" class="insert-number" maxlength="2" pattern="[0-9]" name="" id="2">
-                                        <input type="number" class="insert-number" maxlength="2" pattern="[0-9]" name="" id="3">
+                                        <input name="top" type="number" class="insert-number" maxlength="3" pattern="[0-9]" name="" id="1">
+                                        <input name="middle" type="number" class="insert-number" maxlength="2" pattern="[0-9]" name="" id="2">
+                                        <input name="below" type="number" class="insert-number" maxlength="2" pattern="[0-9]" name="" id="3">
                                     </label>
                                 </div>
                             </div>
@@ -41,7 +52,7 @@
                                 <label for="" class="text-center text-lg-start w-100">
                                     <span class="label-text text-center- text-lg-left">Şifrə</span>
                                     <div class="mt-2">
-                                        <input type="text" class="system-input">
+                                        <input type="password" name="password" class="system-input">
                                     </div>
                                 </label>
                             </div>
@@ -66,7 +77,7 @@
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.
                 </p>
                 <div class="mt-5">
-                    <a href="{{route("signup")}}" class="system-clickable system-clickable-color-1">Qeydiyyatdan Keç!</a>
+                    <a href="{{route("register")}}" class="system-clickable system-clickable-color-1">Qeydiyyatdan Keç!</a>
                 </div>
             </div>
         </div>

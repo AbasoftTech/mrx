@@ -91,9 +91,9 @@ for (i = 0; i < l; i++) {
                 insert[ins].focus();
             }
             var y, i, k, s, h, sl, yl, newinput;
-            newinput = document.createElement('DIV');
-            console.log(newinput);
-            x[j - 1].appendChild(newinput)
+            // newinput = document.createElement('DIV');
+            // console.log(newinput);
+            // x[j - 1].appendChild(newinput)
             s = this.parentNode.parentNode.getElementsByTagName("select")[0];
             sl = s.length;
             h = this.parentNode.previousSibling;
