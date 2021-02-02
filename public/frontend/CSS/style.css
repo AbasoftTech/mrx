@@ -1092,8 +1092,13 @@ input[type=number]::-webkit-outer-spin-button {
     margin: 0;
 }
 
+.num-label {
+    margin-left: 7px;
+    display: flex;
+}
+
 .insert-number {
-    width: 80px;
+    width: 100%;
     color: #A9A9A9;
     height: 47px;
     border: 1px solid #C7C7C7;
