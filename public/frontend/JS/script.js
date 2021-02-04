@@ -58,6 +58,9 @@ $('.owl-carousel.owl-media-carousel').owlCarousel({
 })
 // media slider
 var owlRieltor = $('.owl-carousel.owl-rieltor-carousel');
+
+if (owlRieltor[0] != undefined) {
+    
 $('.owl-carousel.owl-rieltor-carousel').owlCarousel({
     loop: true,
     margin: 19,
@@ -78,6 +81,8 @@ $('.owl-carousel.owl-rieltor-carousel').owlCarousel({
         }
     }
 })
+
+}
 owlRieltor.on('changed.owl.carousel', function (e) {
     // console.log("currentRelated: ", e.relatedTarget.current())
     // console.log("current: ", e.item.index - 1) //same
@@ -92,8 +97,14 @@ owlRieltor.on('changed.owl.carousel', function (e) {
     // document.getElementsByClassName('total-count')[0].innerText = `/ 0${e.item.count}`
     // document.getElementsByClassName('per-count')[0].innerText = `0${e.relatedTarget.current() -1}`
 })
+
+if (owlRieltor[0] != undefined) {
+  
 var at = owlRieltor[0].children[0].children[0].children.length - 12
 document.getElementsByClassName('total-owl-page')[0].innerText = at
+
+}
+
 
 // search contract input focus script
 document.getElementsByClassName('search--contract--input-box')[0].addEventListener('focus', focusOn);

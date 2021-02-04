@@ -41,20 +41,12 @@
                                 <div class="mt-2 d-flex align-items-center justify-content-center justify-content-lg-start">
                                     <label for="">
                                         <div class="custom-select-c custom-select-prefix" style="width:200px;">
-<<<<<<< Updated upstream
                                             <select name="prefix">
                                                 <option value="050">050</option>
                                                 <option value="051">051</option>
                                                 <option value="055">055</option>
                                                 <option value="070">070</option>
                                                 <option value="077">077</option>
-=======
-                                            <select>
-                                                <option value="1">050</option>
-                                                <option value="2">051</option>
-                                                <option value="3">050</option>
-                                                <option value="4">055</option>
->>>>>>> Stashed changes
                                             </select>
                                         </div>
                                     </label>
