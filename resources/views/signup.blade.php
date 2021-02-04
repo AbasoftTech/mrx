@@ -14,7 +14,7 @@
         <div class="log-reg-holder">
             <div class="log-reg-left">
                 <h1 class="block--title">Qeydiyyat</h1>
-                
+
                 @if ($errors->any())
                     <div class="alert alert-danger">
                         <ul>
