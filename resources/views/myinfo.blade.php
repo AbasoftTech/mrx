@@ -65,18 +65,58 @@
                                             </div>
                                         </label>
                                     </div>
-                                    <label for="" class="text-center text-lg-start w-100">
-                                        <span class="label-text text-center- text-lg-left">Köhnə şifrə</span>
+                                    <label for="" class="text-center text-lg-start w-100 mt-3">
+                                        <span class="label-text text-center- text-lg-left">Ad, soyad və ata adı </span>
                                         <div class="mt-2">
-                                            <input type="password" name="password" class="system-input">
+                                            <input type="text" name="password" class="system-input">
                                         </div>
                                     </label>
-                                    <label for="" class="text-center text-lg-start w-100">
-                                        <span class="label-text text-center- text-lg-left">Köhnə şifrə</span>
+                                    <label for="" class="text-center text-lg-start w-100 mt-3">
+                                        <span class="label-text text-center- text-lg-left">Doğum tarixi</span>
                                         <div class="mt-2">
-                                            <input type="password" name="password" class="system-input">
+                                            <input type="date" name="password" class="system-input">
                                         </div>
                                     </label>
+                                    <label for="" class="text-center text-lg-start w-100 mt-3">
+                                        <span class="label-text text-center text-lg-left">* Rieltor kimi iş stajı</span>
+                                        <div class="mt-2"><input name="top" type="number" class="system-input" maxlength="3" pattern="[0-9]" name="" id="1"></div>
+                                    </label>
+                                    <label for="" class="text-center text-lg-start w-100 mt-3">
+                                        <span class="label-text text-center text-lg-left">Milliyəti</span>
+                                        <div class="mt-2"><input type="text" name="password" class="system-input"></div>
+                                    </label>
+                                    <label for="" class="text-center text-lg-start w-100 mt-3">
+                                        <span class="label-text text-center text-lg-left">Təhsili</span>
+                                        <div class="custom-select-c custom-select-prefix" style="width:200px;">
+                                            <select name="prefix">
+                                                <option value="050">050</option>
+                                                <option value="051">051</option>
+                                                <option value="055">055</option>
+                                                <option value="070">070</option>
+                                                <option value="077">077</option>
+                                            </select>
+                                        </div>
+                                    </label>
+                                    <label for="" class="text-center text-lg-start w-100 mt-3">
+                                        <span class="label-text text-center text-lg-left">Ş/V surətini yüklə</span>
+                                        <div class="mt-2">
+                                            <div class="custom-fileinput">
+                                                <input type="file" class="file system-input" multiple="multiple" onchange="uploadFile(this)" />
+                                                <div class="fileinput-holder">
+                                                    <input class="system-input" placeholder="Fayl seç"/>
+                                                    <i class="fas fa-file"></i>
+                                                    <div class="your-file mt-2"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </label>
+                                    <script>
+                                        function uploadFile(target){
+                                            console.log(target.files);
+                                            document.getElementsByClassName('your-file')[0].innerHTML =
+                                            target.files[0].name
+                                        }
+                                    </script>
                                 </div>
                             </div>
                         </form>

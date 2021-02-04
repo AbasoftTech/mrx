@@ -80,7 +80,6 @@ $('.owl-carousel.owl-rieltor-carousel').owlCarousel({
     }
 })
 
-}
 owlRieltor.on('changed.owl.carousel', function (e) {
     // console.log("currentRelated: ", e.relatedTarget.current())
     // console.log("current: ", e.item.index - 1) //same

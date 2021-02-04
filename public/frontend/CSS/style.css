@@ -196,6 +196,8 @@ a.next-page {
 }
 
 /*========= website tablist =========*/
+/*========= website input utility =========*/
+
 .checkbox-holder {
     display: block;
     position: relative;
@@ -260,6 +262,31 @@ a.next-page {
     background: #A9A9A9;
 }
 
+/*------- custom file input =-------*/
+
+.custom-fileinput::-webkit-file-upload-button {
+    visibility: hidden;
+}
+
+.custom-fileinput {
+    position: relative;
+}
+
+.custom-fileinput .file {
+    opacity: .0;
+    position: absolute;
+    z-index: 11;
+}
+
+.fileinput-holder i {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    color: #A9A9A9;
+    z-index: 1;
+}
+
+/*========= website input utility =========*/
 
 /*========= header =========*/
 .header-mobile {
