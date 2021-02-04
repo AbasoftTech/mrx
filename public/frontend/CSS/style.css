@@ -94,6 +94,10 @@ a {
     text-align: center;
 }
 
+button {
+    outline: none;
+}
+
 .system-clickable-color-1 {
     background-color: #F79E02;
 }
@@ -115,9 +119,14 @@ a {
     outline: 0;
     width: 100%;
     padding-left: 30px;
+    height: 47px;
+    border-radius: 4px;
+    color: #A9A9A9;
+    font-family: Poppins_i;
+    font-size: 12px;
 }
 
-.system-clickable {}
+/* .system-input {} */
 
 /*========= website textinput and buttons =========*/
 
@@ -174,6 +183,9 @@ a.next-page {
 
 /*========= website pagination =========*/
 /*========= website tablist =========*/
+.tab {
+    cursor: pointer;
+}
 
 .tab-content {
     display: none;
@@ -184,6 +196,70 @@ a.next-page {
 }
 
 /*========= website tablist =========*/
+.checkbox-holder {
+    display: block;
+    position: relative;
+    padding-left: 24px;
+    cursor: pointer;
+    font-size: 12px;
+    font-family: Poppins_sb;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.checkbox-holder input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkbox-holder .checkmark {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    height: 14px;
+    width: 14px;
+    background-color: #eee;
+    border-radius: 50%;
+    border: 1px solid #A9A9A9;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox-holder:hover input~.checkmark {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.checkbox-holder input:checked~.checkmark {
+    background-color: #fff;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkbox-holder .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.checkbox-holder input:checked~.checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.checkbox-holder .checkmark:after {
+    top: 3px;
+    left: 3px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #A9A9A9;
+}
+
 
 /*========= header =========*/
 .header-mobile {
@@ -193,7 +269,8 @@ a.next-page {
 .container-fluid--custom-colored-one {
     background-color: #1B9CE5;
     height: 40px;
-    padding: 8px 0
+    display: flex;
+    align-items: center;
 }
 
 .container-fluid--custom-colored-two {
@@ -203,6 +280,18 @@ a.next-page {
 }
 
 .login_to_:hover {
+    background-color: #35556817;
+}
+
+.logout-btn {
+    border: 0;
+    background-color: transparent;
+    color: #fff;
+    font-family: Poppins_b;
+    font-size: 14px;
+}
+
+.logout-btn:hover {
     background-color: #35556817;
 }
 
@@ -1008,31 +1097,115 @@ section#indexContent {
 
 /*========= services =========*/
 /*========= myinfo =========*/
-.grid-profile-tablist {
-    display: grid;
-    grid-template-columns: repeat(4, 200px);
+#myinfo {
+    padding-bottom: 61px
 }
 
-.grid-profile-tab {
-    font-family: 21px;
+.grid-profile-linklist {
+    display: flex;
+    /* grid-template-columns: repeat(4, 200px); */
+}
+
+.grid-profile-link {
+    font-size: 21px;
     font-family: Poppins_r;
     line-height: 31.5px;
     color: #7A7A7A;
     cursor: pointer;
 }
 
-.grid-profile-tab-active {
+.grid-profile-link:not(:first-child) {
+    margin-left: 37px;
+}
+
+.grid-profile-link-active {
     color: #0074E1;
     font-family: Poppins_sb;
 }
 
+.profile-sidebar {
+    padding-bottom: 120px;
+    width: 285px;
+    background-color: #fff;
+    border-radius: 8px;
+    /* height: 287px; */
+}
+
+.profile-sidebar-sibling {
+    margin-left: 20px;
+}
+
+.profile-sidebar-sibling-child {
+    width: 895px;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 38px 90px;
+}
+
+.profile-sidebar-sibling-child:not(:first-child) {
+    margin-top: 20px;
+}
+
+.profile-tab-content {
+    width: 386px;
+}
+
+.profile-tab {
+    font-family: Poppins_sb;
+    font-size: 14px;
+    padding: 15px 20px;
+    border-bottom: 0.5px solid #F4F4F4;
+    color: #7A7A7A;
+    position: relative;
+    transition: .3s ease-in-out;
+}
+
+.profile-tab.tab.tab-active {
+    color: #0074E1;
+}
+
+.profile-tab::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 0;
+    background-color: #0074E1;
+    left: 0;
+    top: 0;
+    transition: .3s ease-in-out;
+}
+
+.profile-tab.tab.tab-active::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 100%;
+    background-color: #0074E1;
+    left: 0;
+    top: 0;
+    border-radius: 40px;
+}
+
+.profile-avatar {
+    width: 260px;
+    border-right: 1px solid #F0F0F0;
+}
+
+.profile-details {
+    width: 383px;
+}
+
+.mt-c-4 {
+    margin-top: 34px;
+}
+
 /*========= myinfo =========*/
 /*========= login =========*/
-.log-reg-form input {
+/* .log-reg-form input {
     color: #A9A9A9;
     font-family: Poppins_i;
     font-size: 12px;
-}
+} */
 
 /* .log-reg-form label {
     width: 100%;
@@ -1127,14 +1300,12 @@ input[type=number]::-webkit-outer-spin-button {
 
 .insert-number {
     width: 100%;
-    color: #A9A9A9;
     height: 47px;
     border: 1px solid #C7C7C7;
     border-radius: 4px;
     outline: 0;
     padding: 0 25px;
-    font-size: 12px;
-    font-family: Poppins_i;
+    color: #A9A9A9
 }
 
 .log-reg-holder {
@@ -1155,11 +1326,6 @@ input[type=number]::-webkit-outer-spin-button {
 .insert-number:focus,
 .log-reg-left .text-input:focus {
     box-shadow: 1px 1px 15px #c5b3b3;
-}
-
-.log-reg-left .system-input {
-    height: 47px;
-    border-radius: 4px;
 }
 
 .custom-checkbox {
@@ -1185,7 +1351,7 @@ input[type=number]::-webkit-outer-spin-button {
     cursor: pointer;
 }
 
-.checkmark {
+.custom-checkbox .checkmark {
     position: absolute;
     top: 1px;
     left: 0;
@@ -1195,7 +1361,7 @@ input[type=number]::-webkit-outer-spin-button {
     border: 1px solid #3a3a3a;
 }
 
-.checkmark:after {
+.custom-checkbox .checkmark:after {
     content: "";
     position: absolute;
     display: none;
@@ -1216,12 +1382,6 @@ input[type=number]::-webkit-outer-spin-button {
 
 .user-contract input:checked~.checkmark {
     background-color: transparent;
-}
-
-.checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
 }
 
 .user-contract input:checked~.checkmark:after {

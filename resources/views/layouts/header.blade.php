@@ -23,7 +23,7 @@
                     </div>
                     <div class="d-flex align-items-center">
                         <div class="d-flex align-items-center">
-                            @if (Auth::guard('normal_users')->user() == null) 
+                            @if (Auth::guard('normal_users')->user() == null)
                            <a href="{{route("login")}}" class="login_to_">
                                 <img src="{{asset("frontend/IMAGE/icons/login.svg")}}" alt="">
                                 <span class="log_slogan">Sistemə daxil ol</span>
@@ -31,10 +31,13 @@
                            @else
                            <form action="{{route('logout')}}" method="post">
                                @csrf
-                               <button class="btn btn-warning">Logout</button>
+                               <div>
+                                <a href="{{route('myinfo')}}"><img src="{{asset('frontend/IMAGE/logout-avatar.png')}}" class="logout-img" alt=""></a>
+                                <button class="logout-btn">Çıxış</button>
+                            </div>
                            </form>
-                           
-                           @endif 
+
+                           @endif
                         </div>
                         <div class="form--lang">
                             <form action="">
@@ -103,8 +106,8 @@
             <div>
                 <div class="d-flex align-items-center justify-content-between">
                     <div class="d-flex align-items-center">
-                  
-                    @if (Auth::guard('normal_users')->user() == null) 
+
+                    @if (Auth::guard('normal_users')->user() == null)
                        <a href="{{route("login")}}" class="login_to_">
                             <img src="{{asset("frontend/IMAGE/icons/login.svg")}}" alt="">
                             <span class="log_slogan">Sistemə daxil ol</span>
@@ -112,10 +115,13 @@
                     @else
                     <form action="{{route('logout')}}" method="post">
                         @csrf
-                        <button class="btn btn-warning">Logout</button>
+                        <div>
+                            <a href="{{route('myinfo')}}"><img src="{{asset('frontend/IMAGE/logout-avatar.png')}}" class="logout-img" alt=""></a>
+                            <button class="logout-btn">Çıxış</button>
+                        </div>
                     </form>
-                    
-                    @endif   
+
+                    @endif
                     </div>
                     <div class="form--lang">
                         <form action="">
