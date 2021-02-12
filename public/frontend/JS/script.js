@@ -227,8 +227,7 @@ $(function () {
     });
 })
 $('body').click(function () {
-    // console.log($(".insert-number"));
-    var insert = $(".insert-number");
+    var insert = $(".index0");
     insert.focusout(function () {
         console.log(this.value.length);
         if (this.value.length == 3) {

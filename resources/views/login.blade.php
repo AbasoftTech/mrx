@@ -43,8 +43,8 @@
                                     </label>
                                     <label for="" class="num-label">
                                         <input name="top" type="number" class="insert-number" maxlength="3" pattern="[0-9]" name="" id="1">
-                                        <input name="middle" type="number" class="insert-number" maxlength="2" pattern="[0-9]" name="" id="2">
-                                        <input name="below" type="number" class="insert-number" maxlength="2" pattern="[0-9]" name="" id="3">
+                                        <input name="middle" type="number" class="insert-number index0" maxlength="2" pattern="[0-9]" name="" id="2">
+                                        <input name="below" type="number" class="insert-number index0" maxlength="2" pattern="[0-9]" name="" id="3">
                                     </label>
                                 </div>
                             </div>

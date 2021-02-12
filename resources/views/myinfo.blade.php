@@ -129,7 +129,7 @@
                         </form>
                     </div>
                     <div class="profile-sidebar-sibling-child">
-
+                        <div class="block--title">Nömrə Əlavə Et</div>
                     </div>
                 </div>
                 <div class="profile-tab-content tab-content" id="1">
