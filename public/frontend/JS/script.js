@@ -225,7 +225,16 @@ $(function () {
                 $(this).blur();
         }
     });
-
+})
+$('body').click(function () {
+    // console.log($(".insert-number"));
+    var insert = $(".insert-number");
+    insert.focusout(function () {
+        console.log(this.value.length);
+        if (this.value.length == 3) {
+            this.value = this.value.slice(0, 2);
+        }
+    })
 })
 
 
@@ -288,3 +297,9 @@ for (i = 0; i < rieltorImg.length; i++) {
     }
 }
 // ===check rieltor img ===
+
+// ===date ===
+var date = document.querySelectorAll('.copyright span')[0];
+
+date.innerText = new Date().getFullYear();
+// ==date ===

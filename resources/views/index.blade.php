@@ -1,6 +1,12 @@
 @extends('layouts.master')
 @section('content')
 {{-- slider section --}}
+{{-- @php
+$arr = ['fddf', 'ed', 'ds', 'ds'];
+@endphp
+@for($i=0;$i < count($arr); $i++)
+<div>{{$arr[$i]}}</div>
+@endfor --}}
 <section id="indexSlider">
     {{-- owl-carousel-index --}}
     <div class="position-relative">

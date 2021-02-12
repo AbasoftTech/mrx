@@ -42,7 +42,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="copyright">All Rights Reserved. Abasoft 2020</div>
+                    <div class="copyright">All Rights Reserved. Abasoft <span></span></div>
                 </div>
             </div>
         </div>
@@ -54,6 +54,30 @@
 <script src="{{asset("frontend/JS/owl.carousel.min.js")}}"></script>
 <script src="{{asset("frontend/JS/script.js")}}"></script>
 <script src="{{asset("frontend/JS/bootstrap.min.js")}}"></script>
+{{-- <script src="{{asset("frontend/JS/calendar.js")}}"></script> --}}
+<script src="{{asset("frontend/JS/datepicker.js")}}"></script>
+{{-- <script>
+
+    document.addEventListener('DOMContentLoaded', function() {
+      var calendarEl = document.getElementById('calendar');
+      var calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth'
+      });
+      calendar.render();
+    });
+           $(document).ready(function() {
+                                            $('.arrive-calendar').datepicker({
+                                                inline: true,
+                                            });
+                                        })
+  </script> --}}
+  <script>
+    $(document).ready(function() {
+        $('.arrive-calendar').datepicker({
+            inline: true,
+        });
+    })
+  </script>
 {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> --}}
 </body>
 </html>

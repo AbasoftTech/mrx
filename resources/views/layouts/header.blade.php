@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="{{asset("frontend/CSS/owl.carousel.min.css")}}">
     <link rel="stylesheet" href="{{asset("frontend/CSS/owl.theme.default.min.css")}}">
     <link rel="stylesheet" href="{{asset("frontend/CSS/animate.min.css")}}">
+    <link rel="stylesheet" href="{{asset("frontend/CSS/calendar.css")}}">
+    <link rel="stylesheet" href="{{asset("frontend/CSS/datepicker.css")}}">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
 </head>
 <header>
@@ -32,7 +34,9 @@
                            <form action="{{route('logout')}}" method="post">
                                @csrf
                                <div>
-                                <a href="{{route('myinfo')}}"><img src="{{asset('frontend/IMAGE/logout-avatar.png')}}" class="logout-img" alt=""></a>
+                                <a href="{{route('myinfo')}}">
+                                    {{-- {{ Auth::guard('normal_users')->user()->fullname}} --}}
+                                    <img src="{{asset('frontend/IMAGE/logout-avatar.png')}}" class="logout-img" alt=""></a>
                                 <button class="logout-btn">Çıxış</button>
                             </div>
                            </form>
@@ -66,7 +70,7 @@
                         </ul>
                         <div class="area--contract">
                             <div class="send--contract">
-                                <button class="system-clickable system-clickable-color-1">Müqavilə Göndər</button>
+                                <a href="{{route("addcontract")}}" class="system-clickable system-clickable-color-1">Müqavilə Göndər</a>
                             </div>
                             <button type="button" class="search--contract" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fas fa-search text-white"></i></button>
                             <div class="hover-holder">

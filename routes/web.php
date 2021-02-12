@@ -22,6 +22,7 @@ Route::get("/services", [MainController::class, "services"])->name("services");
 Route::get("/myinfo", [MainController::class, "myinfo"])->name("myinfo");
 Route::get("/rieltors", [MainController::class, "rieltors"])->name("rieltors");
 Route::get("/rieltorpage", [MainController::class, "rieltorpage"])->name("rieltorpage");
+Route::get("/addcontract", [MainController::class, "addcontract"])->name("addcontract");
 
 
 Route::group(['prefix' => 'admin'], function () {

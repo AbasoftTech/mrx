@@ -42,4 +42,8 @@ class MainController extends Controller
     {
         return view("rieltor-page");
     }
+    public function addcontract()
+    {
+        return view("addcontract");
+    }
 }

@@ -74,7 +74,10 @@
                                     <label for="" class="text-center text-lg-start w-100 mt-3">
                                         <span class="label-text text-center- text-lg-left">Doğum tarixi</span>
                                         <div class="mt-2">
-                                            <input type="date" name="password" class="system-input">
+                                            {{-- <input type="date" name="password" class="system-input"> --}}
+                                            {{-- <div id='calendar'></div> --}}
+                                            <div class="arrive-calendar" data-toggle='datepicker'>
+                                            </div>
                                         </div>
                                     </label>
                                     <label for="" class="text-center text-lg-start w-100 mt-3">
@@ -111,11 +114,15 @@
                                         </div>
                                     </label>
                                     <script>
+                                        var fileNames = [];
                                         function uploadFile(target){
-                                            console.log(target.files);
-                                            document.getElementsByClassName('your-file')[0].innerHTML =
-                                            target.files[0].name
+                                            let files = target.files;
+                                            for(var file=0; file < files.length; file++) {
+                                                fileNames.push(files[file].name)
+                                                }
+                                                document.getElementsByClassName('your-file')[0].innerHTML = fileNames
                                         }
+
                                     </script>
                                 </div>
                             </div>
