@@ -24,14 +24,14 @@
                 </div>
                @endif
                 <form action="{{route('login')}}" method="POST" class="log-reg-form">
-                    @csrf
+                 @csrf
                     <div class="d-flex flex-column">
                         <div class="mt-4 d-flex flex-column flex-sm-column flex-lg-column flex-row justify-content-between justify-content-lg-start">
                             <div>
                                 <div class="label-text text-center text-lg-start">Nömrə</div>
                                 <div class="mt-2 d-flex align-items-center justify-content-center justify-lg-content-start">
                                     <label for="">
-                                        <div class="custom-select-c custom-select-prefix" style="width:200px;">
+                                        {{-- <div class="custom-select-c custom-select-prefix" style="width:200px;">
                                             <select name="main_phone_number">
                                                 <option value="050">050</option>
                                                 <option value="051">051</option>
@@ -39,6 +39,19 @@
                                                 <option value="070">070</option>
                                                 <option value="077">077</option>
                                             </select>
+                                        </div> --}}
+                                        <div style="width: 127px;height: 47px">
+                                            <div class="my-select">
+                                                <select name="" id="">
+                                                    <option value="050" class="selected">050</option>
+                                                    <option value="051">051</option>
+                                                    <option value="055">055</option>
+                                                    <option value="070">070</option>
+                                                    <option value="077">077</option>
+                                                </select>
+                                                <div class="clone-select"></div>
+                                                <div class="clone-option"></div>
+                                            </div>
                                         </div>
                                     </label>
                                     <label for="" class="num-label">

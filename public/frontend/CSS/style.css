@@ -124,6 +124,34 @@ button {
     color: #A9A9A9;
     font-family: Poppins_i;
     font-size: 12px;
+    line-height: 16px;
+}
+
+.system-input-2 {
+    border: 0;
+    border-bottom: 1px solid #C7C7C7;
+    outline: 0;
+    width: 100%;
+    padding-left: 30px;
+    padding-top: 30px;
+    color: #A9A9A9;
+    font-family: Poppins_i;
+    font-size: 12px;
+    transition: .3s all ease-in-out;
+    line-height: 16px;
+    overflow: overlay !important;
+}
+
+.system-input-2::-webkit-scrollbar {
+    opacity: 0;
+}
+
+/* .system-input-2:focus {
+    padding-top: 50px;
+} */
+
+textarea {
+    resize: none;
 }
 
 /* .system-input {} */
@@ -197,6 +225,78 @@ a.next-page {
 
 /*========= website tablist =========*/
 /*========= website input utility =========*/
+.my-select {
+    /* border: 1px solid transparent; */
+    border-radius: 4px;
+    font-size: 12px;
+    height: 47px;
+    position: relative;
+    z-index: 111;
+    /* background-color: #fff; */
+}
+
+.my-select select {
+    display: none;
+}
+
+.clone-select {
+    width: 100%;
+    height: 47px;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+    position: relative;
+    /* border: 1px solid #C7C7C7; */
+    padding: 13px 21px;
+    font-family: Poppins_sb;
+    color: #414141;
+}
+
+.clone-select-border {
+    border: 1px solid #C7C7C7
+}
+
+.clone-select::after {
+    content: "";
+    position: absolute;
+    background-image: url(../IMAGE/icons/number-arrow.svg);
+    right: 10px;
+    top: 18px;
+    width: 10px;
+    height: 10px;
+    background-repeat: no-repeat;
+}
+
+.clone-option {
+    padding: 13px 0 13px 31px;
+    font-family: Poppins_r;
+    color: #7A7A7A;
+    overflow-y: scroll;
+    height: 60px;
+    background-color: rgb(242, 247, 255);
+}
+
+.clone-option::-webkit-scrollbar {
+    opacity: 0;
+}
+
+.clone-option div {
+    cursor: pointer;
+}
+
+.clone-option div:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.my-select .clone-option {
+    visibility: hidden;
+    opacity: .0;
+}
+
+.my-select .clone-option.active {
+    visibility: visible;
+    opacity: 10;
+}
 
 .checkbox-holder {
     display: block;
@@ -614,7 +714,7 @@ footer .container {
     margin-bottom: 18px;
 }
 
-a.mailto {
+.color7A a.mailto {
     color: #7A7A7A;
 
 }
@@ -1155,7 +1255,7 @@ section#indexContent {
     width: 285px;
     background-color: #fff;
     border-radius: 8px;
-    /* height: 287px; */
+    height: 287px;
 }
 
 .profile-sidebar-sibling {
@@ -1218,6 +1318,42 @@ section#indexContent {
     border-right: 1px solid #F0F0F0;
 }
 
+.profile-avatar-holder {
+    position: relative;
+    border-radius: 50%;
+    height: 183px;
+    width: 183px;
+}
+
+.profile-avatar-holder:hover .upload-avatar {
+    visibility: visible;
+    opacity: .7;
+}
+
+.upload-avatar {
+    position: absolute;
+    visibility: hidden;
+    opacity: .0;
+    transition: .3s all ease-in-out;
+    background-color: rgba(0, 0, 0, 0.1);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.upload-avatar input {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    outline: 0;
+    opacity: 0;
+    position: absolute;
+}
+
 .profile-details {
     width: 383px;
 }
@@ -1230,6 +1366,22 @@ section#indexContent {
     line-height: 25px;
     font-family: Poppins_i;
     color: #58595B
+}
+
+.add-column i {
+    color: #FDB330;
+}
+
+.add-column {
+    margin-top: 27px;
+    border-radius: 50%;
+    border: 2px solid #FDB330;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
 
 /*========= myinfo =========*/
@@ -1255,7 +1407,7 @@ section#indexContent {
 .custom-select-prefix {
     border-radius: 4px;
     position: relative;
-    font-family: Gilroy-m !important;
+    font-family: Poppins_i !important;
     width: 127px !important;
     border: 1px solid #C7C7C7;
 }
@@ -1345,6 +1497,7 @@ input[type=number] {
     border-radius: 4px;
     outline: 0;
     padding: 0 25px;
+    font-family: Poppins_i;
     color: #A9A9A9
 }
 
@@ -1684,6 +1837,43 @@ input[type=number] {
 
 /*========= rieltors-page =========*/
 
+/*========= contact =========*/
+section#contact {
+    padding-bottom: 36px;
+}
+
+.contact-left {
+    width: 600px;
+}
+
+.contact-right {
+    width: 50%;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 38px 90px;
+    margin-left: 101px;
+}
+
+.contact-left i {
+    color: #F79E02;
+}
+
+.contact-text {
+    color: #7A7A7A;
+    line-height: 27px;
+    font-family: Raleway_m;
+    font-size: 18px;
+}
+
+.color41 {
+    color: #414141
+}
+
+.color41 a.mailto {
+    color: #414141
+}
+
+/*========= contact =========*/
 /*=========================== media queries ==========================*/
 @media(min-width: 1200px) {
     .search--contract:hover+.hover-holder .toggle--contract {

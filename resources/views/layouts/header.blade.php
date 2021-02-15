@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="{{asset("frontend/CSS/animate.min.css")}}">
     <link rel="stylesheet" href="{{asset("frontend/CSS/calendar.css")}}">
     <link rel="stylesheet" href="{{asset("frontend/CSS/datepicker.css")}}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
 </head>
 <header>
@@ -66,7 +67,7 @@
                             <li><a href="{{route("services")}}">Xidmətlər</a></li>
                             <li><a href="{{route("rieltors")}}">Rieltorlar</a></li>
                             <li><a href="{{route("news")}}">Media</a></li>
-                            <li><a href="">Əlaqə</a></li>
+                            <li><a href="{{route("contact")}}">Əlaqə</a></li>
                         </ul>
                         <div class="area--contract">
                             <div class="send--contract">
@@ -140,7 +141,7 @@
                     <li><a href=="{{route("services")}}">Xidmətlər</a></li>
                     <li><a href="{{route("rieltors")}}">Rieltorlar</a></li>
                     <li><a href="{{route("news")}}">Media</a></li>
-                    <li><a href="">Əlaqə</a></li>
+                    <li><a href="{{route("contact")}}">Əlaqə</a></li>
                 </ul>
                 <div class="area--contract">
                     <div class="send--contract">

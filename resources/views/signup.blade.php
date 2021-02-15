@@ -40,7 +40,7 @@
                                 <div class="label-text text-center text-lg-start">Nömrə</div>
                                 <div class="mt-2 d-flex align-items-center justify-content-center justify-content-lg-start">
                                     <label for="">
-                                        <div class="custom-select-c custom-select-prefix" style="width:200px;">
+                                        {{-- <div class="custom-select-c custom-select-prefix" style="width:200px;">
                                             <select name="prefix">
                                                 <option value="050">050</option>
                                                 <option value="051">051</option>
@@ -48,6 +48,19 @@
                                                 <option value="070">070</option>
                                                 <option value="077">077</option>
                                             </select>
+                                        </div> --}}
+                                        <div style="width: 127px;height: 47px">
+                                            <div class="my-select">
+                                                <select name="prefix" id="">
+                                                    <option value="050" class="selected">050</option>
+                                                    <option value="051">051</option>
+                                                    <option value="055">055</option>
+                                                    <option value="070">070</option>
+                                                    <option value="077">077</option>
+                                                </select>
+                                                <div class="clone-select"></div>
+                                                <div class="clone-option"></div>
+                                            </div>
                                         </div>
                                     </label>
                                     <label for="" class="num-label">
