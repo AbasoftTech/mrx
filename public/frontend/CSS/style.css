@@ -114,6 +114,18 @@ button {
     box-shadow: 0 6px 9px #88c5ff
 }
 
+.system-clickable-color-3 {
+    background-color: transparent;
+    border: 1px solid #0074E1;
+    color: #0074E1
+}
+
+.system-clickable-color-3:hover {
+    background-color: #0074E1;
+    border: 1px solid transparent;
+    color: #fff
+}
+
 .system-input {
     border: 1px solid #C7C7C7;
     outline: 0;
@@ -129,26 +141,31 @@ button {
 
 .system-input-2 {
     border: 0;
-    border-bottom: 1px solid #C7C7C7;
+    border-bottom: 1px solid #E5E5E5;
     outline: 0;
     width: 100%;
     padding-left: 30px;
     padding-top: 30px;
+    padding-bottom: 10px;
     color: #A9A9A9;
-    font-family: Poppins_i;
-    font-size: 12px;
+    font-family: Raleway_m;
+    font-size: 14px;
     transition: .3s all ease-in-out;
-    line-height: 16px;
+    /* line-height: 7px; */
     overflow: overlay !important;
+}
+
+.system-input-2::placeholder {
+    font-family: Raleway_sb;
 }
 
 .system-input-2::-webkit-scrollbar {
     opacity: 0;
 }
 
-/* .system-input-2:focus {
-    padding-top: 50px;
-} */
+.system-input-2:focus {
+    border-color: #7A7A7A;
+}
 
 textarea {
     resize: none;
@@ -229,7 +246,7 @@ a.next-page {
     /* border: 1px solid transparent; */
     border-radius: 4px;
     font-size: 12px;
-    height: 47px;
+    /* height: 47px; */
     position: relative;
     z-index: 111;
     /* background-color: #fff; */
@@ -269,7 +286,7 @@ a.next-page {
 
 .clone-option {
     padding: 13px 0 13px 31px;
-    font-family: Poppins_r;
+    font-family: Poppins_i;
     color: #7A7A7A;
     overflow-y: scroll;
     height: 60px;
@@ -1315,7 +1332,6 @@ section#indexContent {
 
 .profile-avatar {
     width: 260px;
-    border-right: 1px solid #F0F0F0;
 }
 
 .profile-avatar-holder {
@@ -1355,7 +1371,9 @@ section#indexContent {
 }
 
 .profile-details {
-    width: 383px;
+    width: 460px;
+    padding-left: 75px;
+    border-left: 1px solid #F0F0F0;
 }
 
 .mt-c-4 {
@@ -1366,6 +1384,15 @@ section#indexContent {
     line-height: 25px;
     font-family: Poppins_i;
     color: #58595B
+}
+
+.segment-holder {
+    margin-top: 43px;
+}
+
+.segment {
+    display: flex;
+    width: 386px;
 }
 
 .add-column i {
@@ -1382,8 +1409,99 @@ section#indexContent {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    position: relative;
+    z-index: 1111;
 }
 
+.segment-divider {
+    margin-top: 66px;
+}
+.profile-grid-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 160px);
+    grid-column-gap: 20px;
+    grid-row-gap: 80px
+}
+.profile-grid-gallery .grid-gallery-item {
+    height: 160px;
+}
+.profile-grid-gallery .grid-gallery-item > img {
+    width: 100%;
+    height: 160px;
+    object-fit: fill;
+    object-position: center;
+    border-radius: 8px;
+}
+.profile-grid-add {
+    position: absolute;
+    visibility: hidden;
+    opacity: .0;
+    transition: .3s all ease-in-out;
+    background-color: rgba(0, 0, 0, 0.1);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profile-grid-add input {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    outline: 0;
+    opacity: 0;
+    position: absolute;
+}
+.profile-grid-holder {
+    position: relative;
+    height: 160px;
+    width: 160px;
+    border-radius: 8px;
+    background-color: #ECECEC;
+    color: #A9A9A9;
+    font-family: Poppins_sb;
+    font-size: 14px;
+}
+.profile-grid-decore {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.profile-grid-holder .profile-grid-decore {
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+}
+.profile-grid-holder:hover .profile-grid-add {
+    visibility: visible;
+    opacity: .7;
+}
+.grid-gallery-item-control {
+    padding: 15px 10px 5px;
+    display: flex;
+    justify-content: center;
+}
+.remove--item {
+    color: #F6765A;
+}
+.rotate--item {
+    color: #F79E02;
+    margin-left: 10px;
+}
+.remove--item, .rotate--item {
+    background-color: transparent;
+    border: 0;
+    font-family: Raleway_m;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 /*========= myinfo =========*/
 /*========= login =========*/
 /* .log-reg-form input {
@@ -1850,8 +1968,13 @@ section#contact {
     width: 50%;
     background-color: #fff;
     border-radius: 8px;
-    padding: 38px 90px;
+    padding: 27px 37px;
     margin-left: 101px;
+}
+
+.contact-right-title {
+    font-family: Poppins_sb;
+    font-size: 27px;
 }
 
 .contact-left i {

@@ -25,6 +25,7 @@ Route::get("/rieltorpage", [MainController::class, "rieltorpage"])->name("rielto
 Route::get("/addcontract", [MainController::class, "addcontract"])->name("addcontract");
 Route::get("/contractresult", [MainController::class, "contractresult"])->name("contractresult");
 Route::get("/contact", [MainController::class, "contact"])->name("contact");
+Route::get("/photogallery", [MainController::class, "photogallery"])->name("photogallery");
 
 
 Route::group(['prefix' => 'admin'], function () {

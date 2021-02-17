@@ -109,198 +109,112 @@ function focusOn() {
 // search contract input focus script
 
 // ===custom select===
-// var insert = document.getElementsByClassName('insert-number');
+var allOption = document.querySelectorAll('.my-select select option');
+var mySelect = document.querySelectorAll('.my-select');
+// var cloneSelect = document.querySelectorAll('.clone-select')[0];
+// var cloneOption = document.querySelectorAll('.clone-option')[0];
+var cloneSelect, cloneOption;
+for (var i = 0; i < mySelect.length; i++) {
+    var mySelectI = mySelect[i];
+    var select = mySelect[i].getElementsByTagName('select')[0];
+    cloneSelect = mySelect[i].getElementsByClassName("clone-select")[0];
+    cloneOption = mySelect[i].getElementsByClassName("clone-option")[0];
+    for (let i = 0; i < select.options.length; i++) {
+        var div = document.createElement('div');
+        if (!select.options[i].classList.contains('selected')) {
+            div.innerHTML = select.options[i].value;
+            cloneOption.append(div);
+        } else {
+            cloneSelect.innerHTML = select.options[i].value;
+        }
+        div.addEventListener('click', function () {
+            console.log('eyo');
+            this.parentElement.parentElement.getElementsByClassName('clone-select')[0].innerHTML = this.innerHTML
+        })
+    }
 
-// var x, i, j, l, ll, selElmnt, a, b, c, ins = 0;
-// x = document.getElementsByClassName("custom-select-c");
-// l = x.length;
-// for (i = 0; i < l; i++) {
-//     selElmnt = x[i].getElementsByTagName("select")[0];
-//     console.log(selElmnt)
-//     // console.log(x[i], 'sleect');
-//     ll = selElmnt.length;
-//     a = document.createElement("DIV");
-//     a.setAttribute("class", "select-selected");
-//     a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
-//     x[i].appendChild(a);
-//     b = document.createElement("DIV");
-//     b.setAttribute("class", "select-items select-hide");
-//     for (j = 1; j < ll; j++) {
-//         c = document.createElement("DIV");
-//         c.innerHTML = selElmnt.options[j].innerHTML;
-//         c.addEventListener("click", function (e) {
-//             // console.log(this.innerHTML, 'this');
-//             // console.log(document.getElementsByClassName('select-selected')[0].innerHTML)
-//             var y, i, k, s, h, sl, yl,
-//                 s = this.parentNode.parentNode.getElementsByTagName("select")[0];
-//             sl = s.length;
-//             h = this.parentNode.previousSibling;
-//             for (i = 0; i < sl; i++) {
-//                 if (s.options[i].innerHTML == this.innerHTML) {
-//                     s.selectedIndex = i;
-//                     h.innerHTML = this.innerHTML;
-//                     y = this.parentNode.getElementsByClassName("same-as-selected");
-//                     yl = y.length;
-//                     for (k = 0; k < yl; k++) {
-//                         y[k].removeAttribute("class");
-//                     }
-//                     this.setAttribute("class", "same-as-selected");
-//                     break;
-//                 }
-//             }
-//             // document.getElementsByClassName('select-selected')[0].innerHTML, 'yalan'
-//             y[0].innerHTML = document.getElementsByClassName('select-selected')[0].innerHTML;
-//             console.log(y[0].innerHTML, 'yea')
-//             h.click();
-//         });
-//         b.appendChild(c);
-//     }
-//     x[i].appendChild(b);
-//     a.addEventListener("click", function (e) {
-//         e.stopPropagation();
-//         closeAllSelect(this);
-//         this.nextSibling.classList.toggle("select-hide");
-//         this.classList.toggle("select-arrow-active");
-//     });
-//     // if (x[i].classList.contains('select-arrow-active')) {
+    function clickHandler(e) {
+        // console.log(this.getElementsByClassName('clone-select')[0])
+        if (e.target.matches(`.${cloneSelect.className.slice(0, 13)}`)) {
+            // console.log(`.${cloneSelect.className.slice(0, 13)}`);
+            // this.getElementsByClassName('clone-select')[0].addEventListener("click", function () {
 
-//     //     console.log('var')
-//     // }
+            //     if (!this.nextSibling.nextSibling.classList.contains('active')) {
+            //         this.nextSibling.nextSibling.classList.add('active')
+            //         this.parentElement.getElementsByClassName('clone-select')[0].style.border = '1px solid transparent'
+            //         this.parentElement.getElementsByClassName('clone-select')[0].style.backgroundColor = '#F2F7FF'
+            //         this.parentElement.style.border = '1px solid #0074E1'
+            //         this.parentElement.style.backgroundColor = "#F2F7FF"
+            //     } else {
+            //         this.nextSibling.nextSibling.classList.remove('active');
+            //         // console.log(this.parentElement.getElementsByClassName('clone-select')[0], 'this')
+            //         this.parentElement.getElementsByClassName('clone-select')[0].style.border = '1px solid #C7C7C7';
+            //         this.parentElement.getElementsByClassName('clone-select')[0].style.backgroundColor = '#fff'
+            //         this.parentElement.style.border = '1px solid transparent';
+            //         this.parentElement.style.backgroundColor = "transparent"
+            //     }
+            // })
+        }
+        // console.log(e.target);
+        // e.stopPropagation();
+    }
+    cloneSelect.addEventListener("click", function () {
 
-// }
+        if (!this.nextSibling.nextSibling.classList.contains('active')) {
+            this.nextSibling.nextSibling.classList.add('active')
+            this.parentElement.getElementsByClassName('clone-select')[0].style.border = '1px solid transparent'
+            this.parentElement.getElementsByClassName('clone-select')[0].style.backgroundColor = '#F2F7FF'
+            this.parentElement.style.border = '1px solid #0074E1'
+            this.parentElement.style.backgroundColor = "#F2F7FF"
+        } else {
+            this.nextSibling.nextSibling.classList.remove('active');
+            // console.log(this.parentElement.getElementsByClassName('clone-select')[0], 'this')
+            this.parentElement.getElementsByClassName('clone-select')[0].style.border = '1px solid #C7C7C7';
+            this.parentElement.getElementsByClassName('clone-select')[0].style.backgroundColor = '#fff'
+            this.parentElement.style.border = '1px solid transparent';
+            this.parentElement.style.backgroundColor = "transparent"
+        }
+    })
+    // var option = document.querySelectorAll('.clone-option div');
+    // var l = cloneOption.getElementsByTagName("div").length
+    // // console.log(cloneOption.getElementsByTagName("div").length, 'un');
+    // for (let index = 0; index < l; index++) {
+    //     cloneOption.getElementsByTagName('div')[i].addEventListener('click', function() {
+    //         console.log(this)
+    //         var old = cloneSelect.innerText;
+    //         cloneSelect.innerHTML = this.innerHTML;
+    //         this.innerHTML = old;
+    //         cloneOption.classList.remove('active');
+    //         cloneOption.classList.remove('active')
+    //         cloneSelect.style.border = '1px solid #C7C7C7'
+    //         mySelectI.style.border = '1px solid transparent';
+    //         mySelectI.style.backgroundColor = "transparent"
+    //     })
+    // }
 
-// function closeAllSelect(elmnt) {
-//     var x, y, i, xl, yl, arrNo = [];
-//     x = document.getElementsByClassName("select-items");
-//     y = document.getElementsByClassName("select-selected");
-//     xl = x.length;
-//     yl = y.length;
-//     for (i = 0; i < yl; i++) {
-//         if (elmnt == y[i]) {
-//             arrNo.push(i)
-//         } else {
-//             y[i].classList.remove("select-arrow-active");
-//         }
+    // for (let index = 0; index < option.length; index++) {
+    //     option[index].addEventListener('click', function() {
+    //         var old = cloneSelect.innerText;
+    //         cloneSelect.innerHTML = this.innerHTML;
+    //         this.innerHTML = old;
+    //         cloneOption.classList.remove('active')
+    //         cloneOption.classList.remove('active')
+    //         cloneSelect.style.border = '1px solid #C7C7C7'
+    //         mySelectI.style.border = '1px solid transparent';
+    //         mySelectI.style.backgroundColor = "transparent"
+    //     })
+    // }
+}
 
-
-//     }
-//     for (i = 0; i < xl; i++) {
-//         if (arrNo.indexOf(i)) {
-//             x[i].classList.add("select-hide");
-//         }
-//         // console.log(x[i], y[i])
-//         // if (y[i].classList.contains('select-arrow-active')) {
-
-//         //     console.log('dsjdn')
-//         // }
-//     }
-//     // var g = document.getElementsByClassName('select-selected')[0];
-//     // if (g.classList.contains('select-arrow-active')) {
-//     // }
-// }
-
-// document.addEventListener("click", closeAllSelect);
-// var x, i, j, l, ll, selElmnt, a, b, c;
-// /* Look for any elements with the class "custom-select": */
-// x = document.getElementsByClassName("custom-select");
-// l = x.length;
-// for (i = 0; i < l; i++) {
-//     selElmnt = x[i].getElementsByTagName("select")[0];
-//     ll = selElmnt.length;
-//     /* For each element, create a new DIV that will act as the selected item: */
-//     a = document.createElement("DIV");
-//     a.setAttribute("class", "select-selected");
-//     a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
-//     x[i].appendChild(a);
-//     /* For each element, create a new DIV that will contain the option list: */
-//     b = document.createElement("DIV");
-//     b.setAttribute("class", "select-items select-hide");
-//     for (j = 1; j < ll; j++) {
-//         /* For each option in the original select element,
-//         create a new DIV that will act as an option item: */
-//         c = document.createElement("DIV");
-//         c.innerHTML = selElmnt.options[j].innerHTML;
-//         c.addEventListener("click", function (e) {
-//             /* When an item is clicked, update the original select box,
-//             and the selected item: */
-//             var y, i, k, s, h, sl, yl;
-//             s = this.parentNode.parentNode.getElementsByTagName("select")[0];
-//             sl = s.length;
-//             h = this.parentNode.previousSibling;
-//             for (i = 0; i < sl; i++) {
-//                 if (s.options[i].innerHTML == this.innerHTML) {
-//                     s.selectedIndex = i;
-//                     h.innerHTML = this.innerHTML;
-//                     y = this.parentNode.getElementsByClassName("same-as-selected");
-//                     yl = y.length;
-//                     for (k = 0; k < yl; k++) {
-//                         y[k].removeAttribute("class");
-//                     }
-//                     this.setAttribute("class", "same-as-selected");
-//                     break;
-//                 }
-//             }
-//             h.click();
-//         });
-//         b.appendChild(c);
-//     }
-//     x[i].appendChild(b);
-//     a.addEventListener("click", function (e) {
-//         /* When the select box is clicked, close any other select boxes,
-//         and open/close the current select box: */
-//         e.stopPropagation();
-//         closeAllSelect(this);
-//         this.nextSibling.classList.toggle("select-hide");
-//         this.classList.toggle("select-arrow-active");
-//     });
-// }
-
-// function closeAllSelect(elmnt) {
-//     /* A function that will close all select boxes in the document,
-//     except the current select box: */
-//     var x, y, i, xl, yl, arrNo = [];
-//     x = document.getElementsByClassName("select-items");
-//     y = document.getElementsByClassName("select-selected");
-//     xl = x.length;
-//     yl = y.length;
-//     for (i = 0; i < yl; i++) {
-//         if (elmnt == y[i]) {
-//             arrNo.push(i)
-//         } else {
-//             y[i].classList.remove("select-arrow-active");
-//         }
-//     }
-//     for (i = 0; i < xl; i++) {
-//         if (arrNo.indexOf(i)) {
-//             x[i].classList.add("select-hide");
-//         }
+// for(let i=0; i< allOption.length; i++) {
+//     var div = document.createElement('div');
+//     if(!allOption[i].classList.contains('selected')) {
+//         div.innerHTML = allOption[i].value;
+//         cloneOption.append(div);
+//     } else {
+//         cloneSelect.innerHTML = allOption[i].value;
 //     }
 // }
-
-// /* If the user clicks anywhere outside the select box,
-// then close all select boxes: */
-// document.addEventListener("click", closeAllSelect);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 // ===custom select===
@@ -407,12 +321,98 @@ date.innerText = new Date().getFullYear();
 // ==date ===
 
 // ==add column ===
-var addColumn = document.getElementsByClassName('add-column')[0];
+var addColumn = document.getElementsByClassName('add-column');
 var segmentHolder = document.getElementsByClassName('segment-holder')[0];
-var segment = document.getElementsByClassName('segment')[0];
+// var segment = document.getElementsByClassName('segment')[0];
 
-addColumn.addEventListener('click', function () {
-    console.log('this', this)
-    // segmentHolder.append(segment)
-})
-// ==add column ===
+var segment;
+for (let index = 0; index < addColumn.length; index++) {
+    var count = 1
+    addColumn[index].addEventListener('click', function () {
+        // segment1 = this.previousSibling.previousSibling;
+        var segment2 = `
+        <div class="segment mt-4">
+        <div style="width: 200px; height: 47px">
+            <div class="my-select myselec-2">
+                <select name="" class="" id="">
+                    <option value="Prefix" class="selected">Prefix</option>
+                    <option value="050">— 050</option>
+                    <option value="051">— 051</option>
+                    <option value="055">— 055</option>
+                    <option value="070">— 070</option>
+                </select>
+                <div class="clone-select clone-select-border"></div>
+                <div class="clone-option"></div>
+            </div>
+        </div>
+        <label for="" class="num-label">
+            <input name="top" type="number" class="insert-number" maxlength="3" pattern="[0-9]" name="" id="1">
+            <input name="middle" type="number" class="insert-number index0" maxlength="2" pattern="[0-9]" name="" id="2">
+            <input name="below" type="number" class="insert-number index0" maxlength="2" pattern="[0-9]" name="" id="3">
+        </label>
+    </div>
+        `;
+        segment1 = this.parentElement.getElementsByClassName('segment')[i]
+        console.log(segment1, segment2)
+        // console.log(typeof segment)
+        if (count < 4) {
+            // var segmentClone = segment.cloneNode(true);
+            // this.parentElement.append(segment2)
+            this.parentElement.insertAdjacentHTML('beforebegin', segment2)
+
+        }
+        count++
+    })
+}
+// $('.add-column').click(function (e) {
+//     var count = 1;
+//     var seg = $(this).prev().eq(0);
+//     var emp = seg;
+//     if (count < 4) {
+
+//         $(this).insertAfter(emp)
+
+//     }
+//     count++
+//     // ==add column ===
+
+
+// })
+
+
+// reference to a list
+const list = document.querySelectorAll('.segment');
+for (let index = 0; index < list.length; index++) {
+    list[index].addEventListener('mouseover', clickHandler);
+}
+// add a single listener on list item
+
+// === rotate & remove control btns ===
+function remove() {}
+function rotate() {}
+
+
+var profGridGal = document.getElementsByClassName('profile-grid-gallery')[0];
+var addNewGalItem = document.getElementsByClassName('add-new-gal-item')[0];
+
+function uploadGal(input) {
+    if (input.files && input.files[0]) {
+    var reader = new FileReader();
+
+    reader.onload = function(e) {
+        var gal = document.createElement('div')
+        gal.className = "grid-gallery-item";
+    //   $('#blah').attr('src', e.target.result);
+        var img = document.createElement('img');
+        img.src = e.target.result;
+        gal.append(img);
+        profGridGal.insertBefore(gal,addNewGalItem)
+    }
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+
+// $("#imgInp").change(function() {
+//     readURL(this);
+//   });
+// === rotate & remove control btns ===

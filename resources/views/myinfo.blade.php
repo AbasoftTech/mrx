@@ -14,7 +14,7 @@
         <div class="grid-profile-linklist">
             <a href="" class="grid-profile-link grid-profile-link-active">Profil Məlumatları</a>
             <a href="" class="grid-profile-link">Müqavilələrim</a>
-            <a href="" class="grid-profile-link">Foto Qalareya</a>
+            <a href="{{route("photogallery")}}" class="grid-profile-link">Foto Qalareya</a>
             <a href="" class="grid-profile-link">Hesab</a>
         </div>
         <div class="d-flex mt-5">
@@ -32,18 +32,18 @@
             </div>
             <div class="profile-sidebar-sibling">
                 <div class="profile-tab-content tab-content content-active" id="0">
-                    <div class="profile-sidebar-sibling-child">
-                        <form action="">
+                    <form action="">
+                        <div class="profile-sidebar-sibling-child">
                             <div class="d-flex justify-content-between">
-                                    <div class="profile-avatar">
-                                        <div class="profile-avatar-holder">
-                                            <img src="{{asset('frontend/IMAGE/profile-avatar.png')}}" alt="">
-                                            <div class="upload-avatar">
-                                                <input type="file">
-                                                <div class="text-center position-absolute">Sekli deyis</div>
-                                            </div>
+                                <div class="profile-avatar">
+                                    <div class="profile-avatar-holder">
+                                        <img src="{{asset('frontend/IMAGE/profile-avatar.png')}}" alt="">
+                                        <div class="upload-avatar">
+                                            <input type="file">
+                                            <div class="text-center position-absolute">Sekli deyis</div>
                                         </div>
                                     </div>
+                                </div>
                                 <div class="profile-details">
                                     <div>
                                         <label class="checkbox-holder">Fiziki shexs
@@ -83,6 +83,7 @@
                                             <div class="arrive-calendar" data-toggle='datepicker'>
                                             </div>
                                             <div class="my-calendar">
+                                            </div>
                                                 <div class="d-flex">
                                                     {{-- <div class="selector"></div> --}}
                                                     {{-- <div class="custom-select-c custom-select-prefix" style="width:200px;">
@@ -98,7 +99,7 @@
                                                         <select name="years" class="years" style="height:100px;">
                                                         </select>
                                                     </div> --}}
-                                                    <div class="custom-select" style="width:200px;">
+                                                    {{-- <div class="custom-select" style="width:200px;">
                                                         <select>
                                                             <option value="Aylar">Aylar</option>
                                                             <option value="Years">Years</option>
@@ -120,38 +121,38 @@
                                                         <select class="years">
                                                             <option value="İllər">Years</option>
                                                         </select>
-                                                    </div>
-                                                        {{-- <div style="width: 200px">
-                                                            <div class="my-select myselec-1">
-                                                                <select name="months" class="months" id="">
-                                                                    <option value="Years">Years</option>
-                                                                    <option value="Yanvar">Yanvar</option>
-                                                                    <option value="Fevral">Fevral</option>
-                                                                    <option value="Mart">Mart</option>
-                                                                    <option value="Aprel">Aprel</option>
-                                                                    <option value="May">May</option>
-                                                                    <option value="İyun">İyun</option>
-                                                                    <option value="İyul">İyuL</option>
-                                                                    <option value="Avqust">Avqust</option>
-                                                                    <option value="Sentyabr">Sentyabr</option>
-                                                                    <option value="Oktyabr">Oktyabr</option>
-                                                                    <option value="Noyabr">Noyabr</option>
-                                                                    <option value="Dekabr">Dekabr</option>
-                                                                </select>
-                                                                <div class="clone-select clone-select-border"></div>
-                                                                <div class="clone-option"></div>
-                                                            </div>
-                                                        </div> --}}
-                                                    {{-- <div style="width: 200px; height: 47px">
-                                                        <div class="my-select myselec-2">
-                                                            <select name="years" class="years" id="">
+                                                    </div> --}}
+                                                    <div style="width: 200px;height: 47px">
+                                                        <div class="my-select myselec-1">
+                                                            <select name="months" class="months" id="">
+                                                                <option value="Aylar" class="selected">Aylar</option>
+                                                                <option value="Yanvar">Yanvar</option>
+                                                                <option value="Fevral">Fevral</option>
+                                                                <option value="Mart">Mart</option>
+                                                                <option value="Aprel">Aprel</option>
+                                                                <option value="May">May</option>
+                                                                <option value="İyun">İyun</option>
+                                                                <option value="İyul">İyuL</option>
+                                                                <option value="Avqust">Avqust</option>
+                                                                <option value="Sentyabr">Sentyabr</option>
+                                                                <option value="Oktyabr">Oktyabr</option>
+                                                                <option value="Noyabr">Noyabr</option>
+                                                                <option value="Dekabr">Dekabr</option>
                                                             </select>
-                                                            <div class="clone-select"></div>
+                                                            <div class="clone-select clone-select-border"></div>
                                                             <div class="clone-option"></div>
                                                         </div>
-                                                    </div> --}}
+                                                    </div>
+                                                    <div style="width: 200px; height: 47px">
+                                                        <div class="my-select myselec-2">
+                                                            <select name="years" class="years" id="">
+                                                                <option value="İllər" class="selected">İllər</option>
+                                                            </select>
+                                                            <div class="clone-select clone-select-border"></div>
+                                                            <div class="clone-option"></div>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                            </div>
                                         </div>
                                     </label>
                                     <label for="" class="text-center text-lg-start w-100 mt-3">
@@ -200,130 +201,169 @@
                                     </script>
                                 </div>
                             </div>
-                        </form>
-                    </div>
-                    <div class="profile-sidebar-sibling-child">
-                        <div class="block--title">Nömrə Əlavə Et</div>
-                        <div class="segment-holder">
-                            <div class="segment">
-                                {{-- <div class="custom-select-c custom-select-prefix" style="width:200px;">
-                                    <select>
-                                        <option value="">050</option>
-                                        <option value="">051</option>
-                                        <option value="">055</option>
-                                        <option value="">070</option>
-                                        <option value="">000</option>
-                                    </select>
-                                </div> --}}
-                                <div class="" style="width:200px;">
-                                    <select>
-                                        <option value="">Prefix</option>
-                                        <option value="050">050</option>
-                                        <option value="051">051</option>
-                                        <option value="055">055</option>
-                                        <option value="070">070</option>
-                                    </select>
+                        </div>
+                        <div class="profile-sidebar-sibling-child">
+                            <div class="block--title">Nömrə Əlavə Et</div>
+                            <div class="segment-holder">
+                                <div class="segment mt-4">
+                                    <div style="width: 200px; height: 47px">
+                                        <div class="my-select myselec-2">
+                                            <select name="" class="" id="">
+                                                <option value="Prefix" class="selected">Prefix</option>
+                                                <option value="050">— 050</option>
+                                                <option value="051">— 051</option>
+                                                <option value="055">— 055</option>
+                                                <option value="070">— 070</option>
+                                            </select>
+                                            <div class="clone-select clone-select-border"></div>
+                                            <div class="clone-option"></div>
+                                        </div>
+                                    </div>
+                                    <label for="" class="num-label">
+                                        <input name="top" type="number" class="insert-number" maxlength="3" pattern="[0-9]" name="" id="1">
+                                        <input name="middle" type="number" class="insert-number index0" maxlength="2" pattern="[0-9]" name="" id="2">
+                                        <input name="below" type="number" class="insert-number index0" maxlength="2" pattern="[0-9]" name="" id="3">
+                                    </label>
                                 </div>
-                                <script>
-                                    console.log(document.getElementsByClassName('segment')[0].getElementsByTagName('select')[0].selectedIndex)
-
-                                </script>
-                                <label for="" class="num-label">
-                                    <input name="top" type="number" class="insert-number" maxlength="3" pattern="[0-9]" name="" id="1">
-                                    <input name="middle" type="number" class="insert-number index0" maxlength="2" pattern="[0-9]" name="" id="2">
-                                    <input name="below" type="number" class="insert-number index0" maxlength="2" pattern="[0-9]" name="" id="3">
-                                </label>
+                                <div class="add-column"><i class="fas fa-plus"></i></div>
                             </div>
                         </div>
-                        <div class="add-column"><i class="fas fa-plus"></i></div>
-                    </div>
-                    <div class="profile-sidebar-sibling-child">
-                        <div class="block--title">Dil Bilikləri</div>
-                        <div class="label-text text-center text-lg-start mt-4">Nömrə</div>
-                        <label for="" class="mt-2">
-                            <input type="text" class="system-input">
-                        </label>
-                        <div class="mt-3">
-                            <label for="">
-                                <input type="radio" name="level" id="">
-                                Zəif
-                            </label>
-                            <label for="">
-                                <input type="radio" name="level" id="">
-                            </label>Yaxşı
-                            <label for="">
-                                <input type="radio" name="level" id="">
-                            </label>Əla
-                        </div>
-                        <label for="" class="mt-4">
-                            <input type="text" class="system-input">
-                        </label>
-                        <div class="mt-3">
-                            <label for="">
-                                <input type="radio" name="level1" id="">
-                                Zəif
-                            </label>
-                            <label for="">
-                                <input type="radio" name="level1" id="">
-                            </label>Yaxşı
-                            <label for="">
-                                <input type="radio" name="level1" id="">
-                            </label>Əla
-                        </div>
-                        <div class="add-column"><i class="fas fa-plus"></i></div>
-                    </div>
-                    <div class="profile-sidebar-sibling-child">
-                        <div class="block--title">Yaşadığı Ərazi</div>
-                        <div>
-                            <div class="custom-select-c custom-select-prefix" style="width:200px;">
-                                <select name="select" class="select">
-                                    <option value="">050</option>
-                                    <option value="">051</option>
-                                    <option value="">055</option>
-                                    <option value="">070</option>
-                                    <option value="">000</option>
-                                </select>
-                            </div>
-                            <div class="custom-select-c custom-select-prefix" style="width:200px;">
-                                <select name="select" class="select">
-                                    <option value="">050</option>
-                                    <option value="">051</option>
-                                    <option value="">055</option>
-                                    <option value="">070</option>
-                                    <option value="">000</option>
-                                </select>
+                        <div class="profile-sidebar-sibling-child">
+                            <div class="block--title">Dil Bilikləri</div>
+                            <div class="segment-holder">
+                                <div class="segment flex-column">
+                                    <div class="label-text text-center text-lg-start mt-4">Xarici Dil</div>
+                                    <label for="" class="mt-2">
+                                        <input type="text" class="system-input">
+                                    </label>
+                                    <div class="mt-3">
+                                        <label for="">
+                                            <input type="radio" name="level" id="">
+                                            Zəif
+                                        </label>
+                                        <label for="">
+                                            <input type="radio" name="level" id="">
+                                        </label>Yaxşı
+                                        <label for="">
+                                            <input type="radio" name="level" id="">
+                                        </label>Əla
+                                    </div>
+                                </div>
+                                <div class="add-column"><i class="fas fa-plus"></i></div>
                             </div>
                         </div>
-                        <div class="add-column"><i class="fas fa-plus"></i></div>
-                    </div>
+                        <div class="profile-sidebar-sibling-child">
+                            <div class="block--title">Yaşadığı Ərazi</div>
+                            <div class="segment-holder">
+                                <div class="segment mt-4">
+                                    <div class="d-flex flex-column">
+                                        <div class="label-text text-center text-lg-start">Şəhər</div>
+                                        <div style="width: 200px; height: 47px" class="mt-3">
+                                            <div class="my-select myselec-2">
+                                                <select name="" class="" id="">
+                                                    <option value="Bileceri" class="selected">Bileceri</option>
+                                                    <option value="050">BAaki</option>
+                                                </select>
+                                                <div class="clone-select clone-select-border"></div>
+                                                <div class="clone-option"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <div class="label-text text-center text-lg-start">Rayon və qəsəbə</div>
+                                        <div style="width: 200px; height: 47px" class="mt-3">
+                                            <div class="my-select myselec-2">
+                                                <select name="" class="" id="">
+                                                    <option value="Baki" class="selected">Bakı</option>
+                                                    <option value="050">Naxcivan</option>
+                                                    <option value="051">— 051</option>
+                                                    <option value="055">— 055</option>
+                                                    <option value="070">— 070</option>
+                                                </select>
+                                                <div class="clone-select clone-select-border"></div>
+                                                <div class="clone-option"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="add-column"><i class="fas fa-plus"></i></div>
+                            </div>
+                            <div class="segment-divider">
+                                <div class="block--title">Çalışdığı Ərazilər</div>
+                                <div class="segment-holder">
+                                    <div class="segment mt-4">
+                                        <div class="d-flex flex-column">
+                                            <div class="label-text text-center text-lg-start">Şəhər</div>
+                                            <div style="width: 200px; height: 47px" class="mt-3">
+                                                <div class="my-select myselec-2">
+                                                    <select name="" class="" id="">
+                                                        <option value="Bileceri" class="selected">Bileceri</option>
+                                                        <option value="050">BAaki</option>
+                                                    </select>
+                                                    <div class="clone-select clone-select-border"></div>
+                                                    <div class="clone-option"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-column">
+                                            <div class="label-text text-center text-lg-start">Rayon və qəsəbə</div>
+                                            <div style="width: 200px; height: 47px" class="mt-3">
+                                                <div class="my-select myselec-2">
+                                                    <select name="" class="" id="">
+                                                        <option value="Baki" class="selected">Bakı</option>
+                                                        <option value="050">Naxcivan</option>
+                                                        <option value="051">— 051</option>
+                                                        <option value="055">— 055</option>
+                                                        <option value="070">— 070</option>
+                                                    </select>
+                                                    <div class="clone-select clone-select-border"></div>
+                                                    <div class="clone-option"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="add-column"><i class="fas fa-plus"></i></div>
+                                </div>
+                            </div>
+                            <div class="mt-4 d-flex">
+                                <div style="width: 29%">
+                                    <button class="system-clickable system-clickable-color-2">Hesabı Yenilə!</button>
+                                </div>
+                                <div style="width: 29%;margin-left: 20px">
+                                    <button class="system-clickable system-clickable-color-3">Ləğv Et</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
                 </div>
                 <div class="profile-tab-content tab-content" id="1">
-                    <div class="profile-sidebar-sibling-child">
-                        <form action="">
-                            <label for="" class="text-center text-lg-start w-100">
-                                <span class="label-text text-center- text-lg-left">Köhnə şifrə</span>
-                                <div class="mt-2">
-                                    <input type="password" name="password" class="system-input">
+                    <form action="">
+                        <div class="profile-sidebar-sibling-child">
+                            {{-- <form action=""> --}}dskmd skd skd
+                                <label for="" class="text-center text-lg-start w-100">
+                                    <span class="label-text text-center- text-lg-left">Köhnə şifrə</span>
+                                    <div class="mt-2">
+                                        <input type="password" name="password" class="system-input">
+                                    </div>
+                                </label>
+                                <label for="" class="text-center text-lg-start w-100 mt-4">
+                                    <span class="label-text text-center- text-lg-left">Yeni şifrə</span>
+                                    <div class="mt-2">
+                                        <input type="password" name="password" class="system-input">
+                                    </div>
+                                </label>
+                                <label for="" class="text-center text-lg-start w-100 mt-4">
+                                    <span class="label-text text-center- text-lg-left">Yeni şifrənin təkrarı</span>
+                                    <div class="mt-2">
+                                        <input type="password" name="password" class="system-input">
+                                    </div>
+                                </label>
+                                <div class="mt-c-4">
+                                    <button class="system-clickable system-clickable-color-2">Yadda Saxla</button>
                                 </div>
-                            </label>
-                            <label for="" class="text-center text-lg-start w-100 mt-4">
-                                <span class="label-text text-center- text-lg-left">Yeni şifrə</span>
-                                <div class="mt-2">
-                                    <input type="password" name="password" class="system-input">
-                                </div>
-                            </label>
-                            <label for="" class="text-center text-lg-start w-100 mt-4">
-                                <span class="label-text text-center- text-lg-left">Yeni şifrənin təkrarı</span>
-                                <div class="mt-2">
-                                    <input type="password" name="password" class="system-input">
-                                </div>
-                            </label>
-                            <div class="mt-c-4">
-                                <button class="system-clickable system-clickable-color-2">Yadda Saxla</button>
-                            </div>
-                        </form>
-                    </div>
-
+                            {{-- </form> --}}
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>

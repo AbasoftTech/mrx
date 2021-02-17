@@ -43,17 +43,20 @@
                 <form action="">
                     <div class="d-flex flex-column">
                         <label for="" >
-                            <input type="text" class="system-input-2" placeholder="name&lastname">
+                            <input type="text" class="system-input-2" placeholder="Ad və soyad">
                         </label>
                         <label for="" >
-                            <input type="text" class="system-input-2" placeholder="email">
+                            <input type="text" class="system-input-2" placeholder="Email">
                         </label>
                         <label for="" >
-                            <textarea name="" id="" class="system-input-2" placeholder="subject"></textarea>
+                            <textarea name="" id="" class="system-input-2" placeholder="Mövzu"></textarea>
                         </label>
                         <label for="" >
-                            <textarea name="" id="" class="system-input-2"  placeholder="message"></textarea>
+                            <textarea name="" id="" class="system-input-2"  placeholder="Mesaj"></textarea>
                         </label>
+                        <div class="mt-5">
+                            <button class="system-clickable  system-clickable-color-2">Göndər!</button>
+                        </div>
                     </div>
                 </form>
             </div>
