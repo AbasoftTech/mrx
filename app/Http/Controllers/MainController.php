@@ -54,4 +54,8 @@ class MainController extends Controller
     {
         return view("photogallery");
     }
+    public function mycontracts()
+    {
+        return view("mycontracts");
+    }
 }

@@ -1420,10 +1420,10 @@ section#indexContent {
     display: grid;
     grid-template-columns: repeat(4, 160px);
     grid-column-gap: 20px;
-    grid-row-gap: 80px
+    grid-row-gap: 30px
 }
 .profile-grid-gallery .grid-gallery-item {
-    height: 160px;
+    height: 214px;
 }
 .profile-grid-gallery .grid-gallery-item > img {
     width: 100%;
@@ -1444,6 +1444,7 @@ section#indexContent {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 8px;
 }
 .profile-grid-add input {
     height: 100%;
@@ -1469,6 +1470,17 @@ section#indexContent {
     align-items: center;
     justify-content: center;
 }
+.profile-grid-decore > div {
+    position: relative;
+}
+.profile-grid-decore > div i:nth-child(1) {
+    position: absolute;
+    right: -12px;
+    top: -7px;
+}
+.profile-grid-decore > div i:nth-child(2) {
+    font-size: 30px;
+}
 .profile-grid-holder .profile-grid-decore {
     position: absolute;
     right: 0;
@@ -1481,17 +1493,30 @@ section#indexContent {
     visibility: visible;
     opacity: .7;
 }
+.profile-grid-holder:hover .profile-grid-decore {
+    color: #0074E1
+}
+.profile-grid-holder:hover {
+    background-color: #F2F7FF;
+}
 .grid-gallery-item-control {
     padding: 15px 10px 5px;
     display: flex;
     justify-content: center;
+    position: relative;
 }
-.remove--item {
+/* .grid-gallery-item-control.active {
+    display: flex;
+} */
+
+.remove--item:hover {
     color: #F6765A;
 }
 .rotate--item {
-    color: #F79E02;
     margin-left: 10px;
+}
+.rotate--item:hover {
+    color: #F79E02;
 }
 .remove--item, .rotate--item {
     background-color: transparent;
@@ -1501,6 +1526,59 @@ section#indexContent {
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: #C4C4C4;
+}
+.contract-grid-head {
+    display: flex;
+    justify-content: space-between;
+    background-color: #FAFCFF;
+    /* padding: 14px 0 */
+    font-size: 14px;
+    font-family: Poppins_sb;
+    color: #414141
+}
+.contract-grid-head >div:nth-child(1),.contract-grid-body >div:nth-child(1){
+    width: 125px
+}
+.contract-grid-head >div:nth-child(2), .contract-grid-body >div:nth-child(2){
+    width: 490px
+}
+.contract-grid-head >div:nth-child(3), .contract-grid-body >div:nth-child(3){
+    width: 161px
+}
+.contract-grid-head >div:nth-child(4), .contract-grid-body >div:nth-child(4){
+    width: 120px
+}
+.contract-grid-body {
+    display: flex;
+    justify-content: space-between;
+    /* padding: 14px 0 */
+    font-size: 14px;
+    font-family: Poppins_r;
+    color: #7A7A7A
+}
+.contract-grid-head div,.contract-grid-body div {
+    height: 48px;
+    display: flex;
+    align-items: center;
+}
+.contract-space {
+    padding: 0 14px
+}
+.done, .remove-contract {
+    position: relative;
+}
+.done div, .remove-contract div {
+    position: absolute;
+    left: 0;
+    top: 24px;
+    width:80px;
+    visibility: hidden;
+    opacity: .0;
+}
+.done:hover ~ div {
+    visibility: visible;
+    opacity: .1;
 }
 /*========= myinfo =========*/
 /*========= login =========*/

@@ -12,8 +12,8 @@
     </div>
     <div class="container">
         <div class="grid-profile-linklist">
-            <a href="" class="grid-profile-link grid-profile-link-active">Profil Məlumatları</a>
-            <a href="" class="grid-profile-link">Müqavilələrim</a>
+            <a href="{{route("myinfo")}}" class="grid-profile-link grid-profile-link-active">Profil Məlumatları</a>
+            <a href="{{route("mycontracts")}}" class="grid-profile-link">Müqavilələrim</a>
             <a href="{{route("photogallery")}}" class="grid-profile-link">Foto Qalareya</a>
             <a href="" class="grid-profile-link">Hesab</a>
         </div>

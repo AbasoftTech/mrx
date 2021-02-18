@@ -26,6 +26,7 @@ Route::get("/addcontract", [MainController::class, "addcontract"])->name("addcon
 Route::get("/contractresult", [MainController::class, "contractresult"])->name("contractresult");
 Route::get("/contact", [MainController::class, "contact"])->name("contact");
 Route::get("/photogallery", [MainController::class, "photogallery"])->name("photogallery");
+Route::get("/mycontracts", [MainController::class, "mycontracts"])->name("mycontracts");
 
 
 Route::group(['prefix' => 'admin'], function () {

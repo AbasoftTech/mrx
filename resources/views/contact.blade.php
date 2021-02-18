@@ -32,7 +32,7 @@
                     </div>
                     <div class="mt-4">
                         <span><i class="fas fa-map-marker-alt"></i></span>
-                        <span class="ms-4">Badamdar, 305-ci döngə</span>
+                        <span class="ms-4">Bakı şəh. Heydər Əliyev pros. 48</span>
                     </div>
                 </div>
             </div>
@@ -61,6 +61,9 @@
                 </form>
             </div>
         </div>
+    </div>
+    <div class="container">
+        <iframe class="mt-5" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3038.518949640912!2d49.870330614804566!3d40.39735306474268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307d389acbf375%3A0x7e90b890fa499c63!2s48%20Heydar%20Aliyev%20Ave%2C%20Baku%2C%20Azerbaijan!5e0!3m2!1sen!2s!4v1613556699544!5m2!1sen!2s" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
     </div>
 </section>
 @endsection

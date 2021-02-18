@@ -1,3 +1,4 @@
+
 // index slider
 var indexOwl = $('.owl-carousel.owl-index-carousel');
 $('.owl-carousel.owl-index-carousel').owlCarousel({
@@ -388,31 +389,62 @@ for (let index = 0; index < list.length; index++) {
 // add a single listener on list item
 
 // === rotate & remove control btns ===
-function remove() {}
-function rotate() {}
+
 
 
 var profGridGal = document.getElementsByClassName('profile-grid-gallery')[0];
 var addNewGalItem = document.getElementsByClassName('add-new-gal-item')[0];
-
+// var control = document.getElementsByClassName('grid-gallery-item-control')[0];
+// var controller = "<div class='grid-gallery-item-control'></div>";
+var remove = function removeNow(e) {
+    // e.preventDefault();
+    e.target.parentElement.parentElement.parentElement.remove()
+}
+var rotate = function rotateNow(e) {
+    // e.preventDefault();
+    var deg = 45;
+    // all = deg + 45;
+    // var all = 45;
+    console.log(e.path)
+    e.path[1].parentElement.previousElementSibling.style.transform = `rotate(${deg}deg)`
+    // e.target.parentElement.parentElement.previousElementSibling.style.transform = `rotate(${deg}deg)`;
+    // deg = parseInt(deg) + parseInt('90');
+    console.log(deg)
+}
 function uploadGal(input) {
     if (input.files && input.files[0]) {
-    var reader = new FileReader();
 
-    reader.onload = function(e) {
+        for(i=0;i<input.files.length; i++) {
+        var reader = new FileReader();
+        reader.onload = function(e) {
+
+        console.log(e)
         var gal = document.createElement('div')
         gal.className = "grid-gallery-item";
-    //   $('#blah').attr('src', e.target.result);
         var img = document.createElement('img');
+        console.log(input.files)
         img.src = e.target.result;
         gal.append(img);
+        var removeBtn = document.createElement("button");
+        var rotateBtn = document.createElement("button");
+        removeBtn.className = "remove--item";
+        rotateBtn.className = "rotate--item";
+        removeBtn.innerHTML = '<i class="fas fa-trash mb-2"></i><span>Sil</span>';
+        rotateBtn.innerHTML = '<i class="fas fa-redo-alt mb-2"></i><span>Çevir</span>';
+        removeBtn.onclick = remove;
+        rotateBtn.onclick = rotate;
+        removeBtn.setAttribute('type', 'button');
+        rotateBtn.setAttribute('type', 'button');
+        var controller = document.createElement('div');
+        controller.className = "grid-gallery-item-control";
+        controller.append(removeBtn);
+        controller.append(rotateBtn);
+        gal.append(controller);
+        // control.classList.add('active')
         profGridGal.insertBefore(gal,addNewGalItem)
     }
-    reader.readAsDataURL(input.files[0]);
+        reader.readAsDataURL(input.files[i]);
+    }
   }
 }
-
-// $("#imgInp").change(function() {
-//     readURL(this);
-//   });
 // === rotate & remove control btns ===
