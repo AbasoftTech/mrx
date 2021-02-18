@@ -66,6 +66,10 @@
         }
     }
 </script>
+<script src="{{asset("frontend/JS/dropzone.js")}}"></script>
+<script>
+    Dropzone.prototype.defaultOptions.dictDefaultMessage = "Faylı seçmək üçün kliklə";
+</script>
 <script src="{{asset("frontend/JS/script.js")}}"></script>
 <script src="{{asset("frontend/JS/bootstrap.min.js")}}"></script>
 {{-- <script src="{{asset("frontend/JS/calendar.js")}}"></script> --}}

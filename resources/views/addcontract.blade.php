@@ -10,5 +10,17 @@
             <a class="breadcrumb-mrx-link breadcrumb-mrx-link-current">Müqavilə Əlavə Et</a>
         </div>
     </div>
+    <div class="container">
+        <h3 class="contract-title">Müqavilənin Surəti</h3>
+        <form action="/file-upload"
+            class="dropzone"
+            id="my-awesome-dropzone">
+        </form>
+        <h3 class="contract-title">Əmlakın Surəti</h3>
+        <form action="/file-upload"
+            class="dropzone"
+            id="my-awesome-dropzone">
+        </form>
+    </div>
 </section>
 @endsection

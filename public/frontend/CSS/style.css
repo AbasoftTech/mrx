@@ -115,17 +115,26 @@ button {
 }
 
 .system-clickable-color-3 {
-    background-color: transparent;
-    border: 1px solid #0074E1;
-    color: #0074E1
+    background-color: #F6765A;
+    border: 1px solid transparent;
 }
 
 .system-clickable-color-3:hover {
-    background-color: #0074E1;
+    background-color: #F6765A;
     border: 1px solid transparent;
+    box-shadow: 0 6px 9px #F6765A
+
+}
+.system-clickable-color-4 {
+    background-color: transparent;
+    border: 1px solid #F6765A;
+    color: #F6765A
+}
+.system-clickable-color-4:hover {
+    background-color: #F6765A;
+    border: 1px solid #F6765A;
     color: #fff
 }
-
 .system-input {
     border: 1px solid #C7C7C7;
     outline: 0;
@@ -1291,19 +1300,24 @@ section#indexContent {
 }
 
 .profile-tab-content {
-    width: 386px;
+    /* width: 386px; */
 }
 
 .profile-tab {
     font-family: Poppins_sb;
     font-size: 14px;
-    padding: 15px 20px;
+    padding: 15px 0 15px 20px;
     border-bottom: 0.5px solid #F4F4F4;
     color: #7A7A7A;
     position: relative;
     transition: .3s ease-in-out;
 }
-
+.profile-tab i {
+    width: 25px
+}
+.profile-tab:hover  {
+    color: #0074E1;
+}
 .profile-tab.tab.tab-active {
     color: #0074E1;
 }
@@ -1318,9 +1332,18 @@ section#indexContent {
     top: 0;
     transition: .3s ease-in-out;
 }
-
+.profile-tab:hover:after {
+    /* content: ''; */
+    position: absolute;
+    width: 4px;
+    height: 0;
+    background-color: #0074E1;
+    left: 0;
+    top: 0;
+    transition: .3s ease-in-out;
+}
 .profile-tab.tab.tab-active::after {
-    content: '';
+    /* content: ''; */
     position: absolute;
     width: 4px;
     height: 100%;
@@ -1567,20 +1590,59 @@ section#indexContent {
 }
 .done, .remove-contract {
     position: relative;
+    background-color: transparent;
+    border: 0;
+    color: #7A7A7A
 }
 .done div, .remove-contract div {
     position: absolute;
-    left: 0;
-    top: 24px;
+    left: 10px;
+    top: 12px;
     width:80px;
     visibility: hidden;
     opacity: .0;
+    font-family: Raleway_b;
+    font-size: 12px;
 }
-.done:hover ~ div {
+.done:hover  div, .remove-contract:hover div {
     visibility: visible;
-    opacity: .1;
+    opacity: 10;
+    z-index: 111;
+}
+.done:hover {
+    color: #81DA9F;
+}
+.remove-contract:hover {
+    color: #F6765A
+}
+.remove-text {
+    font-family: Raleway_m;
+    font-size: 14px;
+    color: #7A7A7A
+}
+.modal-remove-dialog {
+    max-width: 590px !important;
+}
+.modal-remove-dialog .modal-content {
+    padding:15px 25px 20px 40px
+}
+.modal-remove-dialog .modal-header {
+    border-bottom: 0;
+}
+.done-header {
+    font-size: 21px;
+    font-family: Poppins_b;
+    color: #F6765A
 }
 /*========= myinfo =========*/
+/*========= add contract =========*/
+.contract-title {
+    font-size: 21px;
+    font-family: Poppins_b;
+    color: #414141
+}
+/*========= add contract =========*/
+
 /*========= login =========*/
 /* .log-reg-form input {
     color: #A9A9A9;
