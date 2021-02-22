@@ -169,7 +169,7 @@
                 <div class="search--contract--input--holder">
                     <img src="{{asset('frontend/IMAGE/icons/hashtag.svg')}}" class="code_contract" alt="">
                     <input type="text" placeholder="Müqavilə Axtar" class="search--contract--input-box">
-                    <button class="go--for--contract"><i class="fas fa-search text-white"></i></button>
+                    <a href="{{route('contractresult')}}" class="go--for--contract"><i class="fas fa-search text-white"></i></a>
                 </div>
             </div>
           </div>

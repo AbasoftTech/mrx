@@ -8576,11 +8576,11 @@ var FullCalendar = (function (exports) {
 
     var ToolbarSection = /** @class */ (function (_super) {
         __extends(ToolbarSection, _super);
-
         function ToolbarSection() {
             return _super !== null && _super.apply(this, arguments) || this;
         }
         ToolbarSection.prototype.render = function () {
+            // console.log(this, 'this')
             var _this = this;
             var children = this.props.widgetGroups.map(function (widgetGroup) {
                 return _this.renderWidgetGroup(widgetGroup);
@@ -8591,7 +8591,10 @@ var FullCalendar = (function (exports) {
         };
         ToolbarSection.prototype.renderWidgetGroup = function (widgetGroup) {
             var props = this.props;
-            console.log(this.props, 'props')
+            // console.log(this.props.title, 'props')
+            // for(var i=0; i<this.props.length;i++) {
+            //     console.log(this.props[i], '')
+            // }
             var theme = this.context.theme;
             var children = [];
             var isOnlyButtons = true;

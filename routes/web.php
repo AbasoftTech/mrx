@@ -27,6 +27,9 @@ Route::get("/contractresult", [MainController::class, "contractresult"])->name("
 Route::get("/contact", [MainController::class, "contact"])->name("contact");
 Route::get("/photogallery", [MainController::class, "photogallery"])->name("photogallery");
 Route::get("/mycontracts", [MainController::class, "mycontracts"])->name("mycontracts");
+Route::get("/newsdetail", [MainController::class, "newsdetail"])->name("newsdetail");
+Route::get("/addgoon", [MainController::class, "addgoon"])->name("addgoon");
+Route::get("/account", [MainController::class, "account"])->name("account");
 
 
 Route::group(['prefix' => 'admin'], function () {

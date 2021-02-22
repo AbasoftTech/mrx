@@ -181,11 +181,33 @@
   min-height: 169px;
   max-width: 455px;
   position: relative;
-  border: 2px dashed #0074E1;
   border-radius: 8px;
-  background: #F2F7FF url('../IMAGE/icons/dropzone.png') no-repeat center 15px;
+  border: 2px dashed #7A7A7A;
+  background:  url('../IMAGE/icons/dropzone.png') no-repeat center 15px;
+  border: 2px dashed #7A7A7A;
+  background-color: #F4F4F4;
+  filter: grayscale(1.9);
   padding: 20px 20px;
-  box-shadow: 1px 1px 6px #0974d8;
+  /* transition: .7s all ease-in-out */
+}
+.dropzone:hover {
+    border: 2px dashed #0074E1;
+    background-color: #F2F7FF;
+    box-shadow: 0 10px 30px rgba(0, 116, 216, 0.25);
+    filter: unset;
+}
+/* .dropzone.blued {
+  border: 2px dashed #0074E1;
+
+} */
+/* .dropzone:hover {
+    animation: drop .7s infinite
+} */
+@keyframes drop {
+    50% {
+    border: 2px solid #0074E1;
+
+    }
 }
   .dropzone.dz-clickable {
     cursor: pointer; }
@@ -218,11 +240,15 @@
       margin: auto;
      }
   .dropzone .dz-preview {
-    position: relative;
+    position: absolute;
     display: inline-block;
     vertical-align: top;
     margin: 16px;
-    min-height: 100px; }
+    min-height: 100px;
+    right: -192px;
+    min-height: 100px;
+    top: -20px;
+    }
     .dropzone .dz-preview:hover {
       z-index: 1000; }
       .dropzone .dz-preview:hover .dz-details {

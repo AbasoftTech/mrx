@@ -55,7 +55,7 @@
 <script>
     var years = document.getElementsByClassName('years')[0];
     var tStamp = new Date(1000).getFullYear() + 1;
-    // console.log(tStamp +  1);
+    console.log(new Date(1000));
     var now = new Date().getFullYear();
     var month = new Date('January')
     console.log(month);
@@ -72,8 +72,48 @@
 </script>
 <script src="{{asset("frontend/JS/script.js")}}"></script>
 <script src="{{asset("frontend/JS/bootstrap.min.js")}}"></script>
-{{-- <script src="{{asset("frontend/JS/calendar.js")}}"></script> --}}
+<script src="{{asset("frontend/JS/calendar.js")}}"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      initialView: 'dayGridMonth'
+    });
+    calendar.render();
+  });
+</script>
 <script src="{{asset("frontend/JS/datepicker.js")}}"></script>
+<script src="{{asset("frontend/JS/moment.js")}}"></script>
+<script>
+    // console.log(moment().format('MMMM Do YYYY, h:mm:ss a'), 'var');
+    // console.log(moment("20120620", "YYYYMMDD").fromNow(), 'now');
+    // console.log(moment().startOf('day').fromNow(), 'cal');
+    function monthDiff(d1, d2) {
+    var months;
+    months = (d2.getFullYear() - d1.getFullYear()) * 12;
+    months -= d1.getMonth();
+    months += d2.getMonth();
+    return months <= 0 ? 0 : months;
+}
+
+function test(d1, d2) {
+    var diff = monthDiff(d1, d2);
+    console.log(
+        d1.toISOString().substring(0, 10),
+        "to",
+        d2.toISOString().substring(0, 10),
+        ":",
+        diff
+    );
+}
+
+test(
+    new Date(1945, 10, 4), // November 4th, 2008
+    new Date(2010, 2, 12)  // March 12th, 2010
+);
+    // moment().format('MMMM Do YYYY, h:mm:ss a')
+</script>
+
 {{-- <script>
 
     document.addEventListener('DOMContentLoaded', function() {

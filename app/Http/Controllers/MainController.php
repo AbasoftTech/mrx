@@ -46,6 +46,10 @@ class MainController extends Controller
     {
         return view("addcontract");
     }
+    public function contractresult()
+    {
+        return view("contractresult");
+    }
     public function contact()
     {
         return view("contact");
@@ -57,5 +61,17 @@ class MainController extends Controller
     public function mycontracts()
     {
         return view("mycontracts");
+    }
+    public function newsdetail()
+    {
+        return view("newsdetail");
+    }
+    public function addgoon()
+    {
+        return view("addgoon");
+    }
+    public function account()
+    {
+        return view("account");
     }
 }

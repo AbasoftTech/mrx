@@ -100,6 +100,50 @@ if (typeof owlRieltor[0] != 'undefined') {
     var at = owlRieltor[0].children[0].children[0].children.length - 12;
     document.getElementsByClassName('total-owl-page')[0].innerText = at
 }
+
+
+var owlNewsDetails = $('.owl-carousel.owl-news-detail-carousel');
+
+$('.owl-carousel.owl-news-detail-carousel').owlCarousel({
+    loop: true,
+    margin: 19,
+    responsive: {
+        0: {
+            items: 1,
+            // dotsEach: 2
+        },
+        600: {
+            items: 2
+        },
+        1000: {
+            items: 4,
+            dots: true,
+            dotsEach: 3,
+            nav: true,
+            navText: ["<img src='frontend/IMAGE/icons/arrow-rieltor.svg'>", "<img src='frontend/IMAGE/icons/arrow-rieltor.svg'>"]
+        }
+    }
+})
+owlNewsDetails.on('changed.owl.carousel', function (e) {
+    // console.log("currentRelated: ", e.relatedTarget.current())
+    // console.log("current: ", e.item.index - 1) //same
+    // console.log("total: ", e.item.count) //total
+    if (!e.namespace) {
+        return;
+    }
+    var slides = e.relatedTarget;
+    // $('.count').text(slides.relative(slides.current()) + 1 + '/' + slides.items().length);
+    document.getElementsByClassName('total-owl-page')[0].innerText = `${e.item.count}`
+    document.getElementsByClassName('current-owl-page')[0].innerText = `${slides.relative(slides.current())+1}`
+    // document.getElementsByClassName('total-count')[0].innerText = `/ 0${e.item.count}`
+    // document.getElementsByClassName('per-count')[0].innerText = `0${e.relatedTarget.current() -1}`
+})
+
+if (typeof owlNewsDetails[0] != 'undefined') {
+    var at = owlNewsDetails[0].children[0].children[0].children.length - 12;
+    document.getElementsByClassName('total-owl-page')[0].innerText = at
+}
+
 // search contract input focus script
 document.getElementsByClassName('search--contract--input-box')[0].addEventListener('focus', focusOn);
 
@@ -160,9 +204,8 @@ for (var i = 0; i < mySelect.length; i++) {
         // e.stopPropagation();
     }
     cloneSelect.addEventListener("click", function () {
-
         if (!this.nextSibling.nextSibling.classList.contains('active')) {
-            this.nextSibling.nextSibling.classList.add('active')
+            this.nextSibling.nextSibling.classList.add('active');
             this.parentElement.getElementsByClassName('clone-select')[0].style.border = '1px solid transparent'
             this.parentElement.getElementsByClassName('clone-select')[0].style.backgroundColor = '#F2F7FF'
             this.parentElement.style.border = '1px solid #0074E1'
@@ -303,6 +346,22 @@ if (tab) {
     }
 }
 // === tab ===
+// === balans tab ===
+var balansTab = document.querySelectorAll(".choose-balans");
+
+if (balansTab) {
+    for (i = 0; i < balansTab.length; i++) {
+        balansTab[i].addEventListener('click', function (e) {
+            e.preventDefault();
+            var active_tab = document.getElementsByClassName("active");
+            active_tab[0].className = active_tab[0].className.replace("active", " ");
+            this.classList.add("active");
+        })
+    }
+}
+// === balans tab ===
+
+
 
 
 // ===check rieltor img ===
@@ -331,36 +390,49 @@ for (let index = 0; index < addColumn.length; index++) {
     var count = 1
     addColumn[index].addEventListener('click', function () {
         // segment1 = this.previousSibling.previousSibling;
-        var segment2 = `
-        <div class="segment mt-4">
-        <div style="width: 200px; height: 47px">
-            <div class="my-select myselec-2">
-                <select name="" class="" id="">
-                    <option value="Prefix" class="selected">Prefix</option>
-                    <option value="050">— 050</option>
-                    <option value="051">— 051</option>
-                    <option value="055">— 055</option>
-                    <option value="070">— 070</option>
-                </select>
-                <div class="clone-select clone-select-border"></div>
-                <div class="clone-option"></div>
-            </div>
-        </div>
-        <label for="" class="num-label">
-            <input name="top" type="number" class="insert-number" maxlength="3" pattern="[0-9]" name="" id="1">
-            <input name="middle" type="number" class="insert-number index0" maxlength="2" pattern="[0-9]" name="" id="2">
-            <input name="below" type="number" class="insert-number index0" maxlength="2" pattern="[0-9]" name="" id="3">
-        </label>
-    </div>
-        `;
-        segment1 = this.parentElement.getElementsByClassName('segment')[i]
-        console.log(segment1, segment2)
+    //     var segment2 = `
+    //     <div class="segment mt-4">
+    //     <div style="width: 200px; height: 47px">
+    //         <div class="my-select myselec-2">
+    //             <select name="" class="" id="">
+    //                 <option value="Prefix" class="selected">Prefix</option>
+    //                 <option value="050">— 050</option>
+    //                 <option value="051">— 051</option>
+    //                 <option value="055">— 055</option>
+    //                 <option value="070">— 070</option>
+    //             </select>
+    //             <div class="clone-select clone-select-border"></div>
+    //             <div class="clone-option"></div>
+    //         </div>
+    //     </div>
+    //     <label for="" class="num-label">
+    //         <input name="top" type="number" class="insert-number" maxlength="3" pattern="[0-9]" name="" id="1">
+    //         <input name="middle" type="number" class="insert-number index0" maxlength="2" pattern="[0-9]" name="" id="2">
+    //         <input name="below" type="number" class="insert-number index0" maxlength="2" pattern="[0-9]" name="" id="3">
+    //     </label>
+    // </div>
+    //     `;
+        segment1 = this.parentElement.getElementsByClassName('segment')[0]
+        // console.log(segment1, segment2)
         // console.log(typeof segment)
         if (count < 4) {
-            // var segmentClone = segment.cloneNode(true);
-            // this.parentElement.append(segment2)
-            this.parentElement.insertAdjacentHTML('beforebegin', segment2)
-
+            var segmentClone = segment1.cloneNode(true);
+            this.parentElement.append(segmentClone);
+            console.log(segmentClone.getElementsByClassName('clone-select'));
+            var g = segmentClone.getElementsByClassName('clone-select');
+            for(i=0;i<g.length; i++) {
+                g[i].onclick = function() {
+                    if(!this.nextSibling.nextSibling.classList.contains('active')){
+                        this.nextSibling.nextSibling.classList.add('active');
+                    }
+                    else {
+                        this.nextSibling.nextSibling.classList.remove('active');
+                    }
+                }
+                // g[i].onclick = function() {
+                // }
+            }
+            // this.parentElement.insertAdjacentHTML('beforebegin', segmentClone)
         }
         count++
     })
@@ -387,6 +459,8 @@ for (let index = 0; index < list.length; index++) {
     list[index].addEventListener('mouseover', clickHandler);
 }
 // add a single listener on list item
+
+
 
 // === rotate & remove control btns ===
 

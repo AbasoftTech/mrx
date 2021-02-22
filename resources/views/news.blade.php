@@ -18,7 +18,7 @@
                     <div class="media-header">
                         <div class="media-img">
                             <img src="{{asset("frontend/IMAGE/media-img.png")}}" alt="media-img">
-                            <div class="media-title"><a href="">Gələn il ünvanlı sosial yardım üçün 257 000 manat ayrılacaq</a></div>
+                            <div class="media-title"><a href="{{route("newsdetail")}}">Gələn il ünvanlı sosial yardım üçün 257 000 manat ayrılacaq</a></div>
                         </div>
                     </div>
                     <div class="media-body">
@@ -27,8 +27,8 @@
                             <div class="fade-box"></div>
                         </p>
                         <div class="media-footer">
-                            <div class="media-category media-c-1"><a href=""><img src="{{asset("frontend/IMAGE/icons/media-dot-1.svg")}}" alt="">Kateqoriya 1</a></div>
-                            <div class="media-more-details"><a href="">Ətraflı</a></div>
+                            <div class="media-category media-c-1"><a href="{{route("newsdetail")}}"><img src="{{asset("frontend/IMAGE/icons/media-dot-1.svg")}}" alt="">Kateqoriya 1</a></div>
+                            <div class="media-more-details"><a href="{{route("newsdetail")}}">Ətraflı</a></div>
                         </div>
                     </div>
                 </div>
@@ -38,15 +38,14 @@
                     <div class="media-header">
                         <div class="media-img">
                             <img src="{{asset("frontend/IMAGE/media-img-2.png")}}" alt="media-img">
-                            <div class="media-title"><a href="">Gələn il ünvanlı sosial yardım üçün 257 000 manat ayrılacaq</a></div>
+                            <div class="media-title"><a href="{{route("newsdetail")}}">Gələn il ünvanlı sosial yardım üçün 257 000 manat ayrılacaq</a></div>
                         </div>
-
                     </div>
                     <div class="media-body">
                         <p class="media-body-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse</p>
                         <div class="media-footer">
-                            <div class="media-category media-c-2"><a href=""><img src="{{asset("frontend/IMAGE/icons/media-dot-2.svg")}}" alt="">Kateqoriya 1</a></div>
-                            <div class="media-more-details"><a href="">Ətraflı</a></div>
+                            <div class="media-category media-c-2"><a href="{{route("newsdetail")}}"><img src="{{asset("frontend/IMAGE/icons/media-dot-2.svg")}}" alt="">Kateqoriya 1</a></div>
+                            <div class="media-more-details"><a href="{{route("newsdetail")}}">Ətraflı</a></div>
                         </div>
                     </div>
                 </div>
@@ -56,14 +55,14 @@
                     <div class="media-header">
                         <div class="media-img">
                             <img src="{{asset("frontend/IMAGE/media-img-3.png")}}" alt="media-img">
-                            <div class="media-title"><a href="">Gələn il ünvanlı sosial yardım üçün 257 000 manat ayrılacaq</a></div>
+                            <div class="media-title"><a href="{{route("newsdetail")}}">Gələn il ünvanlı sosial yardım üçün 257 000 manat ayrılacaq</a></div>
                         </div>
                     </div>
                     <div class="media-body">
                         <p class="media-body-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse</p>
                         <div class="media-footer">
-                            <div class="media-category media-c-3"><a href=""><img src="{{asset("frontend/IMAGE/icons/media-dot-3.svg")}}" alt="">Kateqoriya 1</a></div>
-                            <div class="media-more-details"><a href="">Ətraflı</a></div>
+                            <div class="media-category media-c-3"><a href="{{route("newsdetail")}}"><img src="{{asset("frontend/IMAGE/icons/media-dot-3.svg")}}" alt="">Kateqoriya 1</a></div>
+                            <div class="media-more-details"><a href="{{route("newsdetail")}}">Ətraflı</a></div>
                         </div>
                     </div>
                 </div>
@@ -73,14 +72,14 @@
                     <div class="media-header">
                         <div class="media-img">
                             <img src="{{asset("frontend/IMAGE/media-img-3.png")}}" alt="media-img">
-                            <div class="media-title"><a href="">Gələn il ünvanlı sosial yardım üçün 257 000 manat ayrılacaq</a></div>
+                            <div class="media-title"><a href="{{route("newsdetail")}}">Gələn il ünvanlı sosial yardım üçün 257 000 manat ayrılacaq</a></div>
                         </div>
                     </div>
                     <div class="media-body">
                         <p class="media-body-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse</p>
                         <div class="media-footer">
-                            <div class="media-category media-c-3"><a href=""><img src="{{asset("frontend/IMAGE/icons/media-dot-3.svg")}}" alt="">Kateqoriya 1</a></div>
-                            <div class="media-more-details"><a href="">Ətraflı</a></div>
+                            <div class="media-category media-c-3"><a href="{{route("newsdetail")}}"><img src="{{asset("frontend/IMAGE/icons/media-dot-3.svg")}}" alt="">Kateqoriya 1</a></div>
+                            <div class="media-more-details"><a href="{{route("newsdetail")}}">Ətraflı</a></div>
                         </div>
                     </div>
                 </div>
@@ -90,14 +89,14 @@
                     <div class="media-header">
                         <div class="media-img">
                             <img src="{{asset("frontend/IMAGE/media-img-3.png")}}" alt="media-img">
-                            <div class="media-title"><a href="">Gələn il ünvanlı sosial yardım üçün 257 000 manat ayrılacaq</a></div>
+                            <div class="media-title"><a href="{{route("newsdetail")}}">Gələn il ünvanlı sosial yardım üçün 257 000 manat ayrılacaq</a></div>
                         </div>
                     </div>
                     <div class="media-body">
                         <p class="media-body-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse</p>
                         <div class="media-footer">
-                            <div class="media-category media-c-3"><a href=""><img src="{{asset("frontend/IMAGE/icons/media-dot-3.svg")}}" alt="">Kateqoriya 1</a></div>
-                            <div class="media-more-details"><a href="">Ətraflı</a></div>
+                            <div class="media-category media-c-3"><a href="{{route("newsdetail")}}"><img src="{{asset("frontend/IMAGE/icons/media-dot-3.svg")}}" alt="">Kateqoriya 1</a></div>
+                            <div class="media-more-details"><a href="{{route("newsdetail")}}">Ətraflı</a></div>
                         </div>
                     </div>
                 </div>
@@ -107,13 +106,13 @@
                     <div class="media-header">
                         <div class="media-img">
                             <img src="{{asset("frontend/IMAGE/media-img-3.png")}}" alt="media-img">
-                            <div class="media-title"><a href="">Gələn il ünvanlı sosial yardım üçün 257 000 manat ayrılacaq</a></div>
+                            <div class="media-title"><a href="{{route("newsdetail")}}">Gələn il ünvanlı sosial yardım üçün 257 000 manat ayrılacaq</a></div>
                         </div>
                     </div>
                     <div class="media-body">
                         <p class="media-body-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse</p>
                         <div class="media-footer">
-                            <div class="media-category media-c-3"><a href=""><img src="{{asset("frontend/IMAGE/icons/media-dot-3.svg")}}" alt="">Kateqoriya 1</a></div>
+                            <div class="media-category media-c-3"><a href="{{route("newsdetail")}}"><img src="{{asset("frontend/IMAGE/icons/media-dot-3.svg")}}" alt="">Kateqoriya 1</a></div>
                             <div class="media-more-details"><a href="">Ətraflı</a></div>
                         </div>
                     </div>

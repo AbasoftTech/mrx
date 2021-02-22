@@ -15,13 +15,13 @@
             <a href="{{route("myinfo")}}" class="grid-profile-link">Profil Məlumatları</a>
             <a href="{{route("mycontracts")}}" class="grid-profile-link grid-profile-link-active">Müqavilələrim</a>
             <a href="{{route("photogallery")}}" class="grid-profile-link">Foto Qalareya</a>
-            <a href="" class="grid-profile-link">Hesab</a>
+            <a href="{{route("account")}}" class="grid-profile-link">Hesab</a>
         </div>
         <div class="d-flex mt-5">
             <div class="profile-sidebar">
                 <div class="profile-tablist tablist">
                     <div class="profile-tab tab tab-active" data-id="0">
-                        <i class="fas fa-user-alt"></i>
+                        <i class="fas fa-reply-all"></i>
                         Bütün Müqavilələr (512)
                     </div>
                     <div class="profile-tab tab" data-id="1">
