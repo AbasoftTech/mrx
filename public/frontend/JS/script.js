@@ -156,6 +156,12 @@ function focusOn() {
 // ===custom select===
 var allOption = document.querySelectorAll('.my-select select option');
 var mySelect = document.querySelectorAll('.my-select');
+var months31 = ['Yanvar',"Mart", "May", "İyul", "Avqust", "Oktyabr","Dekabr"];
+var months30 = ['Aprel',"İyun", "May","Sentyabr",'Noyabr'];
+var $day = document.querySelectorAll(".day");
+var $calDays = document.querySelectorAll(".cal-days")[0];
+
+
 // var cloneSelect = document.querySelectorAll('.clone-select')[0];
 // var cloneOption = document.querySelectorAll('.clone-option')[0];
 var cloneSelect, cloneOption;
@@ -164,18 +170,102 @@ for (var i = 0; i < mySelect.length; i++) {
     var select = mySelect[i].getElementsByTagName('select')[0];
     cloneSelect = mySelect[i].getElementsByClassName("clone-select")[0];
     cloneOption = mySelect[i].getElementsByClassName("clone-option")[0];
+    var dateArr = [];
+
     for (let i = 0; i < select.options.length; i++) {
         var div = document.createElement('div');
+        var span = document.createElement('span');
+        var line = document.createElement('span');
+        line.className = "pre-line"
         if (!select.options[i].classList.contains('selected')) {
-            div.innerHTML = select.options[i].value;
-            cloneOption.append(div);
+
+            span.innerHTML = select.options[i].value;
+            div.append(span)
+            if(select.parentElement.classList.contains('prefix')) {
+                div.className = "preline-exs"
+                console.log(line)
+                div.append(line);
+            }
         } else {
             cloneSelect.innerHTML = select.options[i].value;
         }
+        cloneOption.append(div);
+
+        if(mySelectI.parentElement.classList.contains("calendar-select")) {
+            div.setAttribute("id", select.options[i].getAttribute("id"))
+        }
         div.addEventListener('click', function () {
-            console.log('eyo');
-            this.parentElement.parentElement.getElementsByClassName('clone-select')[0].innerHTML = this.innerHTML
+            this.parentElement.parentElement.getElementsByClassName('clone-select')[0].innerHTML = this.innerHTML;
+            this.parentElement.classList.remove('active');
+            this.parentElement.parentElement.classList.remove('active');
+            this.parentElement.previousElementSibling.classList.remove('active');
+            // this.parentElement.parentElement.style.border = '1px solid transparent';
+            // this.parentElement.parentElement.style.backgroundColor = "transparent"
+            // this.parentElement.previousElementSibling.style.border = '1px solid #C7C7C7';
+            // this.parentElement.previousElementSibling.style.backgroundColor = '#fff';
+            for(i=0; i< months31.length; i++) {
+                if(this.innerHTML == months30[i]) {
+                //    $day[$day.length - 1].style.display = 'none';
+                [...$day].splice($day.length-0,30)
+                // console.log($day.length)
+                }
+                if(this.innerHTML == months31[i]) {
+                    $day[$day.length - 1].style.display = 'inline-block'
+                }
+
+                var $dayFebruary =  [...$day].splice($day.length-3,3);
+                for(var j = 0; j < $dayFebruary.length; j++) {
+                    if(this.innerHTML === "Fevral") {
+                        $dayFebruary[j].style.display = 'none'
+                    }
+                    // else {
+                    //     $dayFebruary[j].style.display = 'inline-block'
+                    // }
+                }
+            }
+            // if(this.parentElement.parentElement.classList.contains('myselect1')) {
+
+            //     var month = this.innerHTML
+            // }
+            // else {
+            //     var year = this.innerHTML
+            // }
+            if(dateArr.length >= 2) {
+                dateArr = []
+            }
+            if(!dateArr.includes(this.getAttribute("id"))) {
+                dateArr.push(this.getAttribute("id"))
+            }
+            // console.log(dateArr)
+            // if(typeof dateArr[dateArr.length] != "undefined") {
+
+            // }
+            // else {console.log('has undefined')}
+            if(dateArr.length >= 2) {
+                userDate(dateArr);
+            }
+            // console.log(dateArr, 'ids');
         })
+
+        function userDate(array) {
+            // var t = array.sort(function(a, b){return a - b})
+            // console.log(t)
+            // for(var i =0; i < array.length; i++) {
+            //     if(typeof parseInt(array[i]) ===  'number') {
+            //         console.log(date)
+            //         // var fullDate = new Date(date);
+            //         // console.log(fullDate, 'full')
+            //     }
+            // }
+            array.map(datam => {
+                if(typeof parseInt(datam) ===  'number') {
+                    console.log(datam)
+                    var fullDate = new Date(datam);
+                    console.log(fullDate, 'full')
+                }
+            })
+            // console.log(array)
+        }
     }
 
     function clickHandler(e) {
@@ -204,20 +294,27 @@ for (var i = 0; i < mySelect.length; i++) {
         // e.stopPropagation();
     }
     cloneSelect.addEventListener("click", function () {
-        if (!this.nextSibling.nextSibling.classList.contains('active')) {
-            this.nextSibling.nextSibling.classList.add('active');
-            this.parentElement.getElementsByClassName('clone-select')[0].style.border = '1px solid transparent'
-            this.parentElement.getElementsByClassName('clone-select')[0].style.backgroundColor = '#F2F7FF'
-            this.parentElement.style.border = '1px solid #0074E1'
-            this.parentElement.style.backgroundColor = "#F2F7FF"
-        } else {
-            this.nextSibling.nextSibling.classList.remove('active');
-            // console.log(this.parentElement.getElementsByClassName('clone-select')[0], 'this')
-            this.parentElement.getElementsByClassName('clone-select')[0].style.border = '1px solid #C7C7C7';
-            this.parentElement.getElementsByClassName('clone-select')[0].style.backgroundColor = '#fff'
-            this.parentElement.style.border = '1px solid transparent';
-            this.parentElement.style.backgroundColor = "transparent"
-        }
+        document.getElementsByClassName("hidden-search-input")[0].classList.toggle("visible")
+        console.log(this.nextSibling.nextSibling)
+        this.nextSibling.nextSibling.classList.toggle('active')
+        this.parentElement.classList.toggle('active')
+        this.classList.toggle('active')
+        // if (!this.nextSibling.nextSibling.classList.contains('active')) {
+        //     this.nextSibling.nextSibling.classList.add('active');
+        //     calDays.style.zIndex = '1'
+        //     this.parentElement.getElementsByClassName('clone-select')[0].style.border = '1px solid transparent'
+        //     this.parentElement.getElementsByClassName('clone-select')[0].style.backgroundColor = '#F2F7FF'
+        //     this.parentElement.style.border = '1px solid #0074E1'
+        //     this.parentElement.style.backgroundColor = "#F2F7FF"
+        // } else {
+        //     this.nextSibling.nextSibling.classList.remove('active');
+        //     calDays.style.zIndex = '111'
+        //     // console.log(this.parentElement.getElementsByClassName('clone-select')[0], 'this')
+        //     this.parentElement.getElementsByClassName('clone-select')[0].style.border = '1px solid #C7C7C7';
+        //     this.parentElement.getElementsByClassName('clone-select')[0].style.backgroundColor = '#fff'
+        //     this.parentElement.style.border = '1px solid transparent';
+        //     this.parentElement.style.backgroundColor = "transparent"
+        // }
     })
     // var option = document.querySelectorAll('.clone-option div');
     // var l = cloneOption.getElementsByTagName("div").length
@@ -417,17 +514,25 @@ for (let index = 0; index < addColumn.length; index++) {
         // console.log(typeof segment)
         if (count < 4) {
             var segmentClone = segment1.cloneNode(true);
-            this.parentElement.append(segmentClone);
-            console.log(segmentClone.getElementsByClassName('clone-select'));
+            // this.parentElement.append(segmentClone);
+            var parser = new DOMParser();
+            parser.parseFromString(segmentClone, 'text/html');
+            this.parentElement.insertBefore(segmentClone,this.parentElement.childNodes[0])
+            // this.parentElement.insertAdjacentHTML("afterbegin", segmentClone)
+            console.log(segmentClone, 'after')
+
+
             var g = segmentClone.getElementsByClassName('clone-select');
             for(i=0;i<g.length; i++) {
                 g[i].onclick = function() {
-                    if(!this.nextSibling.nextSibling.classList.contains('active')){
-                        this.nextSibling.nextSibling.classList.add('active');
-                    }
-                    else {
-                        this.nextSibling.nextSibling.classList.remove('active');
-                    }
+                    // if(!this.nextSibling.nextSibling.classList.contains('active')){
+                        this.nextSibling.nextSibling.classList.toggle('active');
+                        this.nextSibling.parentElement.classList.toggle('active');
+                        this.classList.toggle('active');
+                    // }
+                    // else {
+                        // this.nextSibling.nextSibling.classList.remove('active');
+                    // }
                 }
                 // g[i].onclick = function() {
                 // }
@@ -516,6 +621,47 @@ function uploadGal(input) {
         gal.append(controller);
         // control.classList.add('active')
         profGridGal.insertBefore(gal,addNewGalItem)
+    }
+        reader.readAsDataURL(input.files[i]);
+    }
+  }
+}
+var uploadedContract = document.getElementsByClassName('uploadedContract');
+function addContract(input) {
+    if (input.files && input.files[0]) {
+        for(i=0;i<input.files.length; i++) {
+        var reader = new FileReader();
+        reader.onload = function(e) {
+        var gal = document.createElement('div')
+        gal.className = "contract-item";
+        var img = document.createElement('img');
+        console.log(input.files)
+        img.src = e.target.result;
+        gal.append(img);
+        var removeBtn = document.createElement("button");
+        var rotateBtn = document.createElement("button");
+        removeBtn.className = "remove--item";
+        rotateBtn.className = "rotate--item";
+        removeBtn.innerHTML = '<i class="fas fa-trash mb-2"></i><span>Sil</span>';
+        rotateBtn.innerHTML = '<i class="fas fa-redo-alt mb-2"></i><span>Çevir</span>';
+        removeBtn.onclick = remove;
+        rotateBtn.onclick = rotate;
+        removeBtn.setAttribute('type', 'button');
+        rotateBtn.setAttribute('type', 'button');
+        var controller = document.createElement('div');
+        controller.className = "contract-item-control";
+        controller.append(removeBtn);
+        controller.append(rotateBtn);
+        gal.append(controller);
+        // control.classList.add('active')
+        for(var j=0; j <uploadedContract.length; j++) {
+            uploadedContract[j].append(gal);
+            if(uploadedContract[j].childNodes.length != 0) {
+                uploadedContract[j].style.overflowY = 'scroll'
+                uploadedContract[j].style.display = 'grid'
+            }
+        }
+        // dropFile.insertBefore(gal,addNewGalItem)
     }
         reader.readAsDataURL(input.files[i]);
     }

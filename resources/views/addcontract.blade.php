@@ -14,12 +14,12 @@
         <div class="contract-area">
             <div class="position-relative">
                 <h3 class="contract-title">Müqavilənin Surəti</h3>
-                <form action="/file-upload"
-                    class="dropzone blued mt-4"
-                    id="my-awesome-dropzone">
-                    <div class="op">
-
+                <form action="/file-upload" class="dropFileHolder mt-3">
+                    <div class="dropFile">
+                        <input type="file" multiple onchange="addContract(this)">
+                        <span>Faylı seçmək üçün kliklə</span>
                     </div>
+                    <div class="uploadedContract"></div>
                 </form>
             </div>
             <h3 class="contract-title mt-5">Əmlakın Surəti</h3>
@@ -29,11 +29,16 @@
                     <li>• Müqavilə bağlanan şəxsin şəxsiyyət vəsiqəsinin sürəti</li>
                 </ul>
             </div>
-            <form action="/file-upload"
-                class="dropzone mt-4"
-                id="my-awesome-dropzone">
-            </form>
-            <div class="mt-5 w-25">
+            <div class="position-relative mt-3">
+                <form action="/file-upload" class="dropFileHolder">
+                    <div class="dropFile">
+                        <input type="file" multiple onchange="addContract(this)">
+                        <span>Faylı seçmək üçün kliklə</span>
+                    </div>
+                    <div class="uploadedContract"></div>
+                </form>
+            </div>
+            <div class="mt-5 w-c-">
                 <a href="{{route('addgoon')}}" class="system-clickable system-clickable-color-2">Davam Et!
                     <img src="{{asset('frontend/IMAGE/icons/arrow-long-right.svg')}}" class="hv-ms ms-2" alt="">
                 </a>
