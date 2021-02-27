@@ -127,7 +127,7 @@ a {
     grid-template-columns: repeat(3,123px);
     grid-column-gap: 40px;
     width: 100%;
-    height: 165px;
+    height: 210px;
     padding: 10px;
 }
 /* .uploadedContract::-webkit-scrollbar-thumb {
@@ -229,14 +229,16 @@ button {
     outline: 0;
     width: 100%;
     padding-left: 30px;
-    height: 47px;
+    height: 48px;
     border-radius: 4px;
     color: #A9A9A9;
     font-family: Poppins_i;
     font-size: 12px;
     line-height: 16px;
 }
-
+.system-input::placeholder {
+    color: #9A9A9A;
+}
 .system-input-2 {
     border: 0;
     border-bottom: 1px solid #E5E5E5;
@@ -347,9 +349,10 @@ a.next-page {
     /* height: 47px; */
     position: relative;
     z-index: 111;
-    /* background-color: #fff; */
 }
-
+.my-select:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16);
+}
 .my-select select {
     display: none;
 }
@@ -363,8 +366,8 @@ a.next-page {
     position: relative;
     /* border: 1px solid #C7C7C7; */
     padding: 13px 21px;
-    font-family: Poppins_sb;
-    color: #414141;
+    font-family: Poppins_i;
+    color: #A9A9A9;
 }
 
 .clone-select-border {
@@ -517,10 +520,10 @@ a.next-page {
 
 /* Style the indicator (dot/circle) */
 .checkbox-holder .checkmark:after {
-    top: 3px;
-    left: 3px;
-    width: 6px;
-    height: 6px;
+    top: 2px;
+    left: 2px;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
     background: #A9A9A9;
 }
@@ -1714,7 +1717,7 @@ section#news {
 
 .segment {
     display: flex;
-    width: 395px;
+    width: 415px;
     justify-content: space-between;
 }
 .segment .insert-number {
@@ -2039,11 +2042,35 @@ section#news {
 }
 .bd-calendar-holder {
     position: relative;
+    /* border: 0 !important */
 }
 .bd-calendar-holder input {
     height: 100%;
     width: 100%;
-    opacity: .0;
+    height: 100%;
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    outline: 0;
+    color: #A9A9A9;
+    padding-left: 21px;
+}
+.bd-calendar-holder input.active {
+    border: 1px solid #0074E1;
+    background-color: #F2F7FF;
+}
+.flatpickr-calendar {
+    left: 514px !important;
+}
+.flatpickr-calendar:before, .flatpickr-calendar:after {
+    content: unset !important
+}
+.flatpickr-day.today {
+    color: #0074E1 !important
+}
+.flatpickr-day:hover {
+    background-color: unset !important;
+    color: #0074E1 !important;
 }
 .bd-calendar-holder i {
     position: absolute;
@@ -2064,8 +2091,12 @@ section#news {
     background-color: rgb(242, 247, 255);
     padding-left: 31px;
     width: 100%;
+    font-family: Poppins_i;
+    font-size: 12px;
+    color: #7A7A7A;
+    padding-right: 10px;
 }
-.hidden-search-input.visible {
+.hidden-search-input.active {
     display: inline-block;
 }
 /*========= myinfo =========*/
@@ -2105,6 +2136,36 @@ section#addContract {
 }
 .w-c- {
     width: 175px;
+}
+.tim-period {
+    position: relative;
+}
+.tim-period::after {
+    position: absolute;
+    content: 'Gün';
+    right: 18px;
+    top: 22px;
+    color: #9A9A9A;
+    font-family: Poppins_i;
+    font-size: 12px;
+}
+.add-goon .payment-way-holder {
+    width: 765px;
+}
+.add-goon .caution {
+    width: 550px;
+}
+.required {
+    color: #0074E1;
+    margin-right: 10px;
+    font-size: 12px;
+    font-family: Poppins_sb;
+}
+.contract-value {
+    font-family: Poppins_b;
+    font-size: 52px;
+    line-height: 21px;
+    color: #81DA9F
 }
 /*========= add contract =========*/
 

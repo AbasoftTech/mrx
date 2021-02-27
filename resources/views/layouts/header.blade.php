@@ -147,7 +147,7 @@
                 </ul>
                 <div class="area--contract">
                     <div class="send--contract">
-                        <button class="system-clickable system-clickable-color-1">Müqavilə Göndər</button>
+                        <a href="{{route("addcontract")}}" class="system-clickable system-clickable-color-1">Müqavilə Göndər</a>
                     </div>
                     <button type="button" class="search--contract" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fas fa-search text-white"></i></button>
                     <div class="hover-holder">

@@ -229,11 +229,14 @@
                                     <div class="d-flex flex-column">
                                         <div class="label-text text-center text-lg-start">Şəhər</div>
                                         <div style="width: 200px; height: 47px; position: relative" class="mt-3">
-                                            <input type="text" class="hidden-search-input">
+                                            <input type="text" class="hidden-search-input" autofocus="true" placeholder="axtar">
                                             <div class="my-select myselec-2 living">
                                                 <select name="" class="" id="">
-                                                    <option value="Bileceri" class="selected">Bileceri</option>
-                                                    <option value="050">BAaki</option>
+                                                    <option value="Bakı" class="selected">Bakı</option>
+                                                    <option value="Baki">Baki</option>
+                                                    <option value="Gence">Gence</option>
+                                                    <option value="Naxcivan">Naxcivan</option>
+                                                    <option value="Lenkeran">Lenkeran</option>
                                                 </select>
                                                 <div class="clone-select"></div>
                                                 <div class="clone-option"></div>
@@ -241,10 +244,27 @@
                                         </div>
                                     </div>
                                     <div class="d-flex flex-column">
+                                        <div class="label-text text-center text-lg-start">Şəhər</div>
+                                        <div style="width: 200px; height: 47px; position: relative" class="mt-3">
+                                            <input type="text" class="hidden-search-input" autofocus="true" placeholder="axtar">
+                                            <div class="my-select myselec-2 living">
+                                                <select name="" class="" id="">
+                                                    <option value="Bileceri" class="selected">Bileceri</option>
+                                                    <option value="Baki">Baki</option>
+                                                    <option value="Gence">Gence</option>
+                                                    <option value="Naxcivan">Naxcivan</option>
+                                                    <option value="Lenkeran">Lenkeran</option>
+                                                </select>
+                                                <div class="clone-select"></div>
+                                                <div class="clone-option"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {{-- <div class="d-flex flex-column">
                                         <div class="label-text text-center text-lg-start">Rayon və qəsəbə</div>
                                         <div style="width: 200px; height: 47px" class="mt-3">
-                                            <input type="text" class="hidden-search-input">
-                                            <div class="my-select myselec-2">
+                                            <input type="text" class="hidden-search-input" autofocus="true" placeholder="axtar">
+                                            <div class="my-select myselec-2 living">
                                                 <select name="" class="" id="">
                                                     <option value="Baki" class="selected">Bakı</option>
                                                     <option value="050">Naxcivan</option>
@@ -256,7 +276,7 @@
                                                 <div class="clone-option"></div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> --}}
                                 </div>
                                 <div class="add-column"><i class="fas fa-plus"></i></div>
                             </div>
@@ -266,9 +286,43 @@
                                     <div class="segment mt-4">
                                         <div class="d-flex flex-column">
                                             <div class="label-text text-center text-lg-start">Şəhər</div>
+                                            <div style="width: 200px; height: 47px; position: relative" class="mt-3">
+                                                <input type="text" class="hidden-search-input" autofocus="true" placeholder="axtar">
+                                                <div class="my-select myselec-2 living">
+                                                    <select name="" class="" id="">
+                                                        <option value="Bakı" class="selected">Bakı</option>
+                                                        <option value="Bakı">Bakı</option>
+                                                        <option value="Gence">Gence</option>
+                                                        <option value="Naxcivan">Naxcivan</option>
+                                                        <option value="Lenkeran">Lenkeran</option>
+                                                    </select>
+                                                    <div class="clone-select"></div>
+                                                    <div class="clone-option"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-column">
+                                            <div class="label-text text-center text-lg-start">Şəhər</div>
+                                            <div style="width: 200px; height: 47px; position: relative" class="mt-3">
+                                                <input type="text" class="hidden-search-input" autofocus="true" placeholder="axtar">
+                                                <div class="my-select myselec-2 living">
+                                                    <select name="" class="" id="">
+                                                        <option value="Bileceri" class="selected">Bileceri</option>
+                                                        <option value="Baki">Baki</option>
+                                                        <option value="Gence">Gence</option>
+                                                        <option value="Naxcivan">Naxcivan</option>
+                                                        <option value="Lenkeran">Lenkeran</option>
+                                                    </select>
+                                                    <div class="clone-select"></div>
+                                                    <div class="clone-option"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {{-- <div class="d-flex flex-column">
+                                            <div class="label-text text-center text-lg-start">Şəhər</div>
                                             <div style="width: 200px; height: 47px" class="mt-3">
-                                                <input type="text" class="hidden-search-input">
-                                                <div class="my-select myselec-2">
+                                                <input type="text" class="hidden-search-input" autofocus="true" placeholder="axtar">
+                                                <div class="my-select myselec-2 living">
                                                     <select name="" class="" id="">
                                                         <option value="Bileceri" class="selected">Bileceri</option>
                                                         <option value="050">BAaki</option>
@@ -281,8 +335,8 @@
                                         <div class="d-flex flex-column">
                                             <div class="label-text text-center text-lg-start">Rayon və qəsəbə</div>
                                             <div style="width: 200px; height: 47px" class="mt-3">
-                                            <input type="text" class="hidden-search-input">
-                                                <div class="my-select myselec-2">
+                                            <input type="text" class="hidden-search-input" autofocus="true" placeholder="axtar">
+                                                <div class="my-select myselec-2 living">
                                                     <select name="" class="" id="">
                                                         <option value="Baki" class="selected">Bakı</option>
                                                         <option value="050">Naxcivan</option>
@@ -294,7 +348,7 @@
                                                     <div class="clone-option"></div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> --}}
                                     </div>
                                     <div class="add-column"><i class="fas fa-plus"></i></div>
                                 </div>

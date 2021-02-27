@@ -52,9 +52,14 @@
 
 <script src="{{asset("frontend/JS/jquery.min.js")}}"></script>
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="https://npmcdn.com/flatpickr/dist/l10n/az.js"></script>
 <script>
     window.$(document).ready(function() {
-        window.$(".bd-calendar").flatpickr();
+        window.$(".bd-calendar").flatpickr({
+            // inline: true
+            "locale": "az"
+        });
+
     })
 </script>
 <script src="{{asset("frontend/JS/owl.carousel.min.js")}}"></script>

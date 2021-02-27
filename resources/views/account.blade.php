@@ -30,7 +30,7 @@
                     <div class="d-flex flex-column mt-4">
                         <div class="account-subtitle mt-3">Artırılacaq balansı seçin</div>
                         <div class="d-flex flex-column flex-md-row mt-3">
-                            <div class="choose-balans active">100 AZN</div>
+                            <div class="choose-balans">100 AZN</div>
                             <div class="choose-balans ms-0 mt-3 ms-md-3 mt-md-0">250 AZN</div>
                             <div class="choose-balans ms-0 mt-3 ms-md-3 mt-md-0">800 AZN</div>
                             <div class="choose-balans ms-0 mt-3 ms-md-3 mt-md-0">1000 AZN</div>

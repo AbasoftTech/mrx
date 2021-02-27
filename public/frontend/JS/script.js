@@ -183,7 +183,6 @@ for (var i = 0; i < mySelect.length; i++) {
             div.append(span)
             if(select.parentElement.classList.contains('prefix')) {
                 div.className = "preline-exs"
-                console.log(line)
                 div.append(line);
             }
         } else {
@@ -199,10 +198,9 @@ for (var i = 0; i < mySelect.length; i++) {
             this.parentElement.classList.remove('active');
             this.parentElement.parentElement.classList.remove('active');
             this.parentElement.previousElementSibling.classList.remove('active');
-            // this.parentElement.parentElement.style.border = '1px solid transparent';
-            // this.parentElement.parentElement.style.backgroundColor = "transparent"
-            // this.parentElement.previousElementSibling.style.border = '1px solid #C7C7C7';
-            // this.parentElement.previousElementSibling.style.backgroundColor = '#fff';
+            if(this.parentElement.parentElement.classList.contains('living')) {
+                this.parentElement.parentElement.previousElementSibling.classList.remove("active")
+            }
             for(i=0; i< months31.length; i++) {
                 if(this.innerHTML == months30[i]) {
                 //    $day[$day.length - 1].style.display = 'none';
@@ -259,9 +257,7 @@ for (var i = 0; i < mySelect.length; i++) {
             // }
             array.map(datam => {
                 if(typeof parseInt(datam) ===  'number') {
-                    console.log(datam)
                     var fullDate = new Date(datam);
-                    console.log(fullDate, 'full')
                 }
             })
             // console.log(array)
@@ -294,7 +290,11 @@ for (var i = 0; i < mySelect.length; i++) {
         // e.stopPropagation();
     }
     cloneSelect.addEventListener("click", function () {
-        document.getElementsByClassName("hidden-search-input")[0].classList.toggle("visible")
+        if(this.parentElement.classList.contains('living')) {
+            this.parentElement.previousElementSibling.classList.toggle("active");
+            this.parentElement.previousElementSibling.autofocus
+        }
+        // document.getElementsByClassName("hidden-search-input")[0].classList.toggle("visible")
         console.log(this.nextSibling.nextSibling)
         this.nextSibling.nextSibling.classList.toggle('active')
         this.parentElement.classList.toggle('active')
@@ -346,7 +346,11 @@ for (var i = 0; i < mySelect.length; i++) {
     //     })
     // }
 }
-
+// document.addEventListener('click', function() {
+//     for (var index = 0; index < cloneOption.length; index++) {
+//         cloneOption[index].classList.remove('active')
+//     }
+// })
 // for(let i=0; i< allOption.length; i++) {
 //     var div = document.createElement('div');
 //     if(!allOption[i].classList.contains('selected')) {
@@ -445,17 +449,38 @@ if (tab) {
 // === tab ===
 // === balans tab ===
 var balansTab = document.querySelectorAll(".choose-balans");
+var insertMoney = document.querySelectorAll(".insert-money")[0];
 
 if (balansTab) {
     for (i = 0; i < balansTab.length; i++) {
         balansTab[i].addEventListener('click', function (e) {
             e.preventDefault();
-            var active_tab = document.getElementsByClassName("active");
-            active_tab[0].className = active_tab[0].className.replace("active", " ");
-            this.classList.add("active");
+            // var active_tab = document.getElementsByClassName("active");
+            // console.log(active_tab);
+            // if(active_tab) {
+                // active_tab[0].className = active_tab[0].className.replace("active", " ");
+            // }
+
+            this.classList.toggle("active");
         })
     }
 }
+if(insertMoney) {
+    insertMoney.addEventListener('focusin',function(){
+        for (let i = 0; i < balansTab.length; i++) {
+            if(balansTab[i].classList.contains('active')) {
+                balansTab[i].classList.remove('active')
+            }
+        }
+    })
+}
+// insertMoney.addEventListener('focusout',function(){
+//     for (let i = 0; i < balansTab.length; i++) {
+//         if(!balansTab[i].classList.contains('active')) {
+//             balansTab[i].classList.add('active')
+//         }
+//     }
+// })
 // === balans tab ===
 
 
@@ -576,23 +601,15 @@ var addNewGalItem = document.getElementsByClassName('add-new-gal-item')[0];
 // var control = document.getElementsByClassName('grid-gallery-item-control')[0];
 // var controller = "<div class='grid-gallery-item-control'></div>";
 var remove = function removeNow(e) {
-    // e.preventDefault();
-    e.target.parentElement.parentElement.parentElement.remove()
+    e.currentTarget.parentElement.parentElement.remove()
 }
+var deg = 45
 var rotate = function rotateNow(e) {
-    // e.preventDefault();
-    var deg = 45;
-    // all = deg + 45;
-    // var all = 45;
-    console.log(e.path)
-    e.path[1].parentElement.previousElementSibling.style.transform = `rotate(${deg}deg)`
-    // e.target.parentElement.parentElement.previousElementSibling.style.transform = `rotate(${deg}deg)`;
-    // deg = parseInt(deg) + parseInt('90');
-    console.log(deg)
+    e.currentTarget.parentElement.previousElementSibling.style.transform = `rotate(${deg}deg)`
+    deg += 45
 }
 function uploadGal(input) {
     if (input.files && input.files[0]) {
-
         for(i=0;i<input.files.length; i++) {
         var reader = new FileReader();
         reader.onload = function(e) {
@@ -628,6 +645,7 @@ function uploadGal(input) {
 }
 var uploadedContract = document.getElementsByClassName('uploadedContract');
 function addContract(input) {
+    console.log(input.parentElement.nextSibling, 'in[put')
     if (input.files && input.files[0]) {
         for(i=0;i<input.files.length; i++) {
         var reader = new FileReader();
@@ -654,12 +672,17 @@ function addContract(input) {
         controller.append(rotateBtn);
         gal.append(controller);
         // control.classList.add('active')
-        for(var j=0; j <uploadedContract.length; j++) {
-            uploadedContract[j].append(gal);
-            if(uploadedContract[j].childNodes.length != 0) {
-                uploadedContract[j].style.overflowY = 'scroll'
-                uploadedContract[j].style.display = 'grid'
-            }
+        // for(var j=0; j <uploadedContract.length; j++) {
+        //     uploadedContract[j].append(gal);
+        //     if(uploadedContract[j].childNodes.length != 0) {
+        //         uploadedContract[j].style.overflowY = 'scroll'
+        //         uploadedContract[j].style.display = 'grid'
+        //     }
+        // }
+        input.parentElement.nextSibling.nextSibling.append(gal)
+        if(input.parentElement.nextSibling.nextSibling.childNodes.length != 0) {
+            input.parentElement.nextSibling.nextSibling.style.overflowY = 'scroll'
+            input.parentElement.nextSibling.nextSibling.style.display = 'grid'
         }
         // dropFile.insertBefore(gal,addNewGalItem)
     }
@@ -668,3 +691,7 @@ function addContract(input) {
   }
 }
 // === rotate & remove control btns ===
+
+$('.bd-calendar').click(function() {
+    $(this).addClass('active')
+})

@@ -35,13 +35,13 @@
                     <div class="profile-sidebar-sibling-child">
                         <form action="">
                             <div class="profile-grid-gallery">
-                                <div class="grid-gallery-item">
+                                {{-- <div class="grid-gallery-item">
                                     <img src="{{asset('frontend/IMAGE/rieltor-gallery-1.png')}}" alt="">
                                     <div class="grid-gallery-item-control">
                                         <button type="button" class="remove--item" onclick="remove(this)"><i class="fas fa-trash mb-2"></i>Sil</button>
                                         <button type="button" class="rotate--item" onclick="rotate(this)"><i class="fas fa-redo-alt mb-2"></i>Çevir</button>
                                     </div>
-                                </div>
+                                </div> --}}
                                 {{-- <div class="grid-gallery-item"><img src="{{asset('frontend/IMAGE/rieltor-gallery-2.png')}}" alt=""></div>
                                 <div class="grid-gallery-item"><img src="{{asset('frontend/IMAGE/rieltor-gallery-3.png')}}" alt=""></div>
                                 <div class="grid-gallery-item"><img src="{{asset('frontend/IMAGE/rieltor-gallery-4.png')}}" alt=""></div>
