@@ -42,7 +42,7 @@
                                         <img src="{{asset('frontend/IMAGE/profile-avatar.png')}}" alt="">
                                         <div class="upload-avatar">
                                             <input type="file">
-                                            <div class="text-center position-absolute">Sekli deyis</div>
+                                            <div class="text-center position-absolute">Şəkili Dəyiş</div>
                                         </div>
                                     </div>
                                 </div>
@@ -126,7 +126,7 @@
                                     </label>
                                     <label for="" class="text-center text-lg-start w-100 mt-3">
                                         <span class="label-text text-center text-lg-left">* Rieltor kimi iş stajı</span>
-                                        <div class="mt-2"><input name="top" type="number" class="system-input" maxlength="3" pattern="[0-9]" name="" id="1"></div>
+                                        <div class="mt-2"><input name="top" type="number" class="system-input" maxlength="3" pattern="[0-9]" name="" id="top"></div>
                                     </label>
                                     <label for="" class="text-center text-lg-start w-100 mt-3">
                                         <span class="label-text text-center text-lg-left">Milliyəti</span>
@@ -192,9 +192,9 @@
                                         </div>
                                     </div>
                                     <label for="" class="num-label">
-                                        <input name="top" type="number" class="insert-number ms-2" maxlength="3" pattern="[0-9]" name="" id="1">
-                                        <input name="middle" type="number" class="insert-number index0 ms-2" maxlength="2" pattern="[0-9]" name="" id="2">
-                                        <input name="below" type="number" class="insert-number index0 ms-2" maxlength="2" pattern="[0-9]" name="" id="3">
+                                        <input name="top" type="number" class="insert-number ms-2" maxlength="3" pattern="[0-9]" name="">
+                                        <input name="middle" type="number" class="insert-number index0 ms-2" maxlength="2" pattern="[0-9]" name="">
+                                        <input name="below" type="number" class="insert-number index0 ms-2" maxlength="2" pattern="[0-9]" name="">
                                     </label>
                                 </div>
                                 <div class="add-column"><i class="fas fa-plus"></i></div>
@@ -372,26 +372,29 @@
                     <form action="">
                         <div class="profile-sidebar-sibling-child">
                             {{-- <form action=""> --}}
-                                <label for="" class="text-center text-lg-start w-100">
-                                    <span class="label-text text-center- text-lg-left">Köhnə şifrə</span>
-                                    <div class="mt-2">
-                                        <input type="password" name="password" class="system-input">
+                                <div class="change-pass">
+                                    <label for="" class="text-center text-lg-start w-100">
+                                        <span class="label-text text-center- text-lg-left">Köhnə şifrə</span>
+                                        <div class="mt-2">
+                                            <input type="password" name="password" class="system-input">
+                                        </div>
+                                    </label>
+                                    <label for="" class="text-center text-lg-start w-100 mt-4">
+                                        <span class="label-text text-center- text-lg-left">Yeni şifrə</span>
+                                        <div class="mt-2">
+                                            <input type="password" name="password" class="system-input">
+                                        </div>
+                                    </label>
+                                    <div class="caution-sifre">Şifrə ən az 8 simvoldan ibarət olmalıdır</div>
+                                    <label for="" class="text-center text-lg-start w-100 mt-4">
+                                        <span class="label-text text-center- text-lg-left">Yeni şifrənin təkrarı</span>
+                                        <div class="mt-2">
+                                            <input type="password" name="password" class="system-input">
+                                        </div>
+                                    </label>
+                                    <div class="mt-c-4">
+                                        <button class="system-clickable system-clickable-color-2">Yadda Saxla</button>
                                     </div>
-                                </label>
-                                <label for="" class="text-center text-lg-start w-100 mt-4">
-                                    <span class="label-text text-center- text-lg-left">Yeni şifrə</span>
-                                    <div class="mt-2">
-                                        <input type="password" name="password" class="system-input">
-                                    </div>
-                                </label>
-                                <label for="" class="text-center text-lg-start w-100 mt-4">
-                                    <span class="label-text text-center- text-lg-left">Yeni şifrənin təkrarı</span>
-                                    <div class="mt-2">
-                                        <input type="password" name="password" class="system-input">
-                                    </div>
-                                </label>
-                                <div class="mt-c-4">
-                                    <button class="system-clickable system-clickable-color-2">Yadda Saxla</button>
                                 </div>
                             {{-- </form> --}}
                         </div>

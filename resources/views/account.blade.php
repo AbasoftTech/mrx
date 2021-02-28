@@ -9,11 +9,13 @@
         </div>
     </div>
     <div class="container">
-        <div class="grid-profile-linklist">
-            <a href="{{route("myinfo")}}" class="grid-profile-link">Profil Məlumatları</a>
-            <a href="{{route("mycontracts")}}" class="grid-profile-link">Müqavilələrim</a>
-            <a href="{{route("photogallery")}}" class="grid-profile-link">Foto Qalareya</a>
-            <a href="{{route("account")}}" class="grid-profile-link grid-profile-link-active">Hesab</a>
+        <div class="grid-profile-linklist-holder">
+            <div class="grid-profile-linklist">
+                <a href="{{route("myinfo")}}" class="grid-profile-link">Profil Məlumatları</a>
+                <a href="{{route("mycontracts")}}" class="grid-profile-link">Müqavilələrim</a>
+                <a href="{{route("photogallery")}}" class="grid-profile-link">Foto Qalareya</a>
+                <a href="{{route("account")}}" class="grid-profile-link grid-profile-link-active">Hesab</a>
+            </div>
         </div>
     </div>
     <div class="container mt-5">

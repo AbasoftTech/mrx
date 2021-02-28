@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('content')
-<section id="myinfo">
+<section id="mycontracts">
     <div class="container">
         <div class="breadcrumb-mrx">
             <a href="{{route("home")}}" class="breadcrumb-mrx-link">Ana Səhifə</a>
@@ -11,15 +11,17 @@
         </div>
     </div>
     <div class="container">
-        <div class="grid-profile-linklist">
-            <a href="{{route("myinfo")}}" class="grid-profile-link">Profil Məlumatları</a>
-            <a href="{{route("mycontracts")}}" class="grid-profile-link grid-profile-link-active">Müqavilələrim</a>
-            <a href="{{route("photogallery")}}" class="grid-profile-link">Foto Qalareya</a>
-            <a href="{{route("account")}}" class="grid-profile-link">Hesab</a>
+        <div class="grid-profile-linklist-holder">
+            <div class="grid-profile-linklist">
+                <a href="{{route("myinfo")}}" class="grid-profile-link">Profil Məlumatları</a>
+                <a href="{{route("mycontracts")}}" class="grid-profile-link grid-profile-link-active">Müqavilələrim</a>
+                <a href="{{route("photogallery")}}" class="grid-profile-link">Foto Qalareya</a>
+                <a href="{{route("account")}}" class="grid-profile-link">Hesab</a>
+            </div>
         </div>
-        <div class="d-flex mt-5">
+        <div class="d-flex flex-lgc-dir mt-3 mt-sm-5">
             <div class="profile-sidebar">
-                <div class="profile-tablist tablist">
+                <div class="profile-tablist tablist flex-column flex-lg-row">
                     <div class="profile-tab tab tab-active" data-id="0">
                         <i class="fas fa-reply-all"></i>
                         Bütün Müqavilələr (512)
@@ -45,28 +47,30 @@
             <div class="profile-sidebar-sibling">
                 <div class="profile-tab-content tab-content content-active" id="0">
                     <div class="profile-sidebar-sibling-child contract-space">
-                        <div class="contract-grid-head">
-                            <div width="125px">Kod</div>
-                            <div width="490px">Unvan</div>
-                            <div width="161px">Vəziyyəti</div>
-                            <div width="120px">Əməliyyatlar</div>
-                        </div>
-                        <div class="contract-grid-body">
-                            <div class="contract-grid" width="125px">35244</div>
-                            <div class="contract-grid" width="490px">Bakı şəh. Nərimanov ray. Atatürk pros. ev 5 mənzil 15</div>
-                            <div class="contract-grid" width="161px">Aktiv</div>
-                            <div class="contract-grid" width="120px">
-                                <button type="button" class="done"><i class="fas fa-check-circle"></i><div>Həll Etdim</div></button>
-                                <button type="button" class="remove-contract ms-3" data-bs-toggle="modal" data-bs-target="#remove"><i class="fas fa-trash"><div>Ləğv et</div></i></button>
+                        <div>
+                            <div class="contract-grid-head">
+                                <div width="125px">Kod</div>
+                                <div width="490px">Unvan</div>
+                                <div width="161px">Vəziyyəti</div>
+                                <div width="120px">Əməliyyatlar</div>
                             </div>
-                        </div>
-                        <div class="contract-grid-body">
-                            <div class="contract-grid" width="125px">35240</div>
-                            <div class="contract-grid" width="490px">201 Nəriman Nərimanov prospekti</div>
-                            <div class="contract-grid" width="161px">Passiv</div>
-                            <div class="contract-grid" width="120px">
-                                <button type="button" class="done"><i class="fas fa-check-circle"></i><div>Həll Etdim</div></button>
-                                <button type="button" class="remove-contract ms-3" data-bs-toggle="modal" data-bs-target="#remove"><i class="fas fa-trash"><div>Ləğv et</div></i></button>
+                            <div class="contract-grid-body">
+                                <div class="contract-grid" width="125px">35244</div>
+                                <div class="contract-grid" width="490px">Bakı şəh. Nərimanov ray. Atatürk pros. ev 5 mənzil 15</div>
+                                <div class="contract-grid" width="161px">Aktiv</div>
+                                <div class="contract-grid" width="120px">
+                                    <button type="button" class="done"><i class="fas fa-check-circle"></i><div>Həll Etdim</div></button>
+                                    <button type="button" class="remove-contract ms-3" data-bs-toggle="modal" data-bs-target="#remove"><i class="fas fa-trash"><div>Ləğv et</div></i></button>
+                                </div>
+                            </div>
+                            <div class="contract-grid-body">
+                                <div class="contract-grid" width="125px">35240</div>
+                                <div class="contract-grid" width="490px">201 Nəriman Nərimanov prospekti</div>
+                                <div class="contract-grid" width="161px">Passiv</div>
+                                <div class="contract-grid" width="120px">
+                                    <button type="button" class="done"><i class="fas fa-check-circle"></i><div>Həll Etdim</div></button>
+                                    <button type="button" class="remove-contract ms-3" data-bs-toggle="modal" data-bs-target="#remove"><i class="fas fa-trash"><div>Ləğv et</div></i></button>
+                                </div>
                             </div>
                         </div>
                     </div>

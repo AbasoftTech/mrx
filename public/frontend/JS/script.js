@@ -436,11 +436,14 @@ if (tab) {
             var active_tab = document.getElementsByClassName("tab-active");
             active_tab[0].className = active_tab[0].className.replace("tab-active", " ");
             this.classList.add("tab-active");
+
             var tabContent = document.getElementsByClassName("tab-content");
             for (j = 0; j < tabContent.length; j++) {
-                var tabId = e.target.getAttribute('data-id')
+                var tabId = e.target.getAttribute('data-id');
+                console.log(tabId)
                 tabContent[j].classList.remove("content-active")
                 var new_content = document.getElementById(tabId);
+                console.log(new_content)
                 new_content.classList.add("content-active");
             }
         })
