@@ -11,13 +11,15 @@
         </div>
     </div>
     <div class="container">
-        <div class="grid-profile-linklist">
-            <a href="{{route("myinfo")}}" class="grid-profile-link grid-profile-link-active">Profil Məlumatları</a>
-            <a href="{{route("mycontracts")}}" class="grid-profile-link">Müqavilələrim</a>
-            <a href="{{route("photogallery")}}" class="grid-profile-link">Foto Qalareya</a>
-            <a href="{{route("account")}}" class="grid-profile-link">Hesab</a>
+        <div class="grid-profile-linklist-holder">
+            <div class="grid-profile-linklist">
+                <a href="{{route("myinfo")}}" class="grid-profile-link grid-profile-link-active">Profil Məlumatları</a>
+                <a href="{{route("mycontracts")}}" class="grid-profile-link">Müqavilələrim</a>
+                <a href="{{route("photogallery")}}" class="grid-profile-link">Foto Qalareya</a>
+                <a href="{{route("account")}}" class="grid-profile-link">Hesab</a>
+            </div>
         </div>
-        <div class="d-flex mt-5">
+        <div class="d-flex flex-column flex-lg-row mt-2 mt-sm-5">
             <div class="profile-sidebar">
                 <div class="profile-tablist tablist">
                     <div class="profile-tab tab tab-active" data-id="0">
@@ -34,7 +36,7 @@
                 <div class="profile-tab-content tab-content content-active" id="0">
                     <form action="">
                         <div class="profile-sidebar-sibling-child">
-                            <div class="d-flex justify-content-between">
+                            <div class="d-flex justify-content-between flex-column flex-lg-row">
                                 <div class="profile-avatar">
                                     <div class="profile-avatar-holder">
                                         <img src="{{asset('frontend/IMAGE/profile-avatar.png')}}" alt="">
@@ -206,17 +208,19 @@
                                     <label for="" class="mt-2">
                                         <input type="text" class="system-input">
                                     </label>
-                                    <div class="mt-3">
-                                        <label for="">
-                                            <input type="radio" name="level" id="">
-                                            Zəif
+                                    <div class="d-flex mt-3">
+                                        <label class="checkbox-holder">Zəif
+                                            <input type="radio" name="level">
+                                            <span class="checkmark"></span>
                                         </label>
-                                        <label for="">
-                                            <input type="radio" name="level" id="">
-                                        </label>Yaxşı
-                                        <label for="">
-                                            <input type="radio" name="level" id="">
-                                        </label>Əla
+                                        <label class="checkbox-holder ms-5">Yaxşı
+                                            <input type="radio" name="level">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="checkbox-holder ms-5">Əla
+                                            <input type="radio" name="level">
+                                            <span class="checkmark"></span>
+                                        </label>
                                     </div>
                                 </div>
                                 <div class="add-column"><i class="fas fa-plus"></i></div>
@@ -225,7 +229,7 @@
                         <div class="profile-sidebar-sibling-child">
                             <div class="block--title">Yaşadığı Ərazi</div>
                             <div class="segment-holder">
-                                <div class="segment mt-4">
+                                <div class="segment flex-column flex-sm-row mt-4">
                                     <div class="d-flex flex-column">
                                         <div class="label-text text-center text-lg-start">Şəhər</div>
                                         <div style="width: 200px; height: 47px; position: relative" class="mt-3">
@@ -283,7 +287,7 @@
                             <div class="segment-divider">
                                 <div class="block--title">Çalışdığı Ərazilər</div>
                                 <div class="segment-holder">
-                                    <div class="segment mt-4">
+                                    <div class="segment flex-column flex-sm-row mt-4">
                                         <div class="d-flex flex-column">
                                             <div class="label-text text-center text-lg-start">Şəhər</div>
                                             <div style="width: 200px; height: 47px; position: relative" class="mt-3">
@@ -354,10 +358,10 @@
                                 </div>
                             </div>
                             <div class="mt-4 d-flex">
-                                <div style="width: 29%">
+                                <div class="myinfo-btn-holder">
                                     <button class="system-clickable system-clickable-color-2">Hesabı Yenilə!</button>
                                 </div>
-                                <div style="width: 29%;margin-left: 20px">
+                                <div class="myinfo-btn-holder ms-3">
                                     <button class="system-clickable system-clickable-color-3">Ləğv Et</button>
                                 </div>
                             </div>
@@ -367,7 +371,7 @@
                 <div class="profile-tab-content tab-content" id="1">
                     <form action="">
                         <div class="profile-sidebar-sibling-child">
-                            {{-- <form action=""> --}}dskmd skd skd
+                            {{-- <form action=""> --}}
                                 <label for="" class="text-center text-lg-start w-100">
                                     <span class="label-text text-center- text-lg-left">Köhnə şifrə</span>
                                     <div class="mt-2">

@@ -204,14 +204,16 @@ button {
 }
 
 .system-clickable-color-3 {
-    background-color: #F6765A;
-    border: 1px solid transparent;
+    background-color: transparent;
+    border: 1px solid #0074E1;
+    color: #0074E1;
 }
 
 .system-clickable-color-3:hover {
-    background-color: #F6765A;
-    border: 1px solid transparent;
-    box-shadow: 0 6px 9px #F6765A
+    /* background-color: #F6765A; */
+    border: 1px solid #F6765A;
+    color: #F6765A;
+    /* box-shadow: 0 6px 9px #F6765A */
 
 }
 .system-clickable-color-4 {
@@ -542,6 +544,7 @@ a.next-page {
     opacity: .0;
     position: absolute;
     z-index: 11;
+    left: 0;
 }
 
 .fileinput-holder i {
@@ -1560,9 +1563,15 @@ section#news {
     padding-bottom: 61px
 }
 
+.grid-profile-linklist-holder{
+    position: relative;
+    height: 62px;
+}
 .grid-profile-linklist {
     display: flex;
     /* grid-template-columns: repeat(4, 200px); */
+    position: absolute;
+    /* width: 135%; */
 }
 .grid-profile-link {
     font-size: 21px;
@@ -1723,9 +1732,6 @@ section#news {
 .segment .insert-number {
     max-width: 63px;
 }
-.add-column i {
-    color: #FDB330;
-}
 
 .add-column {
     margin-top: 27px;
@@ -1740,9 +1746,21 @@ section#news {
     position: relative;
     z-index: 1111;
 }
+.add-column i {
+    color: #FDB330;
+}
 
+.add-column:hover {
+    background-color: #FDB330;
+}
+.add-column:hover  i  {
+    color: #fff
+}
 .segment-divider {
     margin-top: 66px;
+}
+.myinfo-btn-holder {
+    width: 200px;
 }
 .profile-grid-gallery {
     display: grid;
@@ -2717,9 +2735,18 @@ section#contact {
     .log-reg-holder {
         padding-right: 0;
     }
-
-
     /*========= login =========*/
+
+    /*========= myinfo =========*/
+    section#myinfo .profile-sidebar-sibling-child {
+        width: 655px;
+        padding: 30px
+    }
+    .profile-details {
+        padding-left: 35px;
+    }
+    /*========= myinfo =========*/
+
 }
 
 @media(max-width: 1024px) {
@@ -2846,12 +2873,63 @@ section#contact {
 
     /*========= about =========*/
     /*========= myinfo =========*/
+    .profile-sidebar {
+        padding-bottom: 0;
+        height: auto;
+        width: 100%;
+    }
+    .profile-sidebar .profile-tablist {
+        display: flex;
+    }
+    .profile-sidebar-sibling {
+        margin: 30px 0 0;
+    }
+    section#myinfo .profile-sidebar-sibling-child {
+        width: 100%;
+    }
+    .profile-tab:last-child {
+        margin-left: 20px;
+    }
+    .profile-avatar {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .profile-details {
+        margin-top: 30px;
+        width: 100%;
+        padding-left: 0;
+        border: 0
+    }
+    .grid-profile-linklist-holder {
+        overflow-x: scroll;
+    }
+    .grid-profile-linklist-holder::-webkit-scrollbar {
+        width: 10px;
+
+    }
+    .grid-profile-linklist-holder::-webkit-scrollbar-track {
+        background: transparent;
+
+    }
+    .grid-profile-linklist-holder::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius:10px;
+        opacity: .0;
+        visibility: hidden;
+    }
+    .grid-profile-linklist-holder::-webkit-scrollbar-thumb:hover {
+        background: #0074E1;
+    }
     .grid-profile-linklist {
+        width: 135%;
+    }
+    /* .grid-profile-linklist {
         flex-direction: column;
-    }
-    .grid-profile-link:not(:first-child) {
+    } */
+    /* .grid-profile-link:not(:first-child) {
         margin-left: 0;
-    }
+    } */
     .account,.account-sidebar {
         width: 100%;
     }
@@ -2952,10 +3030,19 @@ section#contact {
 
     /*========= login =========*/
 
+    /*========= myinfo =========*/
+
+    .segment {
+        width: 100%;
+    }
+    /*========= myinfo =========*/
+
 }
 
 @media(max-width: 576px) {
-
+    .system-clickable {
+        padding: 12px
+    }
     /*========= index =========*/
     .item-bg {
         height: 30vh;
@@ -3023,6 +3110,12 @@ section#contact {
     } */
     .contract-list {
         position: absolute;
+    }
+    .grid-profile-link {
+        font-size: 16px;
+    }
+    .grid-profile-link:not(:first-child) {
+        margin-left: 16px;
     }
     /*========= my info =========*/
     /*========= website pagination =========*/

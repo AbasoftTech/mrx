@@ -509,44 +509,15 @@ var segmentHolder = document.getElementsByClassName('segment-holder')[0];
 
 var segment;
 for (let index = 0; index < addColumn.length; index++) {
-    var count = 1
     addColumn[index].addEventListener('click', function () {
-        // segment1 = this.previousSibling.previousSibling;
-    //     var segment2 = `
-    //     <div class="segment mt-4">
-    //     <div style="width: 200px; height: 47px">
-    //         <div class="my-select myselec-2">
-    //             <select name="" class="" id="">
-    //                 <option value="Prefix" class="selected">Prefix</option>
-    //                 <option value="050">— 050</option>
-    //                 <option value="051">— 051</option>
-    //                 <option value="055">— 055</option>
-    //                 <option value="070">— 070</option>
-    //             </select>
-    //             <div class="clone-select clone-select-border"></div>
-    //             <div class="clone-option"></div>
-    //         </div>
-    //     </div>
-    //     <label for="" class="num-label">
-    //         <input name="top" type="number" class="insert-number" maxlength="3" pattern="[0-9]" name="" id="1">
-    //         <input name="middle" type="number" class="insert-number index0" maxlength="2" pattern="[0-9]" name="" id="2">
-    //         <input name="below" type="number" class="insert-number index0" maxlength="2" pattern="[0-9]" name="" id="3">
-    //     </label>
-    // </div>
-    //     `;
-        segment1 = this.parentElement.getElementsByClassName('segment')[0]
-        // console.log(segment1, segment2)
-        // console.log(typeof segment)
+        var count = 1
+        segment1 = this.parentElement.getElementsByClassName('segment')[0];
         if (count < 4) {
             var segmentClone = segment1.cloneNode(true);
             // this.parentElement.append(segmentClone);
             var parser = new DOMParser();
             parser.parseFromString(segmentClone, 'text/html');
             this.parentElement.insertBefore(segmentClone,this.parentElement.childNodes[0])
-            // this.parentElement.insertAdjacentHTML("afterbegin", segmentClone)
-            console.log(segmentClone, 'after')
-
-
             var g = segmentClone.getElementsByClassName('clone-select');
             for(i=0;i<g.length; i++) {
                 g[i].onclick = function() {
@@ -554,34 +525,12 @@ for (let index = 0; index < addColumn.length; index++) {
                         this.nextSibling.nextSibling.classList.toggle('active');
                         this.nextSibling.parentElement.classList.toggle('active');
                         this.classList.toggle('active');
-                    // }
-                    // else {
-                        // this.nextSibling.nextSibling.classList.remove('active');
-                    // }
                 }
-                // g[i].onclick = function() {
-                // }
             }
-            // this.parentElement.insertAdjacentHTML('beforebegin', segmentClone)
         }
         count++
     })
 }
-// $('.add-column').click(function (e) {
-//     var count = 1;
-//     var seg = $(this).prev().eq(0);
-//     var emp = seg;
-//     if (count < 4) {
-
-//         $(this).insertAfter(emp)
-
-//     }
-//     count++
-//     // ==add column ===
-
-
-// })
-
 
 // reference to a list
 const list = document.querySelectorAll('.segment');
