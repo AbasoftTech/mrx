@@ -1467,7 +1467,7 @@ section#news {
     margin-top: 117px;
 }
 .owl-news-detail-img {
-    height: 130px;
+    height: 126px;
     border-radius: 8px 8px 0 0;
 }
 .owl-news-detail-img img {
@@ -3376,8 +3376,11 @@ section#contact {
 @media(max-width: 476px) {
 
     /*========= rieltors and newsdetail owl =========*/
-    .owl-news-detail-img {
+    /* .owl-news-detail-img {
         height: auto;
+    } */
+    .owl-news-detail-info {
+        padding: 10px 10px 10px;
     }
      /*========= rieltors and newsdetail owl =========*/
 }

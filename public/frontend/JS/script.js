@@ -4,6 +4,7 @@ var indexOwl = $('.owl-carousel.owl-index-carousel');
 $('.owl-carousel.owl-index-carousel').owlCarousel({
     loop: true,
     autoplay: true,
+
     items: 1,
     responsive: {
         0: {
