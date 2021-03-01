@@ -233,7 +233,7 @@
                                     <div class="d-flex flex-column">
                                         <div class="label-text text-center text-lg-start">Şəhər</div>
                                         <div style="width: 200px; height: 47px; position: relative" class="mt-3">
-                                            <input type="text" class="hidden-search-input" autofocus="true" placeholder="axtar">
+                                            <input type="text" class="hidden-search-input" autofocus placeholder="axtar">
                                             <div class="my-select myselec-2 living">
                                                 <select name="" class="" id="">
                                                     <option value="Bakı" class="selected">Bakı</option>
@@ -242,11 +242,12 @@
                                                     <option value="Naxcivan">Naxcivan</option>
                                                     <option value="Lenkeran">Lenkeran</option>
                                                 </select>
-                                                <div class="clone-select"></div>
+                                                <div class="clone-select chevron"></div>
                                                 <div class="clone-option"></div>
                                             </div>
                                         </div>
                                     </div>
+
                                     <div class="d-flex flex-column">
                                         <div class="label-text text-center text-lg-start">Şəhər</div>
                                         <div style="width: 200px; height: 47px; position: relative" class="mt-3">
@@ -404,8 +405,8 @@
         </div>
     </div>
 </section>
-
 <script>
+
 //     var allOption = document.querySelectorAll('.my-select select option');
 //     var mySelect = document.querySelectorAll('.my-select')[0];
 //     var cloneSelect = document.querySelectorAll('.clone-select')[0];

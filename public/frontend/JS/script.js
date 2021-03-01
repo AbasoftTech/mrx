@@ -66,7 +66,7 @@ $('.owl-carousel.owl-rieltor-carousel').owlCarousel({
     responsive: {
         0: {
             items: 1,
-            // dotsEach: 2
+            dotsEach: 4
         },
         600: {
             items: 2
@@ -106,22 +106,31 @@ var owlNewsDetails = $('.owl-carousel.owl-news-detail-carousel');
 
 $('.owl-carousel.owl-news-detail-carousel').owlCarousel({
     loop: true,
+    // items:1,
+    // dotsEach: 2,
     margin: 19,
     responsive: {
         0: {
             items: 1,
-            // dotsEach: 2
+            dotsEach: 3,
         },
-        600: {
+        // 476: {
+        //     items: 2
+        // },
+        376: {
             items: 2
         },
-        1000: {
+        876: {
+            items: 3
+        },
+        1200: {
             items: 4,
             dots: true,
             dotsEach: 3,
             nav: true,
             navText: ["<img src='frontend/IMAGE/icons/arrow-rieltor.svg'>", "<img src='frontend/IMAGE/icons/arrow-rieltor.svg'>"]
-        }
+        },
+        responsiveBaseElement: 'body',
     }
 })
 owlNewsDetails.on('changed.owl.carousel', function (e) {
@@ -221,29 +230,17 @@ for (var i = 0; i < mySelect.length; i++) {
                     // }
                 }
             }
-            // if(this.parentElement.parentElement.classList.contains('myselect1')) {
-
-            //     var month = this.innerHTML
-            // }
-            // else {
-            //     var year = this.innerHTML
-            // }
             if(dateArr.length >= 2) {
                 dateArr = []
             }
             if(!dateArr.includes(this.getAttribute("id"))) {
                 dateArr.push(this.getAttribute("id"))
             }
-            // console.log(dateArr)
-            // if(typeof dateArr[dateArr.length] != "undefined") {
-
-            // }
-            // else {console.log('has undefined')}
             if(dateArr.length >= 2) {
                 userDate(dateArr);
             }
-            // console.log(dateArr, 'ids');
         })
+
 
         function userDate(array) {
             // var t = array.sort(function(a, b){return a - b})
@@ -289,7 +286,42 @@ for (var i = 0; i < mySelect.length; i++) {
         // console.log(e.target);
         // e.stopPropagation();
     }
-    cloneSelect.addEventListener("click", function () {
+    var clicked = false;
+    document.body.addEventListener("click", () => {
+        var allSelect = document.getElementsByClassName('my-select');
+        var allSelectOption = document.getElementsByClassName('clone-option');
+        var allSelectSelect = document.getElementsByClassName('clone-select');
+        var hidInput = document.getElementsByClassName('hidden-search-input');
+        // function checkClick(e) {
+        //     clicked = true;
+        //     console.log('true');
+        // }
+        for (let index = 0; index < hidInput.length; index++) {
+            hidInput[index].addEventListener('click', function () {
+                console.log(this, 'yeahs')
+                this.classList.add('active')
+            })
+        }
+
+        // for (var index = 0; index < hidInput.length; index++) {
+        //     hidInput[index].addEventListener('click',checkClick )
+        //     // hidInput[index].classList.add('active');
+        //     // allSelectSelect[index].classList.remove('active');
+        //     // console.log(hidInput[index], 'caaan')
+        // }
+        for (var index = 0; index < allSelect.length; index++) {
+            // if(clicked == true) {
+            //     console.log('true', 'trudud buuu')
+            //     return
+            // }
+            allSelect[index].classList.remove('active');
+            allSelectOption[index].classList.remove('active');
+            allSelectSelect[index].classList.remove('active');
+            hidInput[index].classList.remove('active');
+
+        }
+    });
+    cloneSelect.addEventListener("click", function (e) {
         if(this.parentElement.classList.contains('living')) {
             this.parentElement.previousElementSibling.classList.toggle("active");
             this.parentElement.previousElementSibling.autofocus
@@ -315,6 +347,7 @@ for (var i = 0; i < mySelect.length; i++) {
         //     this.parentElement.style.border = '1px solid transparent';
         //     this.parentElement.style.backgroundColor = "transparent"
         // }
+        e.stopPropagation();
     })
     // var option = document.querySelectorAll('.clone-option div');
     // var l = cloneOption.getElementsByTagName("div").length
@@ -405,26 +438,31 @@ var burgerCollapse = document.getElementsByClassName('burger-collapse')[0];
 
 
 // ===burger collapse===
-document.body.addEventListener("click", () => {
-    burgerLine[1].classList.remove('burger-menu-line1-after')
-    burgerLine[2].classList.remove('burger-menu-line2-after')
-    burgerCollapse.classList.remove('burger-collapsed')
-}, false);
 
-burger.addEventListener("click", (e) => {
-    if (!burgerLine[1].classList.contains("burger-menu-line1-after") && !burgerLine[1].classList.contains("burger-menu-line1-after")) {
-        burgerLine[1].classList.add('burger-menu-line1-after')
-        burgerLine[2].classList.add('burger-menu-line2-after');
-        burgerCollapse.classList.add('burger-collapsed')
-    } else {
+document.body.addEventListener("click", () => {
+    if(burgerLine[1].classList.contains("burger-menu-line1-after")) {
         burgerLine[1].classList.remove('burger-menu-line1-after')
         burgerLine[2].classList.remove('burger-menu-line2-after')
         burgerCollapse.classList.remove('burger-collapsed')
     }
-    e.stopPropagation();
-}, false)
-// ===burger collapse===
+}, false);
 
+burger.addEventListener("click", (e) => {
+    burgerLine[1].classList.toggle('burger-menu-line1-after')
+    burgerLine[2].classList.toggle('burger-menu-line2-after');
+    burgerCollapse.classList.toggle('burger-collapsed');
+    // if (!burgerLine[1].classList.contains("burger-menu-line1-after")) {
+    //     burgerLine[1].classList.add('burger-menu-line1-after')
+    //     burgerLine[2].classList.add('burger-menu-line2-after');
+    //     burgerCollapse.classList.add('burger-collapsed');
+    // } else {
+    //     burgerLine[1].classList.remove('burger-menu-line1-after')
+    //     burgerLine[2].classList.remove('burger-menu-line2-after')
+    //     burgerCollapse.classList.remove('burger-collapsed')
+    // }
+    e.stopPropagation();
+})
+// ===burger collapse===
 
 // === tab ===
 var tab = document.querySelectorAll(".tablist > .tab");

@@ -5,19 +5,21 @@
         <div class="breadcrumb-mrx">
             <a href="{{route("home")}}" class="breadcrumb-mrx-link">Ana Səhifə</a>
             <span class="me-3"><img src="{{asset('frontend/IMAGE/icons/breadcrumb-arrow.svg')}}" alt=""></span>
-            <a href="" class="breadcrumb-mrx-link">Hesab</a>
+            <a href="{{route("account")}}" class="breadcrumb-mrx-link">Hesab</a>
             <span class="me-3"><img src="{{asset('frontend/IMAGE/icons/breadcrumb-arrow.svg')}}" alt=""></span>
             <a class="breadcrumb-mrx-link breadcrumb-mrx-link-current">Foto Qalareya</a>
         </div>
     </div>
     <div class="container">
-        <div class="grid-profile-linklist">
-            <a href="{{route("myinfo")}}" class="grid-profile-link">Profil Məlumatları</a>
-            <a href="{{route("mycontracts")}}" class="grid-profile-link">Müqavilələrim</a>
-            <a href="{{route("photogallery")}}" class="grid-profile-link grid-profile-link-active">Foto Qalareya</a>
-            <a href="{{route("account")}}" class="grid-profile-link">Hesab</a>
+        <div class="grid-profile-linklist-holder">
+            <div class="grid-profile-linklist">
+                <a href="{{route("myinfo")}}" class="grid-profile-link">Profil Məlumatları</a>
+                <a href="{{route("mycontracts")}}" class="grid-profile-link">Müqavilələrim</a>
+                <a href="{{route("photogallery")}}" class="grid-profile-link grid-profile-link-active">Foto Qalareya</a>
+                <a href="{{route("account")}}" class="grid-profile-link">Hesab</a>
+            </div>
         </div>
-        <div class="d-flex mt-5">
+        <div class="d-flex mt-3 mt-sm-5 flex-column flex-lg-row">
             <div class="profile-sidebar">
                 <div class="profile-tablist tablist">
                     <div class="profile-tab tab tab-active" data-id="0">

@@ -376,7 +376,7 @@ a.next-page {
     border: 1px solid #C7C7C7
 }
 
-.clone-select::after {
+.chevron::after {
     content: "";
     position: absolute;
     background-image: url(../IMAGE/icons/number-arrow.svg);
@@ -1193,6 +1193,7 @@ section#indexContent {
     padding: 27px 28px;
     background-color: #fff;
     border-radius: 8px;
+    position: relative;
 }
 
 .media-img {
@@ -1469,9 +1470,13 @@ section#news {
     height: 130px;
     border-radius: 8px 8px 0 0;
 }
+.owl-news-detail-img img {
+    height: 160px;
+    object-fit: contain;
+}
 .owl-news-detail-info {
     background-color: #fff;
-    padding: 10px;
+    padding: 30px 10px 10px;
     border-radius: 0 0 8px 8px;
 }
 .owl-news-detail-intro {
@@ -1776,13 +1781,19 @@ section#news {
     font-size: 12px;
 }
 .profile-grid-gallery {
-    display: grid;
+    /* display: grid;
     grid-template-columns: repeat(4, 160px);
     grid-column-gap: 20px;
-    grid-row-gap: 30px
+    grid-row-gap: 30px */
+    display: flex;
+    flex-wrap: wrap;
+    grid-column-gap: 16px;
+    grid-row-gap: 35px;
+
 }
 .profile-grid-gallery .grid-gallery-item {
     height: 214px;
+    width: 130px;
 }
 .profile-grid-gallery .grid-gallery-item > img {
     width: 100%;
@@ -1864,6 +1875,13 @@ section#news {
     justify-content: center;
     position: relative;
 }
+
+/* .profile-grid-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(2, 1fr);
+} */
+
 /* .grid-gallery-item-control.active {
     display: flex;
 } */
@@ -2449,17 +2467,28 @@ input[type=number] {
 
 .choose-rieltor-area {
     margin-top: 22px;
+    display: flex;
 }
-
+.extra-color {
+    color: #A9A9A9 !important
+}
 .grid-rieltor-item {
     border-radius: 8px;
 }
-
+.grid-rieltor-item:hover .rieltor-grid-info{
+    background-color: #0074E1;
+}
+.grid-rieltor-item:hover {
+    box-shadow: 0 16px 26px rgb(0, 116, 225, 0.35);
+}
+.grid-rieltor-item:hover .rieltor-grid-name {
+    color: #fff;
+}
 .rieltor-grid-img {
     height: 183px;
-    display: flex;
+    /* display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
     position: relative;
 }
 
@@ -2768,6 +2797,37 @@ section#contact {
         width: 100%;
     }
     /*========= my contracts =========*/
+    /*========= rieltors =========*/
+    .grid-rieltors {
+        grid-template-columns: repeat( 5, 183px);
+        grid-row-gap: 40px;
+    }
+    /*========= rieltors =========*/
+    /*========= services =========*/
+    .grid-card-services {
+        grid-template-columns: repeat(5, auto );
+        grid-row-gap: 20px;
+    }
+    .grid-card-services .item {
+        width: 100%;
+    }
+    /*========= services =========*/
+    /*========= news ========*/
+    .grid-card {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    /*========= news =========*/
+    /*========= news detail =========*/
+    .news-detail-block {
+        width: 590px;
+    }
+    .news-grid-gallery {
+        grid-template-columns: repeat(5, 176px );
+    }
+    .owl-rieltor-carousel .owl-dots, .owl-news-detail-carousel .owl-dots {
+        bottom: -40px;
+    }
+    /*========= news detail =========*/
 }
 
 @media(max-width: 1024px) {
@@ -2943,7 +3003,7 @@ section#contact {
         background: #0074E1;
     }
     .grid-profile-linklist {
-        width: 142%;
+        width: 165%;
     }
     /* .grid-profile-linklist {
         flex-direction: column;
@@ -2994,6 +3054,60 @@ section#contact {
         grid-template-columns: repeat(5,123px );
     }
     /*========= add contract =========*/
+    /*========= rieltors =========*/
+    .grid-rieltors {
+        grid-template-columns: repeat( 4, 1fr);
+        grid-row-gap: 40px;
+    }
+    .rieltor-grid-img {
+        height: 166px;
+    }
+    .rieltor-grid-name {
+        font-size: 14px;
+    }
+    /*========= rieltors =========*/
+    /*========= services =========*/
+
+    .grid-card-services {
+        grid-template-columns: repeat(4, auto );
+        grid-row-gap: 20px;
+    }
+    /*========= services =========*/
+    /*========= news ========*/
+    .grid-card {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    /*========= news =========*/
+    /*========= newsdetail =========*/
+    .news-detail-block {
+        width: 450px;
+    }
+    .news-sidebar {
+        width: 185px;
+    }
+    .news-detail-title {
+        font-size: 26px;
+    }
+    .news-sidebar-block-title {
+        font-size: 18px;
+    }
+    .news-sidebar-title {
+        font-size: 13px;
+    }
+    .news-img {
+        height: auto;
+    }
+    .news-grid-gallery {
+        grid-template-columns:  repeat(4, 158px);
+    }
+    .news-detail-owl {
+        margin-top: 50px;
+    }
+    .owl-news-detail-info {
+        padding:10px 10px 10px
+    }
+    /*========= newsdetail =========*/
+
 }
 
 @media(max-width: 768px) {
@@ -3069,9 +3183,52 @@ section#contact {
     .segment {
         width: 100%;
     }
+    .profile-grid-gallery .grid-gallery-item {
+        /* height: auto; */
+        /* width: 114px; */
+        width: 30%;
+    }
     /*========= myinfo =========*/
+    /*=========rieltors =========*/
+    .grid-rieltors {
+        grid-template-columns: repeat(3, 1fr );
+    }
+    .choose-rieltor-area {
+        flex-direction: column;
+    }
+    .rieltor-area-right {
+        width: 100%;
+        margin-left: 0;
+    }
+    .rieltor-area {
+        padding: 24px 10px 50px !important
+    }
+    .rieltor-page-tablist {
+        grid-template-columns: repeat(2, 1fr );
+    }
+    /*========= rieltors =========*/
+    /*========= sevices =========*/
+    .grid-card-services {
+        grid-template-columns: repeat(3, auto );
+        grid-row-gap: 20px;
+    }
+    /*========= sevices =========*/
+    /*========= news detail =========*/
 
-
+    .news-detail-block, .news-sidebar {
+        width: 100%;
+    }
+    .news-sidebar {
+        margin-top: 30px;
+    }
+    .news-grid-gallery {
+        grid-template-columns:  repeat(3, 1fr);
+        grid-gap: 10px;
+    }
+    .owl-news-detail-info {
+        padding: 40px 10px 10px
+    }
+    /*========= news detail =========*/
 
 }
 
@@ -3150,12 +3307,27 @@ section#contact {
     .contract-list {
         position: absolute;
     }
-    .grid-profile-link {
+    .profile-grid-gallery .grid-gallery-item {
+        /* height: auto; */
+        /* width: 114px; */
+        width: 46%;
+    }
+    /* .grid-profile-link {
         font-size: 16px;
     }
     .grid-profile-link:not(:first-child) {
         margin-left: 16px;
     }
+    .profile-grid-holder {
+        font-size: 13px;
+        height: 110px;
+    }
+    .profile-grid-decore > div i:nth-child(2) {
+        font-size: 20px;
+    }
+    .profile-grid-gallery .grid-gallery-item > img {
+        height: 115px;
+    } */
     /*========= my info =========*/
     /*========= website pagination =========*/
     a.next-page{
@@ -3178,9 +3350,37 @@ section#contact {
         background-size: 50px;
     }
     /*========= add contact =========*/
+    /*========= rieltors =========*/
+    .grid-rieltors {
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 40px;
+    }
+    .rieltor-grid-name {
+        font-size: 14px;
+    }
+    .rieltor-grid-place {
+        font-size: 10px;
+    }
+    .rieltor-grid-img {
+        height: auto
+    }
+    /*========= rieltors =========*/
+        /*========= sevices =========*/
+        .grid-card-services {
+            grid-template-columns: repeat(1, auto );
+            grid-row-gap: 20px;
+        }
+        /*========= sevices =========*/
 
 }
+@media(max-width: 476px) {
 
+    /*========= rieltors and newsdetail owl =========*/
+    .owl-news-detail-img {
+        height: auto;
+    }
+     /*========= rieltors and newsdetail owl =========*/
+}
 @media(max-width: 375px) {
 
     /*========= index =========*/
@@ -3235,8 +3435,12 @@ section#contact {
     .phone-ico {
         width: 12px;
     }
-
     /*========= header =========*/
+    /*========= newsdetails =========*/
+    .owl-news-detail-img {
+        height: 150px;
+    }
+    /*========= newsdetails =========*/
 }
 
 @media(max-width: 300px) {

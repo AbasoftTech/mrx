@@ -140,7 +140,7 @@
                 <ul class="nav-list">
                     <li><a href="{{route("home")}}">Ana Səhifə</a></li>
                     <li><a href="{{route("about")}}">Haqqımızda</a></li>
-                    <li><a href=="{{route("services")}}">Xidmətlər</a></li>
+                    <li><a href="{{route("services")}}">Xidmətlər</a></li>
                     <li><a href="{{route("rieltors")}}">Rieltorlar</a></li>
                     <li><a href="{{route("news")}}">Media</a></li>
                     <li><a href="{{route("contact")}}">Əlaqə</a></li>

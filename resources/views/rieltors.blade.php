@@ -13,38 +13,57 @@
     <div class="container">
         <div class="block--title">Çalışdığı Ərazi Üzrə Rieltorun Seçilməsi</div>
         <div class="choose-rieltor-area">
-            <label for="">
-                <div class="label-text">Şəhər</div>
-                <div class="custom-select-c custom-select-prefix mt-2" style="width:200px;">
-                    <select>
-                        <option value="1">Bakı</option>
-                        <option value="1">Naxçıvan</option>
-                        <option value="2">Gəncə</option>
-                    </select>
+            <div class="d-flex flex-column">
+                <div class="label-text text-left  text-lg-start">Şəhər</div>
+                <div style="width: 200px; height: 47px; position: relative" class="mt-3">
+                    <input type="text" class="hidden-search-input" autofocus="true" placeholder="axtar">
+                    <div class="my-select myselec-2 living">
+                        <select name="" class="" id="">
+                            <option value="Bakı" class="selected">Bakı</option>
+                            <option value="Bakı">Bakı</option>
+                            <option value="Gence">Gence</option>
+                            <option value="Naxcivan">Naxcivan</option>
+                            <option value="Lenkeran">Lenkeran</option>
+                        </select>
+                        <div class="clone-select"></div>
+                        <div class="clone-option"></div>
+                    </div>
                 </div>
-            </label>
-            <label for="">
-                <div class="label-text">Rayon və qəsəbə</div>
-                <div class="custom-select-c custom-select-prefix mt-2" style="width:200px;">
-                    <select>
-                        <option value="1">050</option>
-                        <option value="1">051</option>
-                        <option value="2">050</option>
-                        <option value="3">055</option>
-                    </select>
+            </div>
+            <div class="d-flex flex-column ms-0 ms-md-3">
+                <div class="label-text text-left mt-3 mt-sm-0">Rayon və qəsəbə</div>
+                <div style="width: 200px; height: 47px; position: relative" class="mt-3">
+                    <input type="text" class="hidden-search-input" autofocus="true" placeholder="axtar">
+                    <div class="my-select myselec-2 living">
+                        <select name="" class="" id="">
+                            <option value="Bileceri" class="selected">Bileceri</option>
+                            <option value="Baki">Baki</option>
+                            <option value="Gence">Gence</option>
+                            <option value="Naxcivan">Naxcivan</option>
+                            <option value="Lenkeran">Lenkeran</option>
+                        </select>
+                        <div class="clone-select"></div>
+                        <div class="clone-option"></div>
+                    </div>
                 </div>
-            </label>
-            <label for="">
-                <div class="label-text">Ad, soyad və ya nömrə ilə axtar</div>
-                <div class="custom-select-c custom-select-prefix mt-2" style="width:200px;">
-                    <select>
-                        <option value="1">050</option>
-                        <option value="1">051</option>
-                        <option value="2">050</option>
-                        <option value="3">055</option>
-                    </select>
+            </div>
+            <div class="d-flex flex-column ms-0 ms-md-3">
+                <div class="label-text text-left mt-3 mt-sm-0 extra-color">Ad, soyad və ya nömrə ilə axtar</div>
+                <div style="width: 200px; height: 47px; position: relative" class="mt-3">
+                    <input type="text" class="hidden-search-input" autofocus="true" placeholder="axtar">
+                    <div class="my-select myselec-2 living">
+                        <select name="" class="" id="">
+                            <option value="Bileceri" class="selected">Bileceri</option>
+                            <option value="Baki">Baki</option>
+                            <option value="Gence">Gence</option>
+                            <option value="Naxcivan">Naxcivan</option>
+                            <option value="Lenkeran">Lenkeran</option>
+                        </select>
+                        <div class="clone-select"></div>
+                        <div class="clone-option"></div>
+                    </div>
                 </div>
-            </label>
+            </div>
         </div>
     </div>
     <div class="container">
@@ -61,18 +80,18 @@
             <div class="grid-rieltor-item">
                 <div class="rieltor-grid-img"><a href="{{route("rieltorpage")}}"><img src="{{asset('frontend/IMAGE/icons/top-10.svg')}}" alt="" class="rieltor-grid-badge"><img src="{{asset('frontend/IMAGE/rieltor-2.png')}}" alt=""></a></div>
                 <div class="rieltor-grid-info">
-                    <a href="{{route("rieltorpage")}}" class="rieltor-grid-name"></a>
+                    <a href="{{route("rieltorpage")}}" class="rieltor-grid-name">Əli Abbasov</a>
                     <div class="rieltor-grid-place">
-
+                        7-ci yer
                     </div>
                 </div>
             </div>
             <div class="grid-rieltor-item">
-                <div class="rieltor-grid-img"><a href="{{route("rieltorpage")}}"><img src="{{asset('frontend/IMAGE/icons/top-10.svg')}}" alt="" class="rieltor-grid-badge"><img src="{{asset('frontend/IMAGE/rieltor-3.png')}}" alt=""></a></div>
+                <div class="rieltor-grid-img"><a href="{{route("rieltorpage")}}"><img src="{{asset('frontend/IMAGE/icons/top-10.svg')}}" alt="" class="rieltor-grid-badge"><img src="{{asset('frontend/IMAGE/rieltor-4.png')}}" alt=""></a></div>
                 <div class="rieltor-grid-info">
-                    <a href="{{route("rieltorpage")}}" class="rieltor-grid-name"></a>
+                    <a href="{{route("rieltorpage")}}" class="rieltor-grid-name">Cbbar Heydərov</a>
                     <div class="rieltor-grid-place">
-
+                        5-cu yer
                     </div>
                 </div>
             </div>
@@ -88,13 +107,13 @@
             <div class="grid-rieltor-item">
                 <div class="rieltor-grid-img"><a href="{{route("rieltorpage")}}"><img src="{{asset('frontend/IMAGE/icons/top-10.svg')}}" alt="" class="rieltor-grid-badge"><img src="{{asset('frontend/IMAGE/rieltor-5.png')}}" alt=""></a></div>
                 <div class="rieltor-grid-info">
-                    <a href="{{route("rieltorpage")}}" class="rieltor-grid-name"></a>
+                    <a href="{{route("rieltorpage")}}" class="rieltor-grid-name">Jakob</a>
                     <div class="rieltor-grid-place">
-
+                        3-cu yer
                     </div>
                 </div>
             </div>
-            <div class="grid-rieltor-item">
+            {{-- <div class="grid-rieltor-item">
                 <div class="rieltor-grid-img"><a href="{{route("rieltorpage")}}"><img src="{{asset('frontend/IMAGE/icons/top-10.svg')}}" alt="" class="rieltor-grid-badge"><img src="" alt=""></div>
                 <div class="rieltor-grid-info">
                     <a href="{{route("rieltorpage")}}" class="rieltor-grid-name"></a>
@@ -102,7 +121,19 @@
 
                     </div>
                 </div>
-            </div>
+            </div> --}}
+        </div>
+    </div>
+    <div class="container text-center mt-5">
+        <div class="custom-pagination">
+            <span>
+                <a href="">1</a>
+                <a href="">2</a>
+                <a href="">3</a>
+                <a href="">4</a>
+                <a href="">5</a>
+            </span>
+            <a href="" class="next-page">Növbəti</a>
         </div>
     </div>
 </section>

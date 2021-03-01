@@ -11,8 +11,8 @@
         </div>
     </div>
     <div class="container rieltor-area">
-        <div class="d-flex">
-            <div class="rieltor-page-img"><img src="{{asset('frontend/IMAGE/rieltor-1.png')}}" alt=""></div>
+        <div class="d-flex flex-column flex-lg-row">
+            <div class="rieltor-page-img m-auto m-lg-0"><img src="{{asset('frontend/IMAGE/rieltor-1.png')}}" alt=""></div>
             <div class="rieltor-area-right">
                 <div class="rieltor-name">Əli Abbasov</div>
                 <div class="rieltor-place"><img src="{{asset('frontend/IMAGE/icons/top-10.svg')}}" alt=""><span class="ms-4">3-cu yer</span></div>

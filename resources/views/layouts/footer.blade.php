@@ -4,9 +4,9 @@
             <div class="grid-footer-left">
                 <div><a href=""><img src="{{asset("frontend/IMAGE/icons/logo.svg")}}" alt=""></a></div>
                 <div class="">
-                    <a href="" class="me-4"><i class="fab fa-facebook-f"></i></a>
-                    <a href="" class="me-4"><i class="fab fa-instagram"></i></a>
-                    <a href="" class="me-4"><i class="fab fa-youtube"></i></a>
+                    <a href="" class="me-3 me-sm-4"><i class="fab fa-facebook-f"></i></a>
+                    <a href="" class="me-3 me-sm-4"><i class="fab fa-instagram"></i></a>
+                    <a href="" class="me-3 me-sm-4"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
             <div class="grid-footer-right">

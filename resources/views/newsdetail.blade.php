@@ -11,7 +11,7 @@
         </div>
     </div>
     <div class="container">
-        <div class="d-flex justify-content-between">
+        <div class="d-flex justify-content-between flex-column flex-md-row">
             {{-- news block starts --}}
             <div class="news-detail-block">
                 <h1 class="news-detail-title">
@@ -21,7 +21,7 @@
                     <div class="media-category media-c-3 ms-4"><a href="{{route("newsdetail")}}"><img src="{{asset("frontend/IMAGE/icons/media-dot-3.svg")}}" alt="">Kateqoriya 1</a></div>
                 </div>
                 <div class="news-img">
-                    <img src="{{asset('frontend/IMAGE/news-head.png')}}" alt="">
+                    <img src="{{asset('frontend/IMAGE/news-head.png')}}" width="100%" alt="news-main">
                 </div>
                 <h2 class="subtitle">
                     Türkiyənin Azərbaycanın tərəfində Qarabağ münaqişəsinə müdaxiləsi həm mütəxəssislər, həm də siyasətçilər üçün gözlənilməz oldu. Türkiyə pilotsuz təyyarələrindən istifadə Azərbaycana döyüş meydanında üstünlük verdi, müharibədə qalib gəlməyə kömək etdi.
