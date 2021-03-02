@@ -615,10 +615,23 @@ for (let index = 0; index < list.length; index++) {
 
 var profGridGal = document.getElementsByClassName('profile-grid-gallery')[0];
 var addNewGalItem = document.getElementsByClassName('add-new-gal-item')[0];
+var uploadedContract = document.getElementsByClassName('uploadedContract');
+var uploadedContract = document.getElementsByClassName('dropFileHolder');
+
 // var control = document.getElementsByClassName('grid-gallery-item-control')[0];
 // var controller = "<div class='grid-gallery-item-control'></div>";
 var remove = function removeNow(e) {
-    e.currentTarget.parentElement.parentElement.remove()
+    e.currentTarget.parentElement.parentElement.remove();
+    // for (let index = 0; index < uploadedContract.length; index++) {
+    //     if(uploadedContract[index].childElementCount == 0) {
+    //         console.log(uploadedContract[index].childElementCount)
+    //         // e.currentTarget.parentElement.parentElement.parentElement.remove();
+    //         uploadedContract[index].remove()
+    //         console.log(e.currentTarget.parentElement.parentElement.parentElement)
+    //     }
+    //     return
+    //     // console.log(e.currentTarget.parentElement.parentElement.parentElement)
+    // }
 }
 var deg = 45
 var rotate = function rotateNow(e) {
@@ -660,7 +673,6 @@ function uploadGal(input) {
     }
   }
 }
-var uploadedContract = document.getElementsByClassName('uploadedContract');
 function addContract(input) {
     console.log(input.parentElement.nextSibling, 'in[put')
     if (input.files && input.files[0]) {

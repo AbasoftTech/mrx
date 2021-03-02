@@ -11,7 +11,7 @@
         </div>
     </div>
     <div class="container">
-        <div class="d-flex">
+        <div class="d-flex flex-column flex-lg-row">
             <div class="contact-left">
                 <div class="contact-text">
                     <div class="block--title">Biz Haradayıq</div>

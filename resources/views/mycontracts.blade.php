@@ -19,7 +19,7 @@
                 <a href="{{route("account")}}" class="grid-profile-link">Hesab</a>
             </div>
         </div>
-        <div class="d-flex flex-lgc-dir mt-3 mt-sm-5">
+        <div class="d-flex flex-lgc-dir mt-3 mt-sm-5 mb-5">
             <div class="profile-sidebar">
                 <div class="profile-tablist tablist flex-column flex-lg-row">
                     <div class="profile-tab tab tab-active" data-id="0">

@@ -188,14 +188,14 @@ a {
     width: 10px;
   }
   .uploadedContract::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: transparent;
   }
   .uploadedContract::-webkit-scrollbar-thumb {
-    background: #888;
+    background: transparent;
       border-radius:10px;
   }
   .uploadedContract::-webkit-scrollbar-thumb:hover {
-    background: #0074E1;
+    background: transparent;
   }
 
 .uploadedContract .contract-item {
@@ -2161,13 +2161,38 @@ section#news {
     background-color: #F2F7FF;
 }
 .flatpickr-calendar {
-    left: 514px !important;
+    /* left: 514px !important; */
+}
+.flatpickr-monthDropdown-months, .flatpickr-current-month input.cur-year {
+    font-size: 12px !important;
+    font-family: Poppins_sb !important;
+    color: #C7C7C7 !important
+}
+.dayContainer {
+    max-width: 238.875px !important;
+    min-width: 235.875px !important;
+}
+.flatpickr-day {
+    width: 30px !important;
+    height: 32px !important;
+    line-height: 32px !important;
+    color: #414141 !important;
+    font-size: 12px !important;
+}
+.flatpickr-weekdays {
+    width: 78% !important;
+}
+.flatpickr-calendar {
+    width: 260px !important;
 }
 .flatpickr-calendar:before, .flatpickr-calendar:after {
     content: unset !important
 }
 .flatpickr-day.today {
-    color: #0074E1 !important
+    color: #0074E1 !important;
+}
+.flatpickr-day.selected {
+    background-color: transparent !important;
 }
 .flatpickr-day:hover {
     background-color: unset !important;
@@ -2883,6 +2908,11 @@ section#contact {
         bottom: -40px;
     }
     /*========= news detail =========*/
+    /*========= contact =========*/
+    .contact-left {
+        width: 400px;
+    }
+    /*========= contact =========*/
 }
 
 @media(max-width: 1024px) {
@@ -3173,6 +3203,15 @@ section#contact {
         width: 100%;
     }
     /*========= adgoon =========*/
+    /*========= contract =========*/
+    .contact-right {
+        margin: 30px 0 0;
+        width: 100%;
+    }
+    .contact-left {
+        width: 100%;
+    }
+    /*========= contract =========*/
 
 }
 
@@ -3279,6 +3318,23 @@ section#contact {
         grid-row-gap: 20px;
     }
     /*========= sevices =========*/
+    /*========= media =========*/
+    .media-title a {
+        font-size: 12px;
+        line-height: 0;
+    }
+    .media-body, .media-title {
+        padding: 10px
+    }
+    .media-body-text {
+        height: 100px;
+        overflow: hidden;
+        -webkit-line-clamp: 5;
+        display: -webkit-box;
+        text-overflow: ellipsis;
+        -webkit-box-orient: vertical;
+    }
+    /*========= media =========*/
     /*========= news detail =========*/
 
     .news-detail-block, .news-sidebar {
@@ -3355,11 +3411,6 @@ section#contact {
         height: 165px;
         overflow: hidden;
     }
-
-    .media-title a {
-        font-size: 18px;
-    }
-
     /*========= index =========*/
 
     /*========= contract =========*/
@@ -3393,26 +3444,10 @@ section#contact {
         /* width: 114px; */
         width: 46%;
     }
-    /* .grid-profile-link {
-        font-size: 16px;
-    }
-    .grid-profile-link:not(:first-child) {
-        margin-left: 16px;
-    }
-    .profile-grid-holder {
-        font-size: 13px;
-        height: 110px;
-    }
-    .profile-grid-decore > div i:nth-child(2) {
-        font-size: 20px;
-    }
-    .profile-grid-gallery .grid-gallery-item > img {
-        height: 115px;
-    } */
     /*========= my info =========*/
     /*========= website pagination =========*/
     a.next-page{
-        padding: 0 20px;
+        padding: 0 10px;
         margin-left: 0;
     }
     .custom-pagination span a {
@@ -3446,12 +3481,17 @@ section#contact {
         height: auto
     }
     /*========= rieltors =========*/
-        /*========= sevices =========*/
-        .grid-card-services {
-            grid-template-columns: repeat(1, auto );
-            grid-row-gap: 20px;
-        }
-        /*========= sevices =========*/
+    /*========= sevices =========*/
+    .grid-card-services {
+        grid-template-columns: repeat(1, auto );
+        grid-row-gap: 20px;
+    }
+    /*========= sevices =========*/
+    /*========= media =========*/
+    .grid-card {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    /*========= media =========*/
 
 }
 @media(max-width: 476px) {
