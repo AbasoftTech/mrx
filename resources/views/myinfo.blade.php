@@ -134,7 +134,7 @@
                                     </label>
                                     <label for="" class="text-center text-lg-start w-100 mt-3">
                                         <span class="label-text text-center text-lg-left">Təhsili</span>
-                                            <div style="height: 47px" class="after-selected">
+                                            {{-- <div style="height: 47px" class="after-selected">
                                                 <div class="my-select myselect2">
                                                     <select name="" class="" id="">
                                                         <option value="Ali" class="selected">Ali</option>
@@ -145,6 +145,13 @@
                                                     <div class="clone-select"></div>
                                                     <div class="clone-option"></div>
                                                 </div>
+                                            </div> --}}
+                                            <div class="edu mt-3">
+                                                <select class="js-example-placeholder-single js-states form-control" lang="az">
+                                                    <option>Ali</option>
+                                                    <option>Natamam</option>
+                                                    <option>070</option>
+                                                </select>
                                             </div>
                                     </label>
                                     <label for="" class="text-center text-lg-start w-100 mt-3">
@@ -178,7 +185,14 @@
                             <div class="block--title">Nömrə Əlavə Et</div>
                             <div class="segment-holder">
                                 <div class="segment mt-4">
-                                    <div style="width: 124px; height: 47px">
+                                    <div class="prex">
+                                        <select class="js-example-placeholder-single js-states form-control" lang="az">
+                                            <option>051</option>
+                                            <option>050</option>
+                                            <option>070</option>
+                                        </select>
+                                    </div>
+                                    {{-- <div style="width: 124px; height: 47px">
                                         <div class="my-select myselec-2 prefix">
                                             <select name="" class="" id="">
                                                 <option value="Prefix" class="selected">Prefix</option>
@@ -190,7 +204,7 @@
                                             <div class="clone-select"></div>
                                             <div class="clone-option"></div>
                                         </div>
-                                    </div>
+                                    </div> --}}
                                     <label for="" class="num-label">
                                         <input name="top" type="number" class="insert-number ms-2" maxlength="3" pattern="[0-9]" name="">
                                         <input name="middle" type="number" class="insert-number index0 ms-2" maxlength="2" pattern="[0-9]" name="">
@@ -230,9 +244,16 @@
                             <div class="block--title">Yaşadığı Ərazi</div>
                             <div class="segment-holder">
                                 <div class="segment flex-column flex-sm-row mt-4">
-                                    <div class="d-flex flex-column">
+                                    <div class="d-flex flex-column w-50">
                                         <div class="label-text text-center text-lg-start">Şəhər</div>
-                                        <div style="width: 200px; height: 47px; position: relative" class="mt-3">
+                                        <div class="mt-3">
+                                            <select class="js-example-placeholder-single js-states form-control" lang="az">
+                                                <option>Bakı</option>
+                                                <option>Gence</option>
+                                                <option>Naxcivan</option>
+                                            </select>
+                                        </div>
+                                        {{-- <div style="width: 200px; height: 47px; position: relative" class="mt-3">
                                             <input type="text" class="hidden-search-input" autofocus placeholder="axtar">
                                             <div class="my-select myselec-2 living">
                                                 <select name="" class="" id="">
@@ -245,12 +266,19 @@
                                                 <div class="clone-select chevron"></div>
                                                 <div class="clone-option"></div>
                                             </div>
-                                        </div>
+                                        </div> --}}
                                     </div>
 
-                                    <div class="d-flex flex-column">
+                                    <div class="d-flex flex-column w-50 ms-0 ms-sm-3">
                                         <div class="label-text text-center text-lg-start">Şəhər</div>
-                                        <div style="width: 200px; height: 47px; position: relative" class="mt-3">
+                                        <div class="mt-3">
+                                            <select class="js-example-placeholder-single js-states form-control" lang="az">
+                                                <option>Bakı</option>
+                                                <option>Gence</option>
+                                                <option>Naxcivan</option>
+                                            </select>
+                                        </div>
+                                        {{-- <div style="width: 200px; height: 47px; position: relative" class="mt-3">
                                             <input type="text" class="hidden-search-input" autofocus="true" placeholder="axtar">
                                             <div class="my-select myselec-2 living">
                                                 <select name="" class="" id="">
@@ -263,7 +291,7 @@
                                                 <div class="clone-select"></div>
                                                 <div class="clone-option"></div>
                                             </div>
-                                        </div>
+                                        </div> --}}
                                     </div>
                                     {{-- <div class="d-flex flex-column">
                                         <div class="label-text text-center text-lg-start">Rayon və qəsəbə</div>
@@ -289,9 +317,17 @@
                                 <div class="block--title">Çalışdığı Ərazilər</div>
                                 <div class="segment-holder">
                                     <div class="segment flex-column flex-sm-row mt-4">
-                                        <div class="d-flex flex-column">
+                                        <div class="d-flex flex-column w-50">
                                             <div class="label-text text-center text-lg-start">Şəhər</div>
-                                            <div style="width: 200px; height: 47px; position: relative" class="mt-3">
+                                            <div class="mt-3">
+                                                <select class="js-example-placeholder-single js-states form-control" lang="az">
+                                                    <option>Bakı</option>
+                                                    <option>Gence</option>
+                                                    <option>Naxcivan</option>
+                                                </select>
+                                            </div>
+                                            {{-- <div style="width: 200px"><input type="text" class="hidden-search-input" autofocus="true" placeholder="axtar"></div> --}}
+                                            {{-- <div style="width: 200px; height: 47px; position: relative" class="mt-3">
                                                 <input type="text" class="hidden-search-input" autofocus="true" placeholder="axtar">
                                                 <div class="my-select myselec-2 living">
                                                     <select name="" class="" id="">
@@ -304,11 +340,11 @@
                                                     <div class="clone-select"></div>
                                                     <div class="clone-option"></div>
                                                 </div>
-                                            </div>
+                                            </div> --}}
                                         </div>
-                                        <div class="d-flex flex-column">
+                                        <div class="d-flex flex-column w-50 ms-0 ms-sm-3">
                                             <div class="label-text text-center text-lg-start">Şəhər</div>
-                                            <div style="width: 200px; height: 47px; position: relative" class="mt-3">
+                                            {{-- <div style="width: 200px; height: 47px; position: relative" class="mt-3">
                                                 <input type="text" class="hidden-search-input" autofocus="true" placeholder="axtar">
                                                 <div class="my-select myselec-2 living">
                                                     <select name="" class="" id="">
@@ -321,6 +357,13 @@
                                                     <div class="clone-select"></div>
                                                     <div class="clone-option"></div>
                                                 </div>
+                                            </div> --}}
+                                            <div class="mt-3">
+                                                <select class="js-example-placeholder-single js-states form-control" lang="az">
+                                                    <option>Bakı</option>
+                                                    <option>Gence</option>
+                                                    <option>Naxcivan</option>
+                                                </select>
                                             </div>
                                         </div>
                                         {{-- <div class="d-flex flex-column">
@@ -355,7 +398,7 @@
                                             </div>
                                         </div> --}}
                                     </div>
-                                    <div class="add-column"><i class="fas fa-plus"></i></div>
+                                    <div class="add-column living"><i class="fas fa-plus"></i></div>
                                 </div>
                             </div>
                             <div class="mt-4 d-flex">
@@ -405,55 +448,187 @@
         </div>
     </div>
 </section>
+{{-- <div class="custom-select" style="width:200px;">
+    <input type="text" class="text-test">
+    <select>
+        <option value="0" class="select-selected"><input type="text"></option>
+      <option value="0" >Select car:</option>
+      <option value="1">Audi</option>
+      <option value="2">BMW</option>
+      <option value="3">Citroen</option>
+      <option value="4">Ford</option>
+      <option value="5">Honda</option>
+      <option value="6">Jaguar</option>
+      <option value="7">Land Rover</option>
+      <option value="8">Mercedes</option>
+      <option value="9">Mini</option>
+      <option value="10">Nissan</option>
+      <option value="11">Toyota</option>
+      <option value="12">Volvo</option>
+    </select>
+  </div> --}}
+
+  {{-- <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Dropdown button
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <a class="" ><input type="text"></a>
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+    </div>
+  </div> --}}
+<style>
+    .text-test {
+        visibility: hidden;
+    }
+    .text-test.active {
+        visibility: visible;
+    }
+    /*the container must be positioned relative:*/
+.custom-select {
+  position: relative;
+  font-family: Arial;
+}
+
+.custom-select select {
+  display: none; /*hide original SELECT element:*/
+}
+
+.select-selected {
+  background-color: DodgerBlue;
+}
+
+/*style the arrow inside the select element:*/
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+
+/*style the items (options), including the selected item:*/
+.select-items div,.select-selected {
+  color: #ffffff;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+  user-select: none;
+}
+
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  background-color: DodgerBlue;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+</style>
 <script>
-
-//     var allOption = document.querySelectorAll('.my-select select option');
-//     var mySelect = document.querySelectorAll('.my-select')[0];
-//     var cloneSelect = document.querySelectorAll('.clone-select')[0];
-//     var cloneOption = document.querySelectorAll('.clone-option')[0];
-//     for(let i=0; i< allOption.length; i++) {
-//             var div = document.createElement('div');
-//             if(!allOption[i].classList.contains('selected')) {
-//                 div.innerHTML = allOption[i].value;
-//                 cloneOption.append(div);
-//             } else {
-//                 cloneSelect.innerHTML = allOption[i].value;
-//             }
-//         }
-//     cloneSelect.addEventListener("click", () => {
-//         if(!cloneOption.classList.contains('active')) {
-//             cloneOption.classList.add('active')
-//             cloneSelect.style.border = '1px solid transparent'
-//             mySelect.style.border = '1px solid #0074E1'
-//             mySelect.style.backgroundColor = "#F2F7FF"
-//         }
-//         else {
-//             cloneOption.classList.remove('active')
-//             cloneSelect.style.border = '1px solid #C7C7C7'
-//             mySelect.style.border = '1px solid transparent';
-//             mySelect.style.backgroundColor = "transparent"
-//         }
-//     })
-//     var option = document.querySelectorAll('.clone-option div');
-//     for (let index = 0; index < option.length; index++) {
-//         option[index].addEventListener('click', function() {
-//             var old = cloneSelect.innerText;
-//             cloneSelect.innerHTML = this.innerHTML;
-//             this.innerHTML = old;
-//             cloneOption.classList.remove('active')
-//             cloneOption.classList.remove('active')
-//             cloneSelect.style.border = '1px solid #C7C7C7'
-//             mySelect.style.border = '1px solid transparent';
-//             mySelect.style.backgroundColor = "transparent"
-//         })
-//     }
-
-//     var now = new Date().getFullYear();
-//     var stamp = new Date(1000);
-
-//     // var distance = now - stamp;
-//     console.log(Number(Date.now()));
-// </script>
+var x, i, j, l, ll, selElmnt, a, b, c;
+/*look for any elements with the class "custom-select":*/
+x = document.getElementsByClassName("custom-select");
+l = x.length;
+for (i = 0; i < l; i++) {
+  selElmnt = x[i].getElementsByTagName("select")[0];
+  ll = selElmnt.length;
+  /*for each element, create a new DIV that will act as the selected item:*/
+  a = document.createElement("DIV");
+  a.setAttribute("class", "select-selected");
+  a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+  x[i].appendChild(a);
+  /*for each element, create a new DIV that will contain the option list:*/
+  b = document.createElement("DIV");
+  b.setAttribute("class", "select-items select-hide");
+  for (j = 1; j < ll; j++) {
+    /*for each option in the original select element,
+    create a new DIV that will act as an option item:*/
+    c = document.createElement("DIV");
+    c.innerHTML = selElmnt.options[j].innerHTML;
+    c.addEventListener("click", function(e) {
+        /*when an item is clicked, update the original select box,
+        and the selected item:*/
+        var y, i, k, s, h, sl, yl;
+        s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+        sl = s.length;
+        h = this.parentNode.previousSibling;
+        for (i = 0; i < sl; i++) {
+          if (s.options[i].innerHTML == this.innerHTML) {
+            s.selectedIndex = i;
+            h.innerHTML = this.innerHTML;
+            y = this.parentNode.getElementsByClassName("same-as-selected");
+            yl = y.length;
+            for (k = 0; k < yl; k++) {
+              y[k].removeAttribute("class");
+            }
+            this.setAttribute("class", "same-as-selected");
+            break;
+          }
+        }
+        h.click();
+    });
+    b.appendChild(c);
+  }
+  x[i].appendChild(b);
+  var hid = document.getElementsByClassName("text-test")[0]
+  a.addEventListener("click", function(e) {
+      /*when the select box is clicked, close any other select boxes,
+      and open/close the current select box:*/
+      e.stopPropagation();
+      closeAllSelect(this);
+    //   hid.classList.add('active')
+      this.nextSibling.classList.toggle("select-hide");
+      this.classList.toggle("select-arrow-active");
+    });
+}
+function closeAllSelect(elmnt) {
+  /*a function that will close all select boxes in the document,
+  except the current select box:*/
+  var x, y, i, xl, yl, arrNo = [];
+  x = document.getElementsByClassName("select-items");
+  y = document.getElementsByClassName("select-selected");
+  xl = x.length;
+  yl = y.length;
+  for (i = 0; i < yl; i++) {
+    if (elmnt == y[i]) {
+      arrNo.push(i)
+    } else {
+      y[i].classList.remove("select-arrow-active");
+    }
+  }
+  for (i = 0; i < xl; i++) {
+    if (arrNo.indexOf(i)) {
+      x[i].classList.add("select-hide");
+    }
+  }
+}
+/*if the user clicks anywhere outside the select box,
+then close all select boxes:*/
+document.addEventListener("click", closeAllSelect);
+</script>
 <script>
         var years = document.getElementsByClassName('years')[0];
         var calDays = document.getElementsByClassName('cal-days')[0];

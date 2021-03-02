@@ -288,50 +288,76 @@ for (var i = 0; i < mySelect.length; i++) {
         // e.stopPropagation();
     }
     var clicked = false;
-    document.body.addEventListener("click", () => {
+    // document.body.addEventListener("click", () => {
+    //     var allSelect = document.getElementsByClassName('my-select');
+    //     var allSelectOption = document.getElementsByClassName('clone-option');
+    //     var allSelectSelect = document.getElementsByClassName('clone-select');
+    //     var hidInput = document.getElementsByClassName('hidden-search-input');
+    //     // function checkClick(e) {
+    //     //     clicked = true;
+    //     //     console.log('true');
+    //     // }
+    //     for (let index = 0; index < hidInput.length; index++) {
+    //         hidInput[index].addEventListener('click', function () {
+    //             console.log(this, 'yeahs')
+    //             this.classList.add('active')
+    //         })
+    //     }
+
+    //     // for (var index = 0; index < hidInput.length; index++) {
+    //     //     hidInput[index].addEventListener('click',checkClick )
+    //     //     // hidInput[index].classList.add('active');
+    //     //     // allSelectSelect[index].classList.remove('active');
+    //     //     // console.log(hidInput[index], 'caaan')
+    //     // }
+    //     for (var index = 0; index < allSelect.length; index++) {
+    //         // if(clicked == true) {
+    //         //     console.log('true', 'trudud buuu')
+    //         //     return
+    //         // }
+    //         allSelect[index].classList.remove('active');
+    //         allSelectOption[index].classList.remove('active');
+    //         allSelectSelect[index].classList.remove('active');
+    //         // hidInput[index].classList.remove('active');
+
+    //     }
+    // });
+    document.onclick= function(event) {
+        // Compensate for IE<9's non-standard event model
+        //
         var allSelect = document.getElementsByClassName('my-select');
         var allSelectOption = document.getElementsByClassName('clone-option');
         var allSelectSelect = document.getElementsByClassName('clone-select');
         var hidInput = document.getElementsByClassName('hidden-search-input');
-        // function checkClick(e) {
-        //     clicked = true;
-        //     console.log('true');
-        // }
-        for (let index = 0; index < hidInput.length; index++) {
-            hidInput[index].addEventListener('click', function () {
-                console.log(this, 'yeahs')
-                this.classList.add('active')
-            })
-        }
 
-        // for (var index = 0; index < hidInput.length; index++) {
-        //     hidInput[index].addEventListener('click',checkClick )
-        //     // hidInput[index].classList.add('active');
-        //     // allSelectSelect[index].classList.remove('active');
-        //     // console.log(hidInput[index], 'caaan')
-        // }
-        for (var index = 0; index < allSelect.length; index++) {
-            // if(clicked == true) {
-            //     console.log('true', 'trudud buuu')
-            //     return
-            // }
-            allSelect[index].classList.remove('active');
-            allSelectOption[index].classList.remove('active');
-            allSelectSelect[index].classList.remove('active');
-            hidInput[index].classList.remove('active');
-
+        if (event===undefined) event= window.event;
+        var target= 'target' in event? event.target : event.srcElement;
+        if(!target.classList.contains('living')) {
+            console.log('this is NOT living');
+            for (var index = 0; index < allSelect.length; index++) {
+                if(hidInput == true) {
+                    hidInput[index].classList.remove('active');
+                }
+                allSelect[index].classList.remove('active');
+                allSelectOption[index].classList.remove('active');
+                allSelectSelect[index].classList.remove('active');
+            }
         }
-    });
+        // else {
+        //     console.log('this is not living')
+        // }
+        // alert('clicked on '+target.className);
+    };
     cloneSelect.addEventListener("click", function (e) {
         if(this.parentElement.classList.contains('living')) {
-            this.parentElement.previousElementSibling.classList.toggle("active");
+            this.parentElement.previousElementSibling.classList.add("active");
             this.parentElement.previousElementSibling.autofocus
         }
         // document.getElementsByClassName("hidden-search-input")[0].classList.toggle("visible")
         console.log(this.nextSibling.nextSibling)
-        this.nextSibling.nextSibling.classList.toggle('active')
-        this.parentElement.classList.toggle('active')
-        this.classList.toggle('active')
+        this.nextSibling.nextSibling.classList.add('active')
+        this.parentElement.classList.add('active')
+        this.classList.add('active')
         // if (!this.nextSibling.nextSibling.classList.contains('active')) {
         //     this.nextSibling.nextSibling.classList.add('active');
         //     calDays.style.zIndex = '1'
@@ -686,3 +712,34 @@ function addContract(input) {
 $('.bd-calendar').click(function() {
     $(this).addClass('active')
 })
+
+
+// document.body.addEventListener('click', function() {
+
+//     // console.log(this.getElementsByClassName("living")[0])
+//     // if(!this.classList.contains('living')) {
+//     //     console.log('not living div')
+//     // }
+//     // else {
+//     //     console.log('this is living div')
+//     // }
+//     for(var i =0 ; i < this.children.length; i++) {
+//         console.log(this.children[i])
+//         // if(this.childNodes[i].classList.contains("living")) {
+//         // }
+//     }
+// })
+
+// document.onclick= function(event) {
+//     // Compensate for IE<9's non-standard event model
+//     //
+//     if (event===undefined) event= window.event;
+//     var target= 'target' in event? event.target : event.srcElement;
+//     if(target.classList.contains('living')) {
+//         console.log('this is living')
+//     }
+//     else {
+//         console.log('this is not living')
+//     }
+//     // alert('clicked on '+target.className);
+// };

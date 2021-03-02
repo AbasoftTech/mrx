@@ -28,6 +28,7 @@
                                 <div class="clone-option"></div>
                             </div>
                         </div>
+
                     </label>
                     <label for="" class="w-100 mt-4">
                         <span class="required">*</span><span class="label-text">Müqavilənin başlandığı tarix</span>
@@ -50,10 +51,10 @@
                         <span class="required">*</span><span class="label-text">Təmsilçinin adı, soyadı, ata adı</span>
                         <input type="text" class="system-input mt-2" name="" id="tmn">
                     </label>
-                    <div class="d-flex justify-content-between mt-4">
-                        <div class="d-flex flex-column" style="width:48%;">
+                    <div class="d-flex justify-content-between flex-column flex-md-row mt-4">
+                        <div class="d-flex flex-column adgoon--i-holder">
                             <div class="label-text text-center text-lg-start"><span class="required">*</span>Şəhər</div>
-                            <div style="height: 48px; position: relative" class="mt-2">
+                            {{-- <div style="height: 48px; position: relative" class="mt-2">
                                 <input type="text" class="hidden-search-input" autofocus="true" placeholder="axtar">
                                 <div class="my-select myselec-2 living">
                                     <select name="" class="" id="">
@@ -66,11 +67,18 @@
                                     <div class="clone-select"></div>
                                     <div class="clone-option"></div>
                                 </div>
+                            </div> --}}
+                            <div class="adgoon-i mt-2">
+                                <select class="js-example-placeholder-single js-states form-control" lang="az">
+                                    <option value="Uzun">Uzun müddətli</option>
+                                    <option value="Uzun">Qisa müddətli</option>
+                                    <option value="Uzun">Qisa müddətli</option>
+                                </select>
                             </div>
                         </div>
-                        <div class="d-flex flex-column" style="width:48%;">
+                        <div class="d-flex flex-column adgoon--i-holder">
                             <div class="label-text text-center text-lg-start"><span class="required">*</span>Rayon və qəsəbə</div>
-                            <div style="height: 48px; position: relative" class="mt-2">
+                            {{-- <div style="height: 48px; position: relative" class="mt-2">
                                 <input type="text" class="hidden-search-input" autofocus="true" placeholder="axtar">
                                 <div class="my-select myselec-2 living">
                                     <select name="" class="" id="">
@@ -83,6 +91,13 @@
                                     <div class="clone-select"></div>
                                     <div class="clone-option"></div>
                                 </div>
+                            </div> --}}
+                            <div class="adgoon-i mt-2">
+                                <select class="js-example-placeholder-single js-states form-control" lang="az">
+                                    <option value="Uzun">Uzun müddətli</option>
+                                    <option value="Uzun">Qisa müddətli</option>
+                                    <option value="Uzun">Qisa müddətli</option>
+                                </select>
                             </div>
                         </div>
                     </div>
@@ -111,15 +126,15 @@
                                 <input type="radio" name="payment-way">
                                 <span class="checkmark"></span>
                             </label>
-                            <label class="checkbox-holder ms-5">Portmanat (Terminallarda ödəniş)
+                            <label class="checkbox-holder ms-0 ms-lg-5 mt-1 mt-lg-0">Portmanat (Terminallarda ödəniş)
                                 <input type="radio" name="payment-way">
                                 <span class="checkmark"></span>
                             </label>
-                            <label class="checkbox-holder ms-5">Balansdan ödəniş (0 AZN)
+                            <label class="checkbox-holder ms-0 ms-lg-5 mt-1 mt-lg-0">Balansdan ödəniş (0 AZN)
                                 <input type="radio" name="payment-way">
                                 <span class="checkmark"></span>
                             </label>
-                            <label class="checkbox-holder ms-5">Borca ödəniş
+                            <label class="checkbox-holder ms-0 ms-lg-5 mt-1 mt-lg-0">Borca ödəniş
                                 <input type="radio" name="payment-way">
                                 <span class="checkmark"></span>
                             </label>

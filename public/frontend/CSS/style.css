@@ -77,6 +77,57 @@ a {
 .owl-nav button {
     outline: 0 !important;
 }
+/* custom select width search*/
+.select2-results__option:hover {
+    background-color: red !important;
+}
+.edu .select2-container {
+    width: 388px
+}
+.select2-container {
+    width: 100px;
+}
+.adgoon-i .select2-container {
+    width: 185px;
+}
+.select2-container .select2-selection--single {
+    height: 47px !important;
+    outline: 0 !important;
+    border-color: #C7C7C7 !important;
+    padding-left: 21px !important;
+}
+.select2-container .select2-selection--single:hover {
+    box-shadow: 0 4px 8px rgb(0 0 0 / 16%);
+}
+.select2-container--open .select2-dropdown--below {
+    top: -17px;
+    z-index: 1111;
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    font-family: Poppins_i;
+    color: #A9A9A9 !important;
+    font-size: 12px !important;
+    padding-top: 8px !important;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+    top: 80% !important;
+    border-color: #C7C7C7 transparent transparent transparent !important;
+}
+.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
+    border-color: transparent transparent #888 transparent !important;
+}
+.select2-container--default .select2-selection--single .select2-selection__clear span {
+    display: none !important
+}
+.select2-results__option--selectable {
+    font-family: Poppins_i;
+    color: #7A7A7A;
+    font-size: 12px;
+}
+.select2-container--default .select2-search--dropdown .select2-search__field {
+    outline: 0 !important
+}
+/* custom select width search*/
 
 /*========= fonts =========*/
 .bg-decored {
@@ -633,6 +684,7 @@ section#contractRes {
     color: #fff;
     cursor: pointer;
     font-size: 12px;
+    font-family: Poppins_m;
 }
 
 .phone_header_text {
@@ -1736,7 +1788,7 @@ section#news {
 .segment {
     display: flex;
     width: 415px;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 .segment .insert-number {
     max-width: 63px;
@@ -2215,6 +2267,9 @@ section#addContract {
     font-size: 52px;
     line-height: 21px;
     color: #81DA9F
+}
+.adgoon--i-holder {
+    width: 48%;
 }
 /*========= add contract =========*/
 
@@ -2842,7 +2897,9 @@ section#contact {
 }
 
 @media(max-width: 992px) {
-
+    .edu .select2-container {
+        width: 100%;
+    }
     /*========= header =========*/
     .header-desktop {
         display: none;
@@ -3107,6 +3164,15 @@ section#contact {
         padding:10px 10px 10px
     }
     /*========= newsdetail =========*/
+    /*========= adgoon =========*/
+    .add-goon .payment-way-holder {
+        width: 100%;
+        flex-direction: column;
+    }
+    .add-goon .caution {
+        width: 100%;
+    }
+    /*========= adgoon =========*/
 
 }
 
@@ -3229,12 +3295,27 @@ section#contact {
         padding: 40px 10px 10px
     }
     /*========= news detail =========*/
+    /*========= addgoon =========*/
+    .add-goon {
+        width: 100%;
+    }
 
+    .adgoon--i-holder {
+        width: 100%;
+    }
+    /*========= addgoon =========*/
+    .select2-container {
+        width: 100% !important
+    }
 }
 
 @media(max-width: 576px) {
     .system-clickable {
         padding: 12px
+    }
+    .select2-container .select2-selection--single .select2-selection__rendered {
+        padding-right: 0 !important;
+        padding-left: 0 !important;
     }
     /*========= index =========*/
     .item-bg {
@@ -3468,3 +3549,5 @@ section#contact {
 }
 
 /*========= media queries =========*/
+
+

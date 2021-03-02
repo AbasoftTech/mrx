@@ -7,6 +7,8 @@ $arr = ['fddf', 'ed', 'ds', 'ds'];
 @for($i=0;$i < count($arr); $i++)
 <div>{{$arr[$i]}}</div>
 @endfor --}}
+
+
 <section id="indexSlider">
     {{-- owl-carousel-index --}}
     <div class="position-relative">
