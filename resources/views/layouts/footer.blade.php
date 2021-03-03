@@ -12,13 +12,13 @@
             <div class="grid-footer-right">
                 <div class="mt-4 mt-sm-0">
                     <a href="{{route("about")}}">Haqqımızda</a>
-                    <a href="">Xidmətlər</a>
-                    <a href="">İstifadəçi Razılaşması</a>
+                    <a href="{{route("services")}}">Xidmətlər</a>
+                    <a href="{{route("home")}}">İstifadəçi Razılaşması</a>
                 </div>
                 <div>
-                    <a href="">Rieltorlar</a>
-                    <a href="">Media</a>
-                    <a href="">Sistemə Giriş</a>
+                    <a href="{{route("rieltors")}}">Rieltorlar</a>
+                    <a href="{{route("news")}}">Media</a>
+                    <a href="{{route("login")}}">Sistemə Giriş</a>
                 </div>
                 <div class="mt-4 mt-sm-0">
                     <div class="footer-g-contact">

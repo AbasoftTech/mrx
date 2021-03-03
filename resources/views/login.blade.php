@@ -5,9 +5,9 @@
         <div class="breadcrumb-mrx">
             <a href="{{route("home")}}" class="breadcrumb-mrx-link">Ana Səhifə</a>
             <span class="me-3"><img src="{{asset('frontend/IMAGE/icons/breadcrumb-arrow.svg')}}" alt=""></span>
-            <a href="" class="breadcrumb-mrx-link">Hesab</a>
+            <a href="{{route("account")}}" class="breadcrumb-mrx-link">Hesab</a>
             <span class="me-3"><img src="{{asset('frontend/IMAGE/icons/breadcrumb-arrow.svg')}}" alt=""></span>
-            <a class="breadcrumb-mrx-link breadcrumb-mrx-link-current">Haqqımızda</a>
+            <a class="breadcrumb-mrx-link breadcrumb-mrx-link-current">Daxil Ol</a>
         </div>
     </div>
     <div class="container">
@@ -43,13 +43,14 @@
                                         <div style="width: 127px;height: 47px">
                                             <div class="my-select">
                                                 <select name="" id="">
+                                                    <option value="prefix" selected>prefix</option>
                                                     <option value="050">050</option>
-                                                    <option value="051" selected>051</option>
+                                                    <option value="051">051</option>
                                                     <option value="055">055</option>
                                                     <option value="070">070</option>
                                                     <option value="077">077</option>
                                                 </select>
-                                                <div class="clone-select"></div>
+                                                <div class="clone-select chevron"></div>
                                                 <div class="clone-option"></div>
                                             </div>
                                         </div>

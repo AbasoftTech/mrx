@@ -24,11 +24,10 @@
                                     <option value="Uzun">Qisa müddətli</option>
                                     <option value="Uzun">Qisa müddətli</option>
                                 </select>
-                                <div class="clone-select"></div>
+                                <div class="clone-select chevron"></div>
                                 <div class="clone-option"></div>
                             </div>
                         </div>
-
                     </label>
                     <label for="" class="w-100 mt-4">
                         <span class="required">*</span><span class="label-text">Müqavilənin başlandığı tarix</span>
