@@ -2193,6 +2193,7 @@ section#news {
 }
 .flatpickr-day.selected {
     background-color: transparent !important;
+
 }
 .flatpickr-day:hover {
     background-color: unset !important;
@@ -2882,6 +2883,9 @@ section#contact {
         grid-template-columns: repeat( 5, 183px);
         grid-row-gap: 40px;
     }
+    .rieltor-area-right .grid-gallery {
+        grid-template-columns: repeat(3,1fr );
+    }
     /*========= rieltors =========*/
     /*========= services =========*/
     .grid-card-services {
@@ -3309,7 +3313,10 @@ section#contact {
         padding: 24px 10px 50px !important
     }
     .rieltor-page-tablist {
-        grid-template-columns: repeat(2, 1fr );
+        grid-template-columns: repeat(3, auto);
+    }
+    .rieltor-grid-img {
+        height: auto !important;
     }
     /*========= rieltors =========*/
     /*========= sevices =========*/
@@ -3479,6 +3486,12 @@ section#contact {
     }
     .rieltor-grid-img {
         height: auto
+    }
+    .rieltor-area-right .grid-gallery {
+        grid-template-columns: repeat(2,auto);
+    }
+    .rieltor-area-right .grid-gallery .grid-gallery-item img {
+        width: 100%;
     }
     /*========= rieltors =========*/
     /*========= sevices =========*/

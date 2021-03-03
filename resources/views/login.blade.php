@@ -43,8 +43,8 @@
                                         <div style="width: 127px;height: 47px">
                                             <div class="my-select">
                                                 <select name="" id="">
-                                                    <option value="050" class="selected">050</option>
-                                                    <option value="051">051</option>
+                                                    <option value="050">050</option>
+                                                    <option value="051" selected>051</option>
                                                     <option value="055">055</option>
                                                     <option value="070">070</option>
                                                     <option value="077">077</option>

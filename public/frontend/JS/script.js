@@ -187,8 +187,7 @@ for (var i = 0; i < mySelect.length; i++) {
         var span = document.createElement('span');
         var line = document.createElement('span');
         line.className = "pre-line"
-        if (!select.options[i].classList.contains('selected')) {
-
+        if (!select.options[i].selected)  {
             span.innerHTML = select.options[i].value;
             div.append(span)
             if(select.parentElement.classList.contains('prefix')) {
@@ -197,7 +196,9 @@ for (var i = 0; i < mySelect.length; i++) {
             }
         } else {
             cloneSelect.innerHTML = select.options[i].value;
+            //  setAttribute('selected', 'selected')
         }
+
         cloneOption.append(div);
 
         if(mySelectI.parentElement.classList.contains("calendar-select")) {
@@ -209,8 +210,20 @@ for (var i = 0; i < mySelect.length; i++) {
             this.parentElement.parentElement.classList.remove('active');
             this.parentElement.previousElementSibling.classList.remove('active');
             if(this.parentElement.parentElement.classList.contains('living')) {
-                this.parentElement.parentElement.previousElementSibling.classList.remove("active")
+                this.parentElement.parentElement.previousElementSibling.classList.remove("active");
             }
+            if(this.innerHTML.slice(6,9) == this.parentElement.parentElement.getElementsByTagName('select')[0].options[i].value) {
+                this.parentElement.parentElement.getElementsByTagName('select')[0].options[select.selectedIndex].removeAttribute('selected')
+                this.parentElement.parentElement.getElementsByTagName('select')[0].options[i].setAttribute('selected','selected')
+            }
+            // console.log(this.parentElement.parentElement.getElementsByTagName('select')[0].options[i].value, this.innerHTML.slice(6,9))
+            // selectedOptions[0].removeAttribute("selected", "selected")
+            // if(this.innerHTML == select.options[i].value) {
+            //     // select.options[select.selectedIndex].innerHTML =
+            // }
+            // else {
+            //     console.log('no');
+            // }
             for(i=0; i< months31.length; i++) {
                 if(this.innerHTML == months30[i]) {
                 //    $day[$day.length - 1].style.display = 'none';
