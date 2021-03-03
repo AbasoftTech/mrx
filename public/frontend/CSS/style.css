@@ -2566,7 +2566,7 @@ input[type=number] {
     color: #fff;
 }
 .rieltor-grid-img {
-    height: 183px;
+    height: auto;
     /* display: flex;
     align-items: center;
     justify-content: center; */
@@ -3151,7 +3151,7 @@ section#contact {
         grid-row-gap: 40px;
     }
     .rieltor-grid-img {
-        height: 166px;
+        height: auto;
     }
     .rieltor-grid-name {
         font-size: 14px;
@@ -3313,10 +3313,7 @@ section#contact {
         padding: 24px 10px 50px !important
     }
     .rieltor-page-tablist {
-        grid-template-columns: repeat(3, auto);
-    }
-    .rieltor-grid-img {
-        height: auto !important;
+        grid-template-columns: repeat(2, auto);
     }
     /*========= rieltors =========*/
     /*========= sevices =========*/
