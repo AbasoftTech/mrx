@@ -289,6 +289,9 @@ button {
     font-size: 12px;
     line-height: 16px;
 }
+.system-input:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16);
+}
 .system-input::placeholder {
     color: #9A9A9A;
 }
@@ -426,16 +429,23 @@ a.next-page {
 .clone-select-border {
     border: 1px solid #C7C7C7
 }
-
+/* .chevron {
+} */
 .chevron::after {
     content: "";
     position: absolute;
+    transform: rotate(0);
     background-image: url(../IMAGE/icons/number-arrow.svg);
     right: 10px;
     top: 18px;
     width: 10px;
     height: 10px;
     background-repeat: no-repeat;
+}
+.clone-select.active.chevron::after {
+    transform: rotate(180deg);
+    top: 15px;
+    filter: invert(70%) sepia(2%) saturate(0%) hue-rotate(162deg) brightness(100%) contrast(102%);
 }
 .my-select.active {
     background-color: rgb(242, 247, 255);
@@ -529,7 +539,13 @@ a.next-page {
     -ms-user-select: none;
     user-select: none;
 }
-
+.checkbox-holder:hover{
+    color:#0074E1
+}
+.checkbox-holder:hover .checkmark  {
+    background-color: transparent !important;
+    border-color: #0074E1 !important;
+}
 /* Hide the browser's default radio button */
 .checkbox-holder input {
     position: absolute;
@@ -1285,14 +1301,13 @@ section#indexContent {
     height: 45px;
     position: absolute;
     width: 86%;
-    bottom: 63px;
-    background-color: #f3ec78;
-    background-image: linear-gradient(45deg, #f3ec78, #af4261);
+    bottom: 80px;
+    background-image: linear-gradient(0deg, #fff, transparent);
     background-size: 100%;
-    -webkit-background-clip: text;
+    /* -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
+    -moz-text-fill-color: transparent; */
 
 }
 
@@ -1447,6 +1462,9 @@ section#news {
 
 /*========= news =========*/
 /*========= newsdetail =========*/
+.owl-news-detail-carousel .news-date {
+    color:#C4C4C4
+}
 .news-detail-block {
     width: 692px;
 }
@@ -1535,6 +1553,8 @@ section#news {
     font-family: Raleway_r;
     font-size: 14px;
     margin-top: 10px;
+    line-height: 18px;
+    color: #7A7A7A
 }
 /*========= newsdetail =========*/
 /*========= services =========*/
@@ -1813,6 +1833,7 @@ section#news {
 
 .add-column:hover {
     background-color: #FDB330;
+    box-shadow: 0 12px 18px rgba(247, 158, 2, 0.35);
 }
 .add-column:hover  i  {
     color: #fff
@@ -2420,7 +2441,9 @@ input[type=number] {
     font-family: Poppins_i;
     color: #A9A9A9
 }
-
+.insert-number:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16);
+}
 .log-reg-holder {
     display: flex;
     justify-content: space-between;

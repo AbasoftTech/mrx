@@ -5,9 +5,9 @@
         <div class="breadcrumb-mrx">
             <a href="{{route("home")}}" class="breadcrumb-mrx-link">Ana Səhifə</a>
             <span class="me-3"><img src="{{asset('frontend/IMAGE/icons/breadcrumb-arrow.svg')}}" alt=""></span>
-            <a href="" class="breadcrumb-mrx-link">Hesab</a>
+            <a href="{{route("account")}}" class="breadcrumb-mrx-link">Hesab</a>
             <span class="me-3"><img src="{{asset('frontend/IMAGE/icons/breadcrumb-arrow.svg')}}" alt=""></span>
-            <a class="breadcrumb-mrx-link breadcrumb-mrx-link-current">Haqqımızda</a>
+            <a class="breadcrumb-mrx-link breadcrumb-mrx-link-current">Qeydiyyat</a>
         </div>
     </div>
     <div class="container">
@@ -37,7 +37,7 @@
                                 </label>
                             </div>
                             <div>
-                                <div class="label-text text-center text-lg-start">Nömrə</div>
+                                <div class="label-text text-center text-lg-start mt-3">Nömrə</div>
                                 <div class="mt-2 d-flex align-items-center justify-content-center justify-content-lg-start">
                                     <label for="">
                                         {{-- <div class="custom-select-c custom-select-prefix" style="width:200px;">
@@ -52,13 +52,14 @@
                                         <div style="width: 127px;height: 47px">
                                             <div class="my-select">
                                                 <select name="prefix" id="">
-                                                    <option value="050" class="selected">050</option>
+                                                    <option value="prefix" selected>prefix</option>
+                                                    <option value="050">050</option>
                                                     <option value="051">051</option>
                                                     <option value="055">055</option>
                                                     <option value="070">070</option>
                                                     <option value="077">077</option>
                                                 </select>
-                                                <div class="clone-select"></div>
+                                                <div class="clone-select chevron"></div>
                                                 <div class="clone-option"></div>
                                             </div>
                                         </div>
@@ -108,7 +109,7 @@
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.
                 </p>
                 <div class="mt-5">
-                    <a href="" class="system-clickable system-clickable-color-1">Daxil Ol!</a>
+                    <a href="{{route("login")}}" class="system-clickable system-clickable-color-1">Daxil Ol!</a>
                 </div>
             </div>
         </div>

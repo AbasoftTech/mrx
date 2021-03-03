@@ -109,10 +109,12 @@ $arr = ['fddf', 'ed', 'ds', 'ds'];
                                 <img src="{{asset("frontend/IMAGE/media-img-2.png")}}" alt="media-img">
                                 <div class="media-title"><a href="">Gələn il ünvanlı sosial yardım üçün 257 000 manat ayrılacaq</a></div>
                             </div>
-
                         </div>
                         <div class="media-body">
-                            <p class="media-body-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse</p>
+                            <p class="media-body-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                <div class="fade-box"></div>
+                            </p>
                             <div class="media-footer">
                                 <div class="media-category media-c-2"><a href=""><img src="{{asset("frontend/IMAGE/icons/media-dot-2.svg")}}" alt="">Kateqoriya 1</a></div>
                                 <div class="media-more-details"><a href="">Ətraflı</a></div>
@@ -129,7 +131,10 @@ $arr = ['fddf', 'ed', 'ds', 'ds'];
                             </div>
                         </div>
                         <div class="media-body">
-                            <p class="media-body-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse</p>
+                            <p class="media-body-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                <div class="fade-box"></div>
+                            </p>
                             <div class="media-footer">
                                 <div class="media-category media-c-3"><a href=""><img src="{{asset("frontend/IMAGE/icons/media-dot-3.svg")}}" alt="">Kateqoriya 1</a></div>
                                 <div class="media-more-details"><a href="">Ətraflı</a></div>
@@ -146,7 +151,10 @@ $arr = ['fddf', 'ed', 'ds', 'ds'];
                             </div>
                         </div>
                         <div class="media-body">
-                            <p class="media-body-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse</p>
+                            <p class="media-body-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                <div class="fade-box"></div>
+                            </p>
                             <div class="media-footer">
                                 <div class="media-category media-c-3"><a href=""><img src="{{asset("frontend/IMAGE/icons/media-dot-3.svg")}}" alt="">Kateqoriya 1</a></div>
                                 <div class="media-more-details"><a href="">Ətraflı</a></div>
@@ -163,7 +171,10 @@ $arr = ['fddf', 'ed', 'ds', 'ds'];
                             </div>
                         </div>
                         <div class="media-body">
-                            <p class="media-body-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse</p>
+                            <p class="media-body-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                <div class="fade-box"></div>
+                            </p>
                             <div class="media-footer">
                                 <div class="media-category media-c-3"><a href=""><img src="{{asset("frontend/IMAGE/icons/media-dot-3.svg")}}" alt="">Kateqoriya 1</a></div>
                                 <div class="media-more-details"><a href="">Ətraflı</a></div>

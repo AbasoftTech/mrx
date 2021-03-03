@@ -16,7 +16,7 @@
             <div class="d-flex flex-column">
                 <div class="label-text text-left  text-lg-start">Şəhər</div>
                 <div style="width: 200px; height: 47px; position: relative" class="mt-3">
-                    <input type="text" class="hidden-search-input" autofocus="true" placeholder="axtar">
+                    {{-- <input type="text" class="hidden-search-input" autofocus="true" placeholder="axtar">
                     <div class="my-select myselec-2 living">
                         <select name="" class="" id="">
                             <option value="Bakı" class="selected">Bakı</option>
@@ -27,13 +27,23 @@
                         </select>
                         <div class="clone-select"></div>
                         <div class="clone-option"></div>
-                    </div>
+                    </div> --}}
+                    <select class="js-example-placeholder-single js-states form-control" lang="az">
+                        <option>051</option>
+                        <option>050</option>
+                        <option>070</option>
+                    </select>
                 </div>
             </div>
             <div class="d-flex flex-column ms-0 ms-md-3">
                 <div class="label-text text-left mt-3 mt-sm-0">Rayon və qəsəbə</div>
                 <div style="width: 200px; height: 47px; position: relative" class="mt-3">
-                    <input type="text" class="hidden-search-input" autofocus="true" placeholder="axtar">
+                    <select class="js-example-placeholder-single js-states form-control" lang="az">
+                        <option>051</option>
+                        <option>050</option>
+                        <option>070</option>
+                    </select>
+                    {{-- <input type="text" class="hidden-search-input" autofocus="true" placeholder="axtar">
                     <div class="my-select myselec-2 living">
                         <select name="" class="" id="">
                             <option value="Bileceri" class="selected">Bileceri</option>
@@ -44,13 +54,13 @@
                         </select>
                         <div class="clone-select"></div>
                         <div class="clone-option"></div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
             <div class="d-flex flex-column ms-0 ms-md-3">
                 <div class="label-text text-left mt-3 mt-sm-0 extra-color">Ad, soyad və ya nömrə ilə axtar</div>
                 <div style="width: 200px; height: 47px; position: relative" class="mt-3">
-                    <input type="text" class="hidden-search-input" autofocus="true" placeholder="axtar">
+                    {{-- <input type="text" class="hidden-search-input" autofocus="true" placeholder="axtar">
                     <div class="my-select myselec-2 living">
                         <select name="" class="" id="">
                             <option value="Bileceri" class="selected">Bileceri</option>
@@ -61,7 +71,12 @@
                         </select>
                         <div class="clone-select"></div>
                         <div class="clone-option"></div>
-                    </div>
+                    </div> --}}
+                    <select class="js-example-placeholder-single js-states form-control" lang="az">
+                        <option>051</option>
+                        <option>050</option>
+                        <option>070</option>
+                    </select>
                 </div>
             </div>
         </div>

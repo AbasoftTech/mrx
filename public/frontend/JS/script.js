@@ -346,7 +346,6 @@ for (var i = 0; i < mySelect.length; i++) {
         if (event===undefined) event= window.event;
         var target= 'target' in event? event.target : event.srcElement;
         if(!target.classList.contains('living')) {
-            console.log('this is NOT living');
             for (var index = 0; index < allSelect.length; index++) {
                 if(hidInput == true) {
                     hidInput[index].classList.remove('active');
@@ -366,8 +365,6 @@ for (var i = 0; i < mySelect.length; i++) {
             this.parentElement.previousElementSibling.classList.add("active");
             this.parentElement.previousElementSibling.autofocus
         }
-        // document.getElementsByClassName("hidden-search-input")[0].classList.toggle("visible")
-        console.log(this.nextSibling.nextSibling)
         this.nextSibling.nextSibling.classList.add('active')
         this.parentElement.classList.add('active')
         this.classList.add('active')
