@@ -110,6 +110,7 @@ return [
          * Select languages that are supported.
          */
         'locales' => [
+            'az',
             'en',
             'ru',
             //'pt',

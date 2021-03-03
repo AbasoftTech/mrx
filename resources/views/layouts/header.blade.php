@@ -60,20 +60,19 @@
             <div class="container">
                 <div class="d-flex align-items-center justify-content-between">
                     <div>
-                        <div><a href="{{route("home")}}"><img src="{{asset("frontend/IMAGE/icons/logo.svg")}}" alt=""></a></div>
+                        <div><a href="{{url("/>")}}"><img src="{{asset("frontend/IMAGE/icons/logo.svg")}}" alt=""></a></div>
                     </div>
                     <div class="d-flex align-items-center">
                         <ul class="nav-list">
-                            <li><a href="{{route("home")}}">Ana Səhifə</a></li>
-                            <li><a href="{{route("about")}}">Haqqımızda</a></li>
-                            <li><a href="{{route("services")}}">Xidmətlər</a></li>
-                            <li><a href="{{route("rieltors")}}">Rieltorlar</a></li>
-                            <li><a href="{{route("news")}}">Media</a></li>
-                            <li><a href="{{route("contact")}}">Əlaqə</a></li>
+                            @foreach ($slugs as $slug)
+                                
+                            <li><a href="">{{$slug->menu_name}}</a></li>
+                            @endforeach
+
                         </ul>
                         <div class="area--contract">
                             <div class="send--contract">
-                                <a href="{{route("addcontract")}}" class="system-clickable system-clickable-color-1">Müqavilə Göndər</a>
+                                <a href="" class="system-clickable system-clickable-color-1">Müqavilə Göndər</a>
                             </div>
                             <button type="button" class="search--contract" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fas fa-search text-white"></i></button>
                             <div class="hover-holder">
@@ -91,7 +90,7 @@
             <div class="container">
                 <div class="d-flex align-items-center justify-content-between">
                     <div>
-                        <div><a href="{{route("home")}}"><img src="{{asset("frontend/IMAGE/icons/logo.svg")}}" alt=""></a></div>
+                        <div><a href=""><img src="{{asset("frontend/IMAGE/icons/logo.svg")}}" alt=""></a></div>
                     </div>
                     <div class="d-flex align-items-center for--fold">
                         <div class="d-flex align-items-center">
@@ -138,16 +137,16 @@
                     </div>
                 </div>
                 <ul class="nav-list">
-                    <li><a href="{{route("home")}}">Ana Səhifə</a></li>
-                    <li><a href="{{route("about")}}">Haqqımızda</a></li>
-                    <li><a href="{{route("services")}}">Xidmətlər</a></li>
-                    <li><a href="{{route("rieltors")}}">Rieltorlar</a></li>
-                    <li><a href="{{route("news")}}">Media</a></li>
-                    <li><a href="{{route("contact")}}">Əlaqə</a></li>
+                    <li><a href="">Ana Səhifə</a></li>
+                    <li><a href="">Haqqımızda</a></li>
+                    <li><a href="">Xidmətlər</a></li>
+                    <li><a href="">Rieltorlar</a></li>
+                    <li><a href="">Media</a></li>
+                    <li><a href="">Əlaqə</a></li>
                 </ul>
                 <div class="area--contract">
                     <div class="send--contract">
-                        <a href="{{route("addcontract")}}" class="system-clickable system-clickable-color-1">Müqavilə Göndər</a>
+                        <a href="" class="system-clickable system-clickable-color-1">Müqavilə Göndər</a>
                     </div>
                     <button type="button" class="search--contract" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fas fa-search text-white"></i></button>
                     <div class="hover-holder">
@@ -170,7 +169,7 @@
                 <div class="search--contract--input--holder">
                     <img src="{{asset('frontend/IMAGE/icons/hashtag.svg')}}" class="code_contract" alt="">
                     <input type="text" placeholder="Müqavilə Axtar" class="search--contract--input-box">
-                    <a href="{{route('contractresult')}}" class="go--for--contract"><i class="fas fa-search text-white"></i></a>
+                    <a href="" class="go--for--contract"><i class="fas fa-search text-white"></i></a>
                 </div>
             </div>
           </div>
