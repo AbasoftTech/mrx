@@ -24,7 +24,7 @@
                         </ul>
                     </div>
                 @endif
-                <form action="{{route('register')}}" method="POST" class="log-reg-form">
+                <form action="{{route('getRegister')}}" method="POST" class="log-reg-form">
                     @csrf
                     <div class="d-flex flex-column">
                         <div class="mt-4 d-flex flex-column flex-sm-column flex-lg-column flex-row justify-content-between justify-content-lg-start">

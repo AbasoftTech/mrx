@@ -23,7 +23,7 @@
                     </ul>
                 </div>
                @endif
-                <form action="{{route('login')}}" method="POST" class="log-reg-form">
+                <form action="{{route('getLoged')}}" method="POST" class="log-reg-form">
                  @csrf
                     <div class="d-flex flex-column">
                         <div class="mt-4 d-flex flex-column flex-sm-column flex-lg-column flex-row justify-content-between justify-content-lg-start">
@@ -42,9 +42,9 @@
                                         </div> --}}
                                         <div style="width: 127px;height: 47px">
                                             <div class="my-select">
-                                                <select name="" id="">
-                                                    <option value="050">050</option>
-                                                    <option value="051" selected>051</option>
+                                                <select name="main_phone_number" id="">
+                                                    <option value="050" class="selected">050</option>
+                                                    <option value="051">051</option>
                                                     <option value="055">055</option>
                                                     <option value="070">070</option>
                                                     <option value="077">077</option>

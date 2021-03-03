@@ -32,22 +32,23 @@ class JetstreamServiceProvider extends ServiceProvider
     {
         $this->configurePermissions();
 
-        Jetstream::deleteUsersUsing(DeleteUser::class);
+        // Jetstream::deleteUsersUsing(DeleteUser::class);
 
-        Fortify::registerView(function () {
-            return view('signup');
-        });
-        Fortify::loginView(function () {
-            return view('login');
-        });
+        // Fortify::registerView(function () {
+        //     return view('signup');
+        // });
+        // Fortify::loginView(function () {
+        //     return view('login');
+        // });
 
-        Fortify::authenticateUsing(function (Request $request) {
-            // dd($request->all());
-            $mainNumber = $request->main_phone_number . $request->top . $request->middle . $request->below;
-            $password = $request->password;
-            Auth::guard('normal_users')->attempt(['main_phone_number' => $mainNumber, 'password' => $password]);
+        // Fortify::authenticateUsing(function (Request $request) {
             
-        });
+        //     $mainNumber = $request->main_phone_number . $request->top . $request->middle . $request->below;
+        //     $password = $request->password;
+        //     dd($mainNumber,$password);
+        //     Auth::guard('normal_users')->attempt(['main_phone_number' => $mainNumber, 'password' => $password]);
+            
+        // });
     }
 
     /**
