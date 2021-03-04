@@ -18,8 +18,9 @@ $('.owl-carousel.owl-index-carousel').owlCarousel({
             dots: true,
         },
     },
-    smartSpeed: 10,
+    smartSpeed: 100,
     animateOut: 'fadeOut',
+    animateIn: 'fadeIn',
     // animateIn: 'flipInX',
 })
 indexOwl.on('changed.owl.carousel', function (e) {
