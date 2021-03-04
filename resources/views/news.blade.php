@@ -19,7 +19,7 @@
                 <div class="media-card">
                     <div class="media-header">
                         <div class="media-img">
-                            
+
                             <img src="{{asset("storage/" . $n->image)}}" alt="media-img">
                             <div class="media-title"><a href="">
                                 {{$n->getTranslatedAttribute('title')}}
@@ -43,7 +43,7 @@
         </div>
         <div class="custom-pagination">
             <span>
-                <a href="">1</a>
+                <a href="" class="active">1</a>
                 <a href="">2</a>
                 <a href="">3</a>
                 <a href="">4</a>

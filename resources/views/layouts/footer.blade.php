@@ -102,6 +102,9 @@ $(".js-example-placeholder-single").select2({
         return markup;
     }
 });
+$('.js-example-placeholder-single').one('select2:open', function(e) {
+    $('input.select2-search__field').prop('placeholder', 'axtar..');
+});
 //     document.addEventListener('DOMContentLoaded', function() {
 //     var calendarEl = document.getElementById('calendar');
 //     var calendar = new FullCalendar.Calendar(calendarEl, {
