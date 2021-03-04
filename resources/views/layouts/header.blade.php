@@ -60,13 +60,14 @@
             <div class="container">
                 <div class="d-flex align-items-center justify-content-between">
                     <div>
-                        <div><a href="{{url("/>")}}"><img src="{{asset("frontend/IMAGE/icons/logo.svg")}}" alt=""></a></div>
+                        <div><a href="{{url("/")}}"><img src="{{asset("frontend/IMAGE/icons/logo.svg")}}" alt=""></a></div>
                     </div>
                     <div class="d-flex align-items-center">
                         <ul class="nav-list">
+                            
                             @foreach ($slugs as $slug)
                                 
-                            <li><a href="">{{$slug->menu_name}}</a></li>
+                            <li><a href="{{url($slug->slug)}}">{{$slug->menu_name}}</a></li>
                             @endforeach
 
                         </ul>

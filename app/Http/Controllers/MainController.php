@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use App\Models\Slug;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
@@ -10,10 +11,7 @@ use Illuminate\Support\Facades\Session;
 class MainController extends Controller
 {
 
-    public function __construct() {
-        $slugs = Slug::where('widget','!==','addcontract')->get();
-        view()->share(['slugs' => $slugs]);
-    }
+  
 
     public function locale($locale){
 		if(in_array($locale, ['az', 'en', 'ru'])):
@@ -143,9 +141,10 @@ class MainController extends Controller
         return view("about");
     }
 
-    public function news()
+    public function media()
     {
-        return view("news");
+        $news = Post::latest()->with('category')->get();
+        return view("news",compact('news'));
     }
     public function services()
     {

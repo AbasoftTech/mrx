@@ -3,9 +3,9 @@
 <section id="news">
     <div class="container">
         <div class="breadcrumb-mrx">
-            <a href="{{route("home")}}" class="breadcrumb-mrx-link">Ana Səhifə</a>
+            <a href="" class="breadcrumb-mrx-link">Ana Səhifə</a>
             <span class="me-3"><img src="{{asset('frontend/IMAGE/icons/breadcrumb-arrow.svg')}}" alt=""></span>
-            <a href="{{route("account")}}" class="breadcrumb-mrx-link">Hesab</a>
+            <a href="" class="breadcrumb-mrx-link">Hesab</a>
             <span class="me-3"><img src="{{asset('frontend/IMAGE/icons/breadcrumb-arrow.svg')}}" alt=""></span>
             <a class="breadcrumb-mrx-link breadcrumb-mrx-link-current">Xəbərlər</a>
         </div>
@@ -13,126 +13,33 @@
     <div class="container">
         <h2 class="block--title">Media</h2>
         <div class="grid-card">
+          @foreach ($news as $n)
+
             <div class="item">
                 <div class="media-card">
                     <div class="media-header">
                         <div class="media-img">
-                            <img src="{{asset("frontend/IMAGE/media-img.png")}}" alt="media-img">
-                            <div class="media-title"><a href="{{route("newsdetail")}}">Gələn il ünvanlı sosial yardım üçün 257 000 manat ayrılacaq</a></div>
+                            
+                            <img src="{{asset("storage/" . $n->image)}}" alt="media-img">
+                            <div class="media-title"><a href="">
+                                {{$n->getTranslatedAttribute('title')}}
+                            </a></div>
                         </div>
                     </div>
                     <div class="media-body">
                         <p class="media-body-text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                            {{$n->getTranslatedAttribute('excerpt')}}
                             <div class="fade-box"></div>
                         </p>
                         <div class="media-footer">
-                            <div class="media-category media-c-1"><a href="{{route("newsdetail")}}"><img src="{{asset("frontend/IMAGE/icons/media-dot-1.svg")}}" alt="">Kateqoriya 1</a></div>
-                            <div class="media-more-details"><a href="{{route("newsdetail")}}">Ətraflı</a></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="media-card">
-                    <div class="media-header">
-                        <div class="media-img">
-                            <img src="{{asset("frontend/IMAGE/media-img-2.png")}}" alt="media-img">
-                            <div class="media-title"><a href="{{route("newsdetail")}}">Gələn il ünvanlı sosial yardım üçün 257 000 manat ayrılacaq</a></div>
-                        </div>
-                    </div>
-                    <div class="media-body">
-                        <p class="media-body-text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            <div class="fade-box"></div>
-                        </p>
-                        <div class="media-footer">
-                            <div class="media-category media-c-2"><a href="{{route("newsdetail")}}"><img src="{{asset("frontend/IMAGE/icons/media-dot-2.svg")}}" alt="">Kateqoriya 1</a></div>
-                            <div class="media-more-details"><a href="{{route("newsdetail")}}">Ətraflı</a></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="media-card">
-                    <div class="media-header">
-                        <div class="media-img">
-                            <img src="{{asset("frontend/IMAGE/media-img-3.png")}}" alt="media-img">
-                            <div class="media-title"><a href="{{route("newsdetail")}}">Gələn il ünvanlı sosial yardım üçün 257 000 manat ayrılacaq</a></div>
-                        </div>
-                    </div>
-                    <div class="media-body">
-                        <p class="media-body-text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            <div class="fade-box"></div>
-                        </p>
-                        <div class="media-footer">
-                            <div class="media-category media-c-3"><a href="{{route("newsdetail")}}"><img src="{{asset("frontend/IMAGE/icons/media-dot-3.svg")}}" alt="">Kateqoriya 1</a></div>
-                            <div class="media-more-details"><a href="{{route("newsdetail")}}">Ətraflı</a></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="media-card">
-                    <div class="media-header">
-                        <div class="media-img">
-                            <img src="{{asset("frontend/IMAGE/media-img-3.png")}}" alt="media-img">
-                            <div class="media-title"><a href="{{route("newsdetail")}}">Gələn il ünvanlı sosial yardım üçün 257 000 manat ayrılacaq</a></div>
-                        </div>
-                    </div>
-                    <div class="media-body">
-                        <p class="media-body-text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            <div class="fade-box"></div>
-                        </p>
-                        <div class="media-footer">
-                            <div class="media-category media-c-3"><a href="{{route("newsdetail")}}"><img src="{{asset("frontend/IMAGE/icons/media-dot-3.svg")}}" alt="">Kateqoriya 1</a></div>
-                            <div class="media-more-details"><a href="{{route("newsdetail")}}">Ətraflı</a></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="media-card">
-                    <div class="media-header">
-                        <div class="media-img">
-                            <img src="{{asset("frontend/IMAGE/media-img-3.png")}}" alt="media-img">
-                            <div class="media-title"><a href="{{route("newsdetail")}}">Gələn il ünvanlı sosial yardım üçün 257 000 manat ayrılacaq</a></div>
-                        </div>
-                    </div>
-                    <div class="media-body">
-                        <p class="media-body-text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            <div class="fade-box"></div>
-                        </p>
-                        <div class="media-footer">
-                            <div class="media-category media-c-3"><a href="{{route("newsdetail")}}"><img src="{{asset("frontend/IMAGE/icons/media-dot-3.svg")}}" alt="">Kateqoriya 1</a></div>
-                            <div class="media-more-details"><a href="{{route("newsdetail")}}">Ətraflı</a></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="media-card">
-                    <div class="media-header">
-                        <div class="media-img">
-                            <img src="{{asset("frontend/IMAGE/media-img-3.png")}}" alt="media-img">
-                            <div class="media-title"><a href="{{route("newsdetail")}}">Gələn il ünvanlı sosial yardım üçün 257 000 manat ayrılacaq</a></div>
-                        </div>
-                    </div>
-                    <div class="media-body">
-                        <p class="media-body-text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            <div class="fade-box"></div>
-                        </p>
-                        <div class="media-footer">
-                            <div class="media-category media-c-3"><a href="{{route("newsdetail")}}"><img src="{{asset("frontend/IMAGE/icons/media-dot-3.svg")}}" alt="">Kateqoriya 1</a></div>
+                            <div class="media-category media-c-1"><a href="">
+                                <img src="{{asset("frontend/IMAGE/icons/media-dot-1.svg")}}" alt="">Kateqoriya 1</a></div>
                             <div class="media-more-details"><a href="">Ətraflı</a></div>
                         </div>
                     </div>
                 </div>
             </div>
+            @endforeach
         </div>
         <div class="custom-pagination">
             <span>

@@ -11,8 +11,8 @@
             </div>
             <div class="grid-footer-right">
                 <div class="mt-4 mt-sm-0">
-                    <a href="">Haqqımızda</a>
                     <a href="">Xidmətlər</a>
+                    <a href="">Haqqımızda</a>
                     <a href="">İstifadəçi Razılaşması</a>
                 </div>
                 <div>

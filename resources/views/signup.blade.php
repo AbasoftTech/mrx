@@ -3,9 +3,9 @@
 <section id="reg">
     <div class="container">
         <div class="breadcrumb-mrx">
-            <a href="{{route("home")}}" class="breadcrumb-mrx-link">Ana Səhifə</a>
+            <a href="" class="breadcrumb-mrx-link">Ana Səhifə</a>
             <span class="me-3"><img src="{{asset('frontend/IMAGE/icons/breadcrumb-arrow.svg')}}" alt=""></span>
-            <a href="{{route("account")}}" class="breadcrumb-mrx-link">Hesab</a>
+            <a href="" class="breadcrumb-mrx-link">Hesab</a>
             <span class="me-3"><img src="{{asset('frontend/IMAGE/icons/breadcrumb-arrow.svg')}}" alt=""></span>
             <a class="breadcrumb-mrx-link breadcrumb-mrx-link-current">Qeydiyyat</a>
         </div>

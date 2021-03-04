@@ -3,9 +3,9 @@
 <section id="login">
     <div class="container">
         <div class="breadcrumb-mrx">
-            <a href="{{route("home")}}" class="breadcrumb-mrx-link">Ana Səhifə</a>
+            <a href="" class="breadcrumb-mrx-link">Ana Səhifə</a>
             <span class="me-3"><img src="{{asset('frontend/IMAGE/icons/breadcrumb-arrow.svg')}}" alt=""></span>
-            <a href="{{route("account")}}" class="breadcrumb-mrx-link">Hesab</a>
+            <a href="" class="breadcrumb-mrx-link">Hesab</a>
             <span class="me-3"><img src="{{asset('frontend/IMAGE/icons/breadcrumb-arrow.svg')}}" alt=""></span>
             <a class="breadcrumb-mrx-link breadcrumb-mrx-link-current">Daxil Ol</a>
         </div>
@@ -23,7 +23,7 @@
                     </ul>
                 </div>
                @endif
-                <form action="{{route('getLoged')}}" method="POST" class="log-reg-form">
+                <form action="" method="POST" class="log-reg-form">
                  @csrf
                     <div class="d-flex flex-column">
                         <div class="mt-4 d-flex flex-column flex-sm-column flex-lg-column flex-row justify-content-between justify-content-lg-start">
@@ -91,7 +91,7 @@
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.
                 </p>
                 <div class="mt-5">
-                    <a href="{{route("register")}}" class="system-clickable system-clickable-color-1">Qeydiyyatdan Keç!</a>
+                    <a href="" class="system-clickable system-clickable-color-1">Qeydiyyatdan Keç!</a>
                 </div>
             </div>
         </div>
