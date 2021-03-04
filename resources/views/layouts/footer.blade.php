@@ -16,9 +16,9 @@
                     <a href="">İstifadəçi Razılaşması</a>
                 </div>
                 <div>
-                    <a href="{{route("rieltors")}}">Rieltorlar</a>
-                    <a href="{{route("news")}}">Media</a>
-                    <a href="{{route("login")}}">Sistemə Giriş</a>
+                    <a href="">Rieltorlar</a>
+                    <a href="">Media</a>
+                    <a href="">Sistemə Giriş</a>
                 </div>
                 <div class="mt-4 mt-sm-0">
                     <div class="footer-g-contact">
