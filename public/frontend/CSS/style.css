@@ -244,6 +244,7 @@ button {
 
 .system-clickable-color-1:hover {
     box-shadow: 0 6px 9px rgba(247, 158, 2, 0.35);
+    background-color: #E19309;
 }
 
 .system-clickable-color-2 {
@@ -783,11 +784,26 @@ section#contractRes {
     line-height: 21px;
     text-decoration: none;
     color: #414141;
+    position: relative;
+    transition: .4s ease-in-out all;
 }
 .nav-list li a:hover {
-    /* color: rgb(247 158 2 / 35%);
-    text-shadow: 0 2px 3px rgb(247 158 2 / 35%) */
-    border-bottom: 3px solid rgb(247 158 2 / 35%);
+    color:#F79E02;;
+    /*text-shadow: 0 2px 3px rgb(247 158 2 / 35%) */
+    /* border-bottom: 3px solid rgb(247 158 2 / 35%); */
+}
+.nav-list li a::after {
+    content:'';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    background-color: #F79E02;
+    transition: .4s ease-in-out all;
+    bottom: -3px;
+    left: 0;
+}
+.nav-list li a:hover::after {
+    width: 100%;
 }
 .area--contract {
     position: relative;
@@ -795,13 +811,13 @@ section#contractRes {
     display: flex;
     align-items: center;
 }
-
 .fa-search {
     font-size: 21px;
 }
 
 .search--contract .fa-search {
-    color: #F79E02 !important
+    color: #F79E02 !important;
+    transition: .3s all ease-in-out;
 }
 
 .search--contract {
@@ -810,13 +826,13 @@ section#contractRes {
     cursor: pointer;
     width: 85px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     border: 0;
     outline: 0;
     height: 45px;
     align-items: center;
     background-color: transparent;
-    padding: 0;
+    padding: 0 0 0 40px;
     transition: .3s all ease-in-out;
 }
 
@@ -831,8 +847,9 @@ section#contractRes {
     background-color: transparent;
 } */
 
-.search--contract:hover {
-    background-color: #35556817;
+.search--contract:hover .fa-search{
+    /* background-color: #35556817; */
+    transform: rotate(-44deg);
 }
 
 .hover-holder {
@@ -968,7 +985,13 @@ footer .container {
     justify-content: space-between;
     align-items: center;
 }
-
+.grid-footer-left i {
+    transition: .9s ease-in-out all;
+}
+.grid-footer-left i:hover {
+    transform: rotateX(360deg) scale(1.4);
+    /* transform: scale(1.4); */
+}
 .grid-footer-right {
     display: flex;
     justify-content: space-between;
@@ -1229,7 +1252,7 @@ section#indexContent {
 .about--us-container-right-child {
     position: relative;
     /* height: 310px; */
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 .about--us-container-right-child img {
@@ -3416,9 +3439,10 @@ section#contact {
     }
 
     .owl-index-subtitle {
-        width: 100%;
+        width:81%;
         font-size: 14px;
         margin-top: 20px;
+        line-height: 18px;
     }
 
     .owl-index-carousel .owl-dots {

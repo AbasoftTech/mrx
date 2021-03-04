@@ -67,9 +67,9 @@ $arr = ['fddf', 'ed', 'ds', 'ds'];
                     <div class="about--us--more--details"><a href="{{route("about")}}">— Daha Ətraflı</a></div>
                 </div>
                 <div class="about--us-container-right-child">
-                    <div class="play-now">
+                    {{-- <div class="play-now">
                         <img src="{{asset("frontend/IMAGE/icons/play.svg")}}" alt="">
-                    </div>
+                    </div> --}}
                     <img src="{{asset("frontend/IMAGE/about-us-img.png")}}" alt="">
                 </div>
                 <h2 class="block--title block--title-mobile">Haqqımızda</h2>
