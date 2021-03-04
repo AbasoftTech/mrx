@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>MRX</title>
     <link rel="stylesheet" href="{{asset("frontend/CSS/style.css")}}">
+    <!--[if IE ]>
+    <link href="{{asset("frontend/CSS/iestyle.css")}}" rel="stylesheet" type="text/css">
+    <![endif]-->
     <link rel="stylesheet" href="{{asset("frontend/CSS/bootstrap.min.css")}}">
     <link rel="stylesheet" href="{{asset("frontend/CSS/owl.carousel.min.css")}}">
     <link rel="stylesheet" href="{{asset("frontend/CSS/owl.theme.default.min.css")}}">
@@ -64,9 +67,9 @@
                     </div>
                     <div class="d-flex align-items-center">
                         <ul class="nav-list">
-                            
+
                             @foreach ($slugs as $slug)
-                                
+
                             <li><a href="{{url($slug->slug)}}">{{$slug->menu_name}}</a></li>
                             @endforeach
 

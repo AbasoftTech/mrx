@@ -951,11 +951,11 @@ section#contractRes {
     transition: .4s ease-in-out all;
 }
 .nav-list li a:hover {
-    color:#F79E02;;
+    color:#F79E02;
     /*text-shadow: 0 2px 3px rgb(247 158 2 / 35%) */
-    /* border-bottom: 3px solid rgb(247 158 2 / 35%); */
+    border-bottom: 3px solid #F79E02;
 }
-.nav-list li a::after {
+/* .nav-list li a:after {
     content:'';
     position: absolute;
     width: 0;
@@ -967,7 +967,7 @@ section#contractRes {
 }
 .nav-list li a:hover::after {
     width: 100%;
-}
+} */
 .area--contract {
     position: relative;
     margin-left: 55.5px;

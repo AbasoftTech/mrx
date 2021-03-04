@@ -116,7 +116,7 @@ $arr = ['fddf', 'ed', 'ds', 'ds'];
                                 <div class="fade-box"></div>
                             </p>
                             <div class="media-footer">
-                                <div class="media-category media-c-2"><a href=""><img src="{{asset("frontend/IMAGE/icons/media-dot-2.svg")}}" alt="">Kateqoriya 1</a></div>
+                                <div class="media-category"><a href="" style="color: #07DACF;"><i class="fas fa-circle me-2"></i>Kateqoriya 2</a></div>
                                 <div class="media-more-details"><a href="">Ətraflı</a></div>
                             </div>
                         </div>
