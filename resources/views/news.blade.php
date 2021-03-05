@@ -32,8 +32,9 @@
                             <div class="fade-box"></div>
                         </p>
                         <div class="media-footer">
-                            <div class="media-category media-c-1"><a href="">
-                                <img src="{{asset("frontend/IMAGE/icons/media-dot-1.svg")}}" alt="">Kateqoriya 1</a></div>
+                            <div class="media-category"><a href="" style="color: #07DACF">
+                                <i class="fas fa-circle me-2"></i>Kateqoriya 1</a>
+                            </div>
                             <div class="media-more-details"><a href="">Ətraflı</a></div>
                         </div>
                     </div>

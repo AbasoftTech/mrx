@@ -96,7 +96,7 @@ $arr = ['fddf', 'ed', 'ds', 'ds'];
                                 <div class="fade-box"></div>
                             </p>
                             <div class="media-footer">
-                                <div class="media-category media-c-1"><a href=""><img src="{{asset("frontend/IMAGE/icons/media-dot-1.svg")}}" alt="">Kateqoriya 1</a></div>
+                                <div class="media-category media-c-1"><a href=""><i class="fas fa-circle me-2"></i>Kateqoriya 1</a></div>
                                 <div class="media-more-details"><a href="">Ətraflı</a></div>
                             </div>
                         </div>
@@ -116,7 +116,7 @@ $arr = ['fddf', 'ed', 'ds', 'ds'];
                                 <div class="fade-box"></div>
                             </p>
                             <div class="media-footer">
-                                <div class="media-category"><a href="" style="color: #07DACF;"><i class="fas fa-circle me-2"></i>Kateqoriya 2</a></div>
+                                <div class="media-category"><a href="" style="color: #07DACF"><i class="fas fa-circle me-2"></i>Kateqoriya 2</a></div>
                                 <div class="media-more-details"><a href="">Ətraflı</a></div>
                             </div>
                         </div>
@@ -136,7 +136,7 @@ $arr = ['fddf', 'ed', 'ds', 'ds'];
                                 <div class="fade-box"></div>
                             </p>
                             <div class="media-footer">
-                                <div class="media-category media-c-3"><a href=""><img src="{{asset("frontend/IMAGE/icons/media-dot-3.svg")}}" alt="">Kateqoriya 1</a></div>
+                                <div class="media-category media-c-3"><a href="" style="color: #07DACF"><i class="fas fa-circle me-2"></i>Kateqoriya 3</a></div>
                                 <div class="media-more-details"><a href="">Ətraflı</a></div>
                             </div>
                         </div>
@@ -156,7 +156,7 @@ $arr = ['fddf', 'ed', 'ds', 'ds'];
                                 <div class="fade-box"></div>
                             </p>
                             <div class="media-footer">
-                                <div class="media-category media-c-3"><a href=""><img src="{{asset("frontend/IMAGE/icons/media-dot-3.svg")}}" alt="">Kateqoriya 1</a></div>
+                                <div class="media-category media-c-3"><a href="" style="color: #07DACF"><i class="fas fa-circle me-2"></i>Kateqoriya 3</a></div>
                                 <div class="media-more-details"><a href="">Ətraflı</a></div>
                             </div>
                         </div>
@@ -176,7 +176,7 @@ $arr = ['fddf', 'ed', 'ds', 'ds'];
                                 <div class="fade-box"></div>
                             </p>
                             <div class="media-footer">
-                                <div class="media-category media-c-3"><a href=""><img src="{{asset("frontend/IMAGE/icons/media-dot-3.svg")}}" alt="">Kateqoriya 1</a></div>
+                                <div class="media-category media-c-3"><a href="" style="color: #FDB330"><i class="fas fa-circle me-2"></i>Kateqoriya 3</a></div>
                                 <div class="media-more-details"><a href="">Ətraflı</a></div>
                             </div>
                         </div>
