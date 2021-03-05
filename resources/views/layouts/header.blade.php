@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>MRX</title>
     <link rel="stylesheet" href="{{asset("frontend/CSS/style.css")}}">
-    <!--[if IE ]>
+    {{-- <!--[if IE ]>
     <link href="{{asset("frontend/CSS/iestyle.css")}}" rel="stylesheet" type="text/css">
-    <![endif]-->
+    <![endif]--> --}}
     <link rel="stylesheet" href="{{asset("frontend/CSS/bootstrap.min.css")}}">
     <link rel="stylesheet" href="{{asset("frontend/CSS/owl.carousel.min.css")}}">
     <link rel="stylesheet" href="{{asset("frontend/CSS/owl.theme.default.min.css")}}">
@@ -33,8 +33,8 @@
                         <div class="d-flex align-items-center">
                             @if (Auth::guard('normal_users')->user() == null)
                            <a href="{{route("login")}}" class="login_to_">
-                                <img src="{{asset("frontend/IMAGE/icons/login.svg")}}" alt="">
-                                <span class="log_slogan">Sistemə daxil ol</span>
+                                <i class="fas fa-user-plus"></i>
+                                <span class="ms-2">Sistemə daxil ol</span>
                            </a>
                            @else
                            <form action="{{route('logout')}}" method="post">

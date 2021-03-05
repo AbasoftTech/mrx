@@ -3,7 +3,7 @@
 <section id="myinfo">
     <div class="container">
         <div class="breadcrumb-mrx">
-            <a href="{{route("home")}}" class="breadcrumb-mrx-link">Ana Səhifə</a>
+            <a href="" class="breadcrumb-mrx-link">Ana Səhifə</a>
             <span class="me-3"><img src="{{asset('frontend/IMAGE/icons/breadcrumb-arrow.svg')}}" alt=""></span>
             <a href="" class="breadcrumb-mrx-link">Hesab</a>
             <span class="me-3"><img src="{{asset('frontend/IMAGE/icons/breadcrumb-arrow.svg')}}" alt=""></span>
@@ -13,10 +13,10 @@
     <div class="container">
         <div class="grid-profile-linklist-holder">
             <div class="grid-profile-linklist">
-                <a href="{{route("myinfo")}}" class="grid-profile-link grid-profile-link-active">Profil Məlumatları</a>
-                <a href="{{route("mycontracts")}}" class="grid-profile-link">Müqavilələrim</a>
-                <a href="{{route("photogallery")}}" class="grid-profile-link">Foto Qalareya</a>
-                <a href="{{route("account")}}" class="grid-profile-link">Hesab</a>
+                <a href="" class="grid-profile-link grid-profile-link-active">Profil Məlumatları</a>
+                <a href="" class="grid-profile-link">Müqavilələrim</a>
+                <a href="" class="grid-profile-link">Foto Qalareya</a>
+                <a href="" class="grid-profile-link">Hesab</a>
             </div>
         </div>
         <div class="d-flex flex-column flex-lg-row mt-2 mt-sm-5">

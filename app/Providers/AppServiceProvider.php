@@ -24,7 +24,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $slugs = Slug::where('widget','!=','addcontract')->get();
+        $slugs = Slug::where('menu_order', null)->get();
         view()->share(['slugs' => $slugs]);
     }
 }

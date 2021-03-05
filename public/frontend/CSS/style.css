@@ -301,20 +301,21 @@ background-color: unset !important;
     display: flex;
 }
 .dropFile {
-    min-width: 57%;
+    min-width: 44%;
     height: 169px;
-    border: 3px dashed #7A7A7A;
+    border: 3px dashed #C7C7C7;
     border-radius: 8px;
     position: relative;
-    background-color: #F4F4F4;
     filter: grayscale(1.9);
     padding: 20px 20px;
-    background: url(../IMAGE/icons/dropzone.png) no-repeat center 15px;
+    /* background: url(../IMAGE/icons/file-ico.svg) #F4F4F4 no-repeat center 15px; */
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    flex-direction: column;
+    align-items: center;
     font-family: Raleway_sb;
-    color: #58595B;
+    color: #7A7A7A;
     font-size: 14px;
 }
 .dropFile:hover {
@@ -322,6 +323,13 @@ background-color: unset !important;
     background-color: #F2F7FF;
     box-shadow: 0 10px 30px rgb(0 116 216 / 25%);
     filter: unset;
+    color: #58595B
+}
+.dropFile:hover .file-ico path:first-child {
+    fill: #2087C1 !important;
+}
+.dropFile:hover .file-ico path:last-child {
+    fill: #1B9CE5 !important;
 }
 .dropFile input[type=file]{
     position: absolute;
@@ -839,11 +847,19 @@ section#contractRes {
     height: 70px;
     padding: 11px 0
 }
-
-.login_to_:hover {
-    background-color: #35556817;
+.login_to_ {
+    color: #fff;
+    font-size: 14px;
+    font-family: Poppins_b;
+    line-height: 21px;
+    margin-left: 12px;
+    transition: .3s all ease-in-out;
+    position: relative;
 }
-
+.login_to_:hover {
+    transform: rotateY(-15deg);
+    /* color: #E19309; */
+}
 .logout-btn {
     border: 0;
     background-color: transparent;
@@ -924,23 +940,12 @@ section#contractRes {
     visibility: visible;
     opacity: 1;
 }
-
-.log_slogan {
-    font-size: 14px;
-    font-family: Poppins_b;
-    line-height: 21px;
-    color: #fff;
-    margin-left: 12px;
-}
-
 .nav-list li {
     display: inline-block;
 }
-
 .nav-list li:not(:last-child) {
     margin-right: 43px;
 }
-
 .nav-list li a {
     font-family: Poppins_b;
     font-size: 14px;
