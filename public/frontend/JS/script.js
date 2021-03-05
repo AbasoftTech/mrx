@@ -627,7 +627,7 @@ for (let index = 0; index < list.length; index++) {
 var profGridGal = document.getElementsByClassName('profile-grid-gallery')[0];
 var addNewGalItem = document.getElementsByClassName('add-new-gal-item')[0];
 var uploadedContract = document.getElementsByClassName('uploadedContract');
-var uploadedContract = document.getElementsByClassName('dropFileHolder');
+// var uploadedContract = document.getElementsByClassName('dropFileHolder');
 
 // var control = document.getElementsByClassName('grid-gallery-item-control')[0];
 // var controller = "<div class='grid-gallery-item-control'></div>";
@@ -644,10 +644,10 @@ var remove = function removeNow(e) {
     //     // console.log(e.currentTarget.parentElement.parentElement.parentElement)
     // }
 }
-var deg = 45
+var deg = 90
 var rotate = function rotateNow(e) {
     e.currentTarget.parentElement.previousElementSibling.style.transform = `rotate(${deg}deg)`
-    deg += 45
+    deg += 90
 }
 function uploadGal(input) {
     if (input.files && input.files[0]) {
@@ -684,16 +684,16 @@ function uploadGal(input) {
     }
   }
 }
+var scrl = document.getElementsByClassName('scroll-please')
 function addContract(input) {
-    console.log(input.parentElement.nextSibling, 'in[put')
     if (input.files && input.files[0]) {
         for(i=0;i<input.files.length; i++) {
+
         var reader = new FileReader();
         reader.onload = function(e) {
         var gal = document.createElement('div')
         gal.className = "contract-item";
         var img = document.createElement('img');
-        console.log(input.files)
         img.src = e.target.result;
         gal.append(img);
         var removeBtn = document.createElement("button");
@@ -718,12 +718,25 @@ function addContract(input) {
         //         uploadedContract[j].style.overflowY = 'scroll'
         //         uploadedContract[j].style.display = 'grid'
         //     }
-        // }
+
         input.parentElement.nextSibling.nextSibling.append(gal)
         if(input.parentElement.nextSibling.nextSibling.childNodes.length != 0) {
-            input.parentElement.nextSibling.nextSibling.style.overflowY = 'scroll'
             input.parentElement.nextSibling.nextSibling.style.display = 'grid'
         }
+        if(input.parentElement.nextSibling.nextSibling.childNodes.length > 5) {
+            input.parentElement.nextSibling.nextSibling.style.overflowY = 'scroll';
+            for (let index = 0; index < scrl.length; index++) {
+                input.parentElement.parentElement.parentElement.getElementsByClassName('scroll-please')[0].style.display = 'block';
+            }
+            setTimeout(() => {
+                input.parentElement.nextSibling.nextSibling.scrollTop = 60;
+            }, 800);
+            // console.log(scrl, 'poxam')
+            // console.log(input.parentElement.nextSibling.nextSibling.childNodes.length, 'ipl')
+        }
+        // else {
+        //     scrl.style.display = 'block'
+        // }
         // dropFile.insertBefore(gal,addNewGalItem)
     }
         reader.readAsDataURL(input.files[i]);
@@ -904,3 +917,39 @@ for (let index = 0; index < mediaImg.length; index++) {
         mediaImg[index].classList.add('active');
     }
 }
+
+// auto resize while tpying in textarea
+var observe;
+if (window.attachEvent) {
+    observe = function (element, event, handler) {
+        element.attachEvent('on'+event, handler);
+    };
+}
+else {
+    observe = function (element, event, handler) {
+        element.addEventListener(event, handler, false);
+    };
+}
+function init () {
+    var text = document.getElementById('text');
+    function resize () {
+        if(text.value.length == 0) {
+            text.style.height = 'auto';
+        }
+        text.style.height = text.scrollHeight+'px';
+    }
+    /* 0-timeout to get the already changed text */
+    function delayedResize () {
+        window.setTimeout(resize, 3);
+    }
+    observe(text, 'change',  resize);
+    observe(text, 'cut',     delayedResize);
+    observe(text, 'paste',   delayedResize);
+    observe(text, 'drop',    delayedResize);
+    observe(text, 'keydown', delayedResize);
+
+    // text.focus();
+    text.select();
+    resize();
+}
+// auto resize while tpying in textarea

@@ -23,10 +23,12 @@
                         <input type="file" multiple onchange="addContract(this)">
                         <span class="mt-3">Faylı seçmək üçün kliklə</span>
                     </div>
-                    <div class="uploadedContract"></div>
+                    <div class="uploadedContract">
+                    </div>
+                    <div class="scroll-please muq"><i class="fas fa-angle-double-down"></i></div>
                 </form>
             </div>
-            <h3 class="contract-title mt-5">Əmlakın Surəti</h3>
+            <h3 class="contract-title mt-5">Əmlakın sənədlərinin sürəti</h3>
             <div class="mt-2">
                 <ul class="dropzone-subtitle">
                     <li>• Müqavilədə göstərilən əmlakın hüquqi sənədinin surəti</li>
@@ -43,7 +45,9 @@
                         <input type="file" multiple onchange="addContract(this)">
                         <span class="mt-3">Faylı seçmək üçün kliklə</span>
                     </div>
-                    <div class="uploadedContract"></div>
+                    <div class="uploadedContract">
+                    </div>
+                    <div class="scroll-please eml"><i class="fas fa-angle-double-down"></i></div>
                 </form>
             </div>
             <div class="mt-5 w-c-">

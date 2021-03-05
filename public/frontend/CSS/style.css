@@ -299,6 +299,7 @@ background-color: unset !important;
 .dropFileHolder {
     width: 100%;
     display: flex;
+    position: relative;
 }
 .dropFile {
     min-width: 44%;
@@ -344,11 +345,63 @@ background-color: unset !important;
 .uploadedContract {
     margin-left: 40px;
     display: none;
-    grid-template-columns: repeat(3,123px);
-    grid-column-gap: 40px;
+    grid-template-columns: repeat(4,123px);
+    grid-column-gap: 10px;
     width: 100%;
     height: 210px;
     padding: 10px;
+    position: relative;
+    /* animation: scroll 1.5s; */
+    transition: 9s all ease-in-out;
+    scroll-behavior: smooth;
+}
+/* .uploadedContract::after {
+    font-family: "Font Awesome 4 Free"; font-weight: 900; content: "\f007";
+    position: absolute;
+    height: 100%;
+    width: 50px;
+    right:0;
+    animation: bottom .9s infinite;
+} */
+.scroll-please {
+    position: absolute;
+    right: -15px;
+    top: 25%;
+    display: none;
+    color: #0074E1;
+    opacity: .0;
+}
+.scroll-please.muq {
+    animation: scrollmuq 1.5s;
+}
+/* .scroll-please {
+    position: absolute;
+    right: -15px;
+    top: 25%;
+    display: none;
+    color: #0074E1;
+    opacity: .0;
+} */
+.scroll-please.eml {
+    animation: scrolleml 1.5s;
+}
+@keyframes scrollmuq {
+    50% {
+        opacity: .4;
+        transform: translateY(30px);
+    }
+    75% {
+        opacity: .2;
+    }
+}
+@keyframes scrolleml {
+    50% {
+        opacity: .4;
+        transform: translateY(30px);
+    }
+    75% {
+        opacity: .2;
+    }
 }
 /* .uploadedContract::-webkit-scrollbar-thumb {
     width: 10px;
@@ -366,6 +419,19 @@ background-color: unset !important;
   .uploadedContract::-webkit-scrollbar-thumb:hover {
     background: transparent;
   }
+  .uploadedContract::-scrollbar{
+    width: 10px;
+  }
+  .uploadedContract::scrollbar-track {
+    background: blue;
+  }
+  .uploadedContract::scrollbar-thumb {
+    background: blue;
+      border-radius:10px;
+  }
+  .uploadedContract::scrollbar-thumb:hover {
+    background: blue;
+  }
 
 .uploadedContract .contract-item {
     height: 197px;
@@ -374,6 +440,9 @@ background-color: unset !important;
     width: 100%;
     height: 123px;
     object-fit: fill;
+    border: 1px solid #C7C7C7;
+    border-radius: 4px;
+    padding: 5px
 }
 /* .contract-item:not(:first-child) {
     margin-left: 40px;
@@ -473,7 +542,6 @@ button {
     padding-left: 30px;
     padding-top: 30px;
     padding-bottom: 10px;
-    color: #A9A9A9;
     font-family: Raleway_m;
     font-size: 14px;
     transition: .3s all ease-in-out;
@@ -483,6 +551,7 @@ button {
 
 .system-input-2::placeholder {
     font-family: Raleway_sb;
+    color: #A9A9A9;
 }
 
 .system-input-2::-webkit-scrollbar {
@@ -3082,7 +3151,10 @@ section#contact {
 }
 
 .color41 {
-    color: #414141
+    color: #414141;
+    font-family: Poppins_m;
+    font-size: 14px;
+    line-height: 21px;
 }
 
 .color41 a.mailto {
@@ -3421,8 +3493,14 @@ section#contact {
     }
     .uploadedContract {
         margin-left: 0;
-        grid-column-gap: 38px;
+        grid-column-gap: 6px;
         grid-template-columns: repeat(5,123px );
+    }
+    .uploadedContract .contract-item {
+        height: 245px;
+    }
+    .uploadedContract .contract-item img {
+        height: 175px;
     }
     /*========= add contract =========*/
     /*========= rieltors =========*/
@@ -3647,6 +3725,17 @@ section#contact {
     .select2-container {
         width: 100% !important
     }
+    /*========= contact =========*/
+    .system-input-2 {
+        padding-left: 0;
+    }
+    /*========= contact =========*/
+    /*========= addcontract =========*/
+    .uploadedContract {
+        grid-template-columns: repeat(2,1fr);
+    }
+    /*========= addcontract =========*/
+
 }
 
 @media(max-width: 576px) {
@@ -3749,6 +3838,15 @@ section#contact {
     .dropFile {
         background-position: center 50px;
         background-size: 50px;
+    }
+    .uploadedContract .contract-item {
+        height: auto;
+    }
+    .uploadedContract .contract-item img {
+        height: auto;
+    }
+    .w-c- {
+        width: 100%;
     }
     /*========= add contact =========*/
     /*========= rieltors =========*/

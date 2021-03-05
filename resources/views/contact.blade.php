@@ -52,7 +52,8 @@
                             <textarea name="" id="" class="system-input-2" placeholder="Mövzu"></textarea>
                         </label>
                         <label for="" >
-                            <textarea name="" id="" class="system-input-2"  placeholder="Mesaj"></textarea>
+                            {{-- <textarea name="" id="" class="system-input-2"  placeholder="Mesaj"></textarea> --}}
+                            <textarea rows="1" id="text" class="system-input-2" placeholder="Mesaj"></textarea>
                         </label>
                         <div class="mt-5">
                             <button class="system-clickable  system-clickable-color-2">Göndər!</button>
