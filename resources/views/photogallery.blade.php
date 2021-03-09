@@ -19,7 +19,7 @@
                 <a href="{{route("account")}}" class="grid-profile-link">Hesab</a>
             </div>
         </div>
-        <div class="d-flex mt-3 mt-sm-5 flex-column flex-lg-row">
+        <div class="d-flex mt-3 mt-sm-3 flex-column flex-lg-row">
             <div class="profile-sidebar">
                 <div class="profile-tablist tablist">
                     <div class="profile-tab tab tab-active" data-id="0">
@@ -77,33 +77,35 @@
                         </form>
                     </div>
                 </div>
-                {{-- <div class="profile-tab-content tab-content" id="1">
+                <div class="profile-tab-content tab-content" id="1">
                     <form action="">
                         <div class="profile-sidebar-sibling-child">
-                            <label for="" class="text-center text-lg-start w-100">
-                                <span class="label-text text-center- text-lg-left">Köhnə şifrə</span>
-                                <div class="mt-2">
-                                    <input type="password" name="password" class="system-input">
+                            <div class="chng-pss">
+                                <label for="" class="text-center text-lg-start w-100">
+                                    <span class="label-text text-center- text-lg-left">Köhnə şifrə</span>
+                                    <div class="mt-2">
+                                        <input type="password" name="password" class="system-input">
+                                    </div>
+                                </label>
+                                <label for="" class="text-center text-lg-start w-100 mt-4">
+                                    <span class="label-text text-center- text-lg-left">Yeni şifrə</span>
+                                    <div class="mt-2">
+                                        <input type="password" name="password" class="system-input">
+                                    </div>
+                                </label>
+                                <label for="" class="text-center text-lg-start w-100 mt-4">
+                                    <span class="label-text text-center- text-lg-left">Yeni şifrənin təkrarı</span>
+                                    <div class="mt-2">
+                                        <input type="password" name="password" class="system-input">
+                                    </div>
+                                </label>
+                                <div class="mt-c-4">
+                                    <button class="system-clickable system-clickable-color-2">Yadda Saxla</button>
                                 </div>
-                            </label>
-                            <label for="" class="text-center text-lg-start w-100 mt-4">
-                                <span class="label-text text-center- text-lg-left">Yeni şifrə</span>
-                                <div class="mt-2">
-                                    <input type="password" name="password" class="system-input">
-                                </div>
-                            </label>
-                            <label for="" class="text-center text-lg-start w-100 mt-4">
-                                <span class="label-text text-center- text-lg-left">Yeni şifrənin təkrarı</span>
-                                <div class="mt-2">
-                                    <input type="password" name="password" class="system-input">
-                                </div>
-                            </label>
-                            <div class="mt-c-4">
-                                <button class="system-clickable system-clickable-color-2">Yadda Saxla</button>
                             </div>
                         </div>
                     </form>
-                </div> --}}
+                </div>
             </div>
         </div>
     </div>

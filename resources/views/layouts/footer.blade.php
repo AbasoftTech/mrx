@@ -11,14 +11,14 @@
             </div>
             <div class="grid-footer-right">
                 <div class="mt-4 mt-sm-0">
-                    <a href="">Xidmətlər</a>
-                    <a href="">Haqqımızda</a>
-                    <a href="">İstifadəçi Razılaşması</a>
+                    <div><a href="">Xidmətlər</a></div>
+                    <div><a href="">Haqqımızda</a></div>
+                    <div><a href="">İstifadəçi Razılaşması</a></div>
                 </div>
                 <div>
-                    <a href="">Rieltorlar</a>
-                    <a href="">Media</a>
-                    <a href="">Sistemə Giriş</a>
+                    <div><a href="">Rieltorlar</a></div>
+                    <div><a href="">Media</a></div>
+                    <div><a href="">Sistemə Giriş</a></div>
                 </div>
                 <div class="mt-4 mt-sm-0">
                     <div class="footer-g-contact">
@@ -55,11 +55,31 @@
 <script src="https://npmcdn.com/flatpickr/dist/l10n/az.js"></script>
 <script>
     window.$(document).ready(function() {
-        window.$(".bd-calendar").flatpickr({
+        window.$(".flatpickr").flatpickr({
             // inline: true
-            "locale": "az"
-        });
+            "locale": "az",
+            wrap: true,
+            onOpen: function() {
+                $('.bd-calendar-holder').addClass("active");
+                $('.bd-calendar-holder i').addClass("active");
+            },
+            onClose: function() {
+                $('.bd-calendar-holder').removeClass("active");
+                $('.bd-calendar-holder i').removeClass("active");
+            },
+            disable: [
+        function(date) {
+            // disable every multiple of 8
+            return !(date.getDate() % 8);
+        },
 
+    ]
+        });
+        var planDatePickr;
+        planDatePickr = flatpickr(".bd-calendar");
+        $(".bd-calendar").click(function () {
+            planDatePickr.toggle()
+        });
     })
 </script>
 <script src="{{asset("frontend/JS/owl.carousel.min.js")}}"></script>
@@ -115,9 +135,20 @@ $('.js-example-placeholder-single').one('select2:open', function(e) {
 // </script>
 <script src="{{asset("frontend/JS/datepicker.js")}}"></script>
 <script src="{{asset("frontend/JS/moment.js")}}"></script>
-
+<script src="{{asset("frontend/JS/jquery.magnific-popup.js")}}"></script>
 <script>
-
+$(document).ready(function() {
+  $('.image-link').magnificPopup({
+    type: "image"
+        , closeOnContentClick: !0
+        , mainClass: "mfp-fade"
+        , gallery: {
+            enabled: !0
+            , navigateByImgClick: !0
+            , preload: [0, 1]
+        }
+  });
+});
 
 //     // console.log(moment().format('MMMM Do YYYY, h:mm:ss a'), 'var');
 //     // console.log(moment("20120620", "YYYYMMDD").fromNow(), 'now');

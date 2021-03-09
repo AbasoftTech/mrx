@@ -86,27 +86,29 @@
 
     <div class="container">
         <div class="news-grid-gallery">
-            <div class="grid-gallery-item"><img src="{{asset('frontend/IMAGE/rieltor-gallery-1.png')}}" alt=""></div>
-            <div class="grid-gallery-item"><img src="{{asset('frontend/IMAGE/rieltor-gallery-2.png')}}" alt=""></div>
-            <div class="grid-gallery-item"><img src="{{asset('frontend/IMAGE/rieltor-gallery-3.png')}}" alt=""></div>
-            <div class="grid-gallery-item"><img src="{{asset('frontend/IMAGE/rieltor-gallery-4.png')}}" alt=""></div>
-            <div class="grid-gallery-item"><img src="{{asset('frontend/IMAGE/rieltor-gallery-5.png')}}" alt=""></div>
-            <div class="grid-gallery-item"><img src="{{asset('frontend/IMAGE/rieltor-gallery-6.png')}}" alt=""></div>
-            <div class="grid-gallery-item"><img src="{{asset('frontend/IMAGE/rieltor-gallery-7.png')}}" alt=""></div>
-            <div class="grid-gallery-item"><img src="{{asset('frontend/IMAGE/rieltor-gallery-8.png')}}" alt=""></div>
-            <div class="grid-gallery-item"><img src="{{asset('frontend/IMAGE/rieltor-gallery-9.png')}}" alt=""></div>
-            <div class="grid-gallery-item"><img src="{{asset('frontend/IMAGE/rieltor-gallery-10.png')}}" alt=""></div>
-            <div class="grid-gallery-item"><img src="{{asset('frontend/IMAGE/rieltor-gallery-11.png')}}" alt=""></div>
+            <div class="grid-gallery-item"><a href="{{asset('frontend/IMAGE/rieltor-gallery-1.png')}}" class="image-link"><img src="{{asset('frontend/IMAGE/rieltor-gallery-1.png')}}" alt=""></a></div>
+            <div class="grid-gallery-item"><a href="{{asset('frontend/IMAGE/rieltor-gallery-2.png')}}" class="image-link"><img src="{{asset('frontend/IMAGE/rieltor-gallery-2.png')}}" alt=""></a></div>
+            <div class="grid-gallery-item"><a href="{{asset('frontend/IMAGE/rieltor-gallery-3.png')}}" class="image-link"><img src="{{asset('frontend/IMAGE/rieltor-gallery-3.png')}}" alt=""></a></div>
+            <div class="grid-gallery-item"><a href="{{asset('frontend/IMAGE/rieltor-gallery-4.png')}}" class="image-link"><img src="{{asset('frontend/IMAGE/rieltor-gallery-4.png')}}" alt=""></a></div>
+            <div class="grid-gallery-item"><a href="{{asset('frontend/IMAGE/rieltor-gallery-5.png')}}" class="image-link"><img src="{{asset('frontend/IMAGE/rieltor-gallery-5.png')}}" alt=""></a></div>
+            <div class="grid-gallery-item"><a href="{{asset('frontend/IMAGE/rieltor-gallery-6.png')}}" class="image-link"><img src="{{asset('frontend/IMAGE/rieltor-gallery-6.png')}}" alt=""></a></div>
+            <div class="grid-gallery-item"><a href="{{asset('frontend/IMAGE/rieltor-gallery-7.png')}}" class="image-link"><img src="{{asset('frontend/IMAGE/rieltor-gallery-7.png')}}" alt=""></a></div>
+            <div class="grid-gallery-item"><a href="{{asset('frontend/IMAGE/rieltor-gallery-8.png')}}" class="image-link"><img src="{{asset('frontend/IMAGE/rieltor-gallery-8.png')}}" alt=""></a></div>
+            <div class="grid-gallery-item"><a href="{{asset('frontend/IMAGE/rieltor-gallery-9.png')}}" class="image-link"><img src="{{asset('frontend/IMAGE/rieltor-gallery-9.png')}}" alt=""></a></div>
+            <div class="grid-gallery-item"><a href="{{asset('frontend/IMAGE/rieltor-gallery-10.png')}}" class="image-link"><img src="{{asset('frontend/IMAGE/rieltor-gallery-10.png')}}" alt=""></a></div>
+            <div class="grid-gallery-item"><a href="{{asset('frontend/IMAGE/rieltor-gallery-11.png')}}" class="image-link"><img src="{{asset('frontend/IMAGE/rieltor-gallery-11.png')}}" alt=""></a></div>
+            <div class="grid-gallery-item"><a href="{{asset('frontend/IMAGE/rieltor-gallery-12.png')}}" class="image-link"><img src="{{asset('frontend/IMAGE/rieltor-gallery-12.png')}}" alt=""></a></div>
         </div>
     </div>
     {{-- news detail gallery ends --}}
 
     {{-- news detail slider starts --}}
     <div class="container news-detail-owl">
-        <div class="serial-card">
+        <div class="block--title">Oxşar Xəbərlər</div>
+        <div class="serial  -card">
             <div class="owl-carousel owl-news-detail-carousel">
                 <div class="item">
-                    <div class="owl-news-detail-box">
+                    <div class="media-card">
                         <div class="owl-news-detail-img"><a href="{{route("newsdetail")}}"><img src="{{asset('frontend/IMAGE/similar-news.png')}}" alt=""></a></a></div>
                         <div class="owl-news-detail-info">
                             <a href="{{route("newsdetail")}}" class="news-sidebar-title">Azərbaycanda və Ermənistanda
@@ -122,7 +124,7 @@
                     </div>
                 </div>
                 <div class="item">
-                    <div class="owl-news-detail-box">
+                    <div class="media-card">
                         <div class="owl-news-detail-img"><a href="{{route("newsdetail")}}"><img src="{{asset('frontend/IMAGE/similar-news.png')}}" alt=""></a></a></div>
                         <div class="owl-news-detail-info">
                             <a href="{{route("newsdetail")}}" class="news-sidebar-title">Azərbaycanda və Ermənistanda
@@ -138,7 +140,7 @@
                     </div>
                 </div>
                 <div class="item">
-                    <div class="owl-news-detail-box">
+                    <div class="media-card">
                         <div class="owl-news-detail-img"><a href="{{route("newsdetail")}}"><img src="{{asset('frontend/IMAGE/similar-news.png')}}" alt=""></a></a></div>
                         <div class="owl-news-detail-info">
                             <a href="{{route("newsdetail")}}" class="news-sidebar-title">Azərbaycanda və Ermənistanda
@@ -154,7 +156,7 @@
                     </div>
                 </div>
                 <div class="item">
-                    <div class="owl-news-detail-box">
+                    <div class="media-card">
                         <div class="owl-news-detail-img"><a href="{{route("newsdetail")}}"><img src="{{asset('frontend/IMAGE/similar-news.png')}}" alt=""></a></a></div>
                         <div class="owl-news-detail-info">
                             <a href="{{route("newsdetail")}}" class="news-sidebar-title">Azərbaycanda və Ermənistanda
@@ -170,7 +172,7 @@
                     </div>
                 </div>
                 <div class="item">
-                    <div class="owl-news-detail-box">
+                    <div class="media-card">
                         <div class="owl-news-detail-img"><a href="{{route("newsdetail")}}"><img src="{{asset('frontend/IMAGE/similar-news.png')}}" alt=""></a></a></div>
                         <div class="owl-news-detail-info">
                             <a href="{{route("newsdetail")}}" class="news-sidebar-title">Azərbaycanda və Ermənistanda
@@ -186,7 +188,7 @@
                     </div>
                 </div>
                 <div class="item">
-                    <div class="owl-news-detail-box">
+                    <div class="media-card">
                         <div class="owl-news-detail-img"><a href="{{route("newsdetail")}}"><img src="{{asset('frontend/IMAGE/similar-news.png')}}" alt=""></a></a></div>
                         <div class="owl-news-detail-info">
                             <a href="{{route("newsdetail")}}" class="news-sidebar-title">Azərbaycanda və Ermənistanda

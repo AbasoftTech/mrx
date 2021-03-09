@@ -31,9 +31,16 @@
                     </label>
                     <label for="" class="w-100 mt-4">
                         <span class="required">*</span><span class="label-text">Müqavilənin başlandığı tarix</span>
-                        <div class="bd-calendar-holder system-input ps-0 mt-2">
-                            <input class="bd-calendar" data-date-format="d.m.y"/>
-                            <i class="fas fa-calendar-alt"></i>
+                        <div class="flatpickr bd-calendar-holder mt-2">
+                            <input type="text" placeholder="Tarix Seçin.." data-input> <!-- input is mandatory -->
+
+                            <a class="input-button" title="toggle" data-toggle>
+                                <i class="fas fa-calendar-alt"></i>
+                            </a>
+
+                            <a class="input-button" title="clear" data-clear>
+                                <i class="icon-close"></i>
+                            </a>
                         </div>
                     </label>
                     <label for="tm" class="w-100 mt-4">

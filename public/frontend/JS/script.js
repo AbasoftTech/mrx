@@ -363,12 +363,13 @@ for (var i = 0; i < mySelect.length; i++) {
     };
     cloneSelect.addEventListener("click", function (e) {
         if(this.parentElement.classList.contains('living')) {
-            this.parentElement.previousElementSibling.classList.add("active");
+            this.parentElement.previousElementSibling.classList.toggle("active");
             this.parentElement.previousElementSibling.autofocus
         }
-        this.nextSibling.nextSibling.classList.add('active')
-        this.parentElement.classList.add('active')
-        this.classList.add('active')
+        this.nextSibling.nextSibling.classList.toggle('active');
+        this.parentElement.classList.toggle('active');
+        this.classList.toggle('active');
+
         // if (!this.nextSibling.nextSibling.classList.contains('active')) {
         //     this.nextSibling.nextSibling.classList.add('active');
         //     calDays.style.zIndex = '1'
@@ -588,12 +589,17 @@ var segmentHolder = document.getElementsByClassName('segment-holder')[0];
 
 var segment;
 for (let index = 0; index < addColumn.length; index++) {
+    var count = 1
     addColumn[index].addEventListener('click', function () {
-        var count = 1
+        // console.log(addColumn[index], index);
         segment1 = this.parentElement.getElementsByClassName('segment')[0];
-        if (count < 4) {
+        // var clonedInput = segmentClone.querySelectorAll('input[type="text"]')[0].value;
+        if(segment1.querySelectorAll('input[type="text"]')[0]) {
+            segment1.querySelectorAll('input[type="text"]')[0].value = "";
+        }
+        console.log(this.parentElement);
+        // if (count < 5 && this.parentElement.childNodes.length > 3) {
             var segmentClone = segment1.cloneNode(true);
-            // this.parentElement.append(segmentClone);
             var parser = new DOMParser();
             parser.parseFromString(segmentClone, 'text/html');
             this.parentElement.insertBefore(segmentClone,this.parentElement.childNodes[0])
@@ -606,7 +612,7 @@ for (let index = 0; index < addColumn.length; index++) {
                         this.classList.toggle('active');
                 }
             }
-        }
+        // }
         count++
     })
 }
@@ -901,9 +907,9 @@ function autocomplete(inp, arr) {
         }
     }
     /*execute a function when someone clicks in the document:*/
-    document.addEventListener("click", function (e) {
-        closeAllLists(e.target);
-    });
+    // document.addEventListener("click", function (e) {
+    //     closeAllLists(e.target);
+    // });
   }
   var rieltors = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla","Antigua & Barbuda","Argentina","Armenia","Aruba","Australia","Austria","Azerbaijan","Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bermuda","Bhutan","Bolivia","Bosnia & Herzegovina","Botswana","Brazil","British Virgin Islands","Brunei","Bulgaria","Burkina Faso","Burundi","Cambodia","Cameroon","Canada","Cape Verde","Cayman Islands","Central Arfrican Republic","Chad","Chile","China","Colombia","Congo","Cook Islands","Costa Rica","Cote D Ivoire","Croatia","Cuba","Curacao","Cyprus","Czech Republic","Denmark","Djibouti","Dominica","Dominican Republic","Ecuador","Egypt","El Salvador","Equatorial Guinea","Eritrea","Estonia","Ethiopia","Falkland Islands","Faroe Islands","Fiji","Finland","France","French Polynesia","French West Indies","Gabon","Gambia","Georgia","Germany","Ghana","Gibraltar","Greece","Greenland","Grenada","Guam","Guatemala","Guernsey","Guinea","Guinea Bissau","Guyana","Haiti","Honduras","Hong Kong","Hungary","Iceland","India","Indonesia","Iran","Iraq","Ireland","Isle of Man","Israel","Italy","Jamaica","Japan","Jersey","Jordan","Kazakhstan","Kenya","Kiribati","Kosovo","Kuwait","Kyrgyzstan","Laos","Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Macau","Macedonia","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Marshall Islands","Mauritania","Mauritius","Mexico","Micronesia","Moldova","Monaco","Mongolia","Montenegro","Montserrat","Morocco","Mozambique","Myanmar","Namibia","Nauro","Nepal","Netherlands","Netherlands Antilles","New Caledonia","New Zealand","Nicaragua","Niger","Nigeria","North Korea","Norway","Oman","Pakistan","Palau","Palestine","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Poland","Portugal","Puerto Rico","Qatar","Reunion","Romania","Russia","Rwanda","Saint Pierre & Miquelon","Samoa","San Marino","Sao Tome and Principe","Saudi Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Slovakia","Slovenia","Solomon Islands","Somalia","South Africa","South Korea","South Sudan","Spain","Sri Lanka","St Kitts & Nevis","St Lucia","St Vincent","Sudan","Suriname","Swaziland","Sweden","Switzerland","Syria","Taiwan","Tajikistan","Tanzania","Thailand","Timor L'Este","Togo","Tonga","Trinidad & Tobago","Tunisia","Turkey","Turkmenistan","Turks & Caicos","Tuvalu","Uganda","Ukraine","United Arab Emirates","United Kingdom","United States of America","Uruguay","Uzbekistan","Vanuatu","Vatican City","Venezuela","Vietnam","Virgin Islands (US)","Yemen","Zambia","Zimbabwe"];
   autocomplete(document.getElementById("myInput"), rieltors);
@@ -919,37 +925,37 @@ for (let index = 0; index < mediaImg.length; index++) {
 }
 
 // auto resize while tpying in textarea
-var observe;
-if (window.attachEvent) {
-    observe = function (element, event, handler) {
-        element.attachEvent('on'+event, handler);
-    };
-}
-else {
-    observe = function (element, event, handler) {
-        element.addEventListener(event, handler, false);
-    };
-}
-function init () {
-    var text = document.getElementById('text');
-    function resize () {
-        if(text.value.length == 0) {
-            text.style.height = 'auto';
+    var observe;
+    if (window.attachEvent) {
+        observe = function (element, event, handler) {
+            element.attachEvent('on'+event, handler);
+        };
+    }
+    else {
+        observe = function (element, event, handler) {
+            element.addEventListener(event, handler, false);
+        };
+    }
+    function init () {
+        var text = document.getElementById('text');
+        function resize () {
+            if(text.value.length == 0) {
+                text.style.height = 'auto';
+            }
+            text.style.height = text.scrollHeight+'px';
         }
-        text.style.height = text.scrollHeight+'px';
-    }
-    /* 0-timeout to get the already changed text */
-    function delayedResize () {
-        window.setTimeout(resize, 3);
-    }
-    observe(text, 'change',  resize);
-    observe(text, 'cut',     delayedResize);
-    observe(text, 'paste',   delayedResize);
-    observe(text, 'drop',    delayedResize);
-    observe(text, 'keydown', delayedResize);
+        /* 0-timeout to get the already changed text */
+        function delayedResize () {
+            window.setTimeout(resize, 3);
+        }
+        observe(text, 'change',  resize);
+        observe(text, 'cut',     delayedResize);
+        observe(text, 'paste',   delayedResize);
+        observe(text, 'drop',    delayedResize);
+        observe(text, 'keydown', delayedResize);
 
-    // text.focus();
-    text.select();
-    resize();
-}
+        // text.focus();
+        text.select();
+        resize();
+    }
 // auto resize while tpying in textarea

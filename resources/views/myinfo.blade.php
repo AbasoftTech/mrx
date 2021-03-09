@@ -16,10 +16,10 @@
                 <a href="" class="grid-profile-link grid-profile-link-active">Profil Məlumatları</a>
                 <a href="" class="grid-profile-link">Müqavilələrim</a>
                 <a href="" class="grid-profile-link">Foto Qalareya</a>
-                <a href="" class="grid-profile-link">Hesab</a>
+                <a href="{{route("account")}}" class="grid-profile-link">Hesab</a>
             </div>
         </div>
-        <div class="d-flex flex-column flex-lg-row mt-2 mt-sm-5">
+        <div class="d-flex flex-column flex-lg-row mt-2 mt-sm-3">
             <div class="profile-sidebar">
                 <div class="profile-tablist tablist">
                     <div class="profile-tab tab tab-active" data-id="0">
@@ -48,9 +48,9 @@
                                 </div>
                                 <div class="profile-details">
                                     <div>
-                                        <label class="checkbox-holder">Fiziki shexs
-                                            <input type="radio" name="radio">
-                                            <input type="radio" name="radio">
+                                        <label class="checkbox-holder">
+                                            <input type="radio" checked name="radio">
+                                            <span>Fiziki şəxs</span>
                                             <span class="checkmark"></span>
                                         </label>
                                         <label for="" class="text-center text-lg-start w-100 mt-1">
@@ -60,9 +60,9 @@
                                         </label>
                                     </div>
                                     <div class="mt-3">
-                                        <label class="checkbox-holder">Shirket
+                                        <label class="checkbox-holder">
                                             <input type="radio" name="radio">
-                                            <input type="radio" name="radio">
+                                            <span>Şirkət</span>
                                             <span class="checkmark"></span>
                                         </label>
                                         <label for="" class="text-center text-lg-start w-100 mt-1">
@@ -78,7 +78,7 @@
                                         </div>
                                     </label>
                                     <label for="" class="text-center text-lg-start w-100 mt-3">
-                                        <span class="label-text text-center- text-lg-left">Doğum tarixi</span>
+                                        <span class="label-text text-center- text-lg-left bd">Doğum tarixi</span>
                                         <div class="mt-2">
                                             {{-- <div class="my-cal">
                                                 <div class="d-flex flex-column">
@@ -118,9 +118,20 @@
                                                     </div>
                                                 </div>
                                             </div> --}}
-                                            <div class="bd-calendar-holder system-input ps-0">
+                                            {{-- <div class="bd-calendar-holder system-input ps-0">
                                                 <input class="bd-calendar" data-date-format="d.m.y"/>
                                                 <i class="fas fa-calendar-alt"></i>
+                                            </div> --}}
+                                            <div class="flatpickr bd-calendar-holder">
+                                                <input type="text" placeholder="Tarix Seçin.." data-input> <!-- input is mandatory -->
+
+                                                <a class="input-button" title="toggle" data-toggle>
+                                                    <i class="fas fa-calendar-alt"></i>
+                                                </a>
+
+                                                <a class="input-button" title="clear" data-clear>
+                                                    <i class="icon-close"></i>
+                                                </a>
                                             </div>
                                         </div>
                                     </label>
@@ -160,7 +171,7 @@
                                             <div class="custom-fileinput">
                                                 <input type="file" class="file system-input" multiple="multiple" onchange="uploadFile(this)" />
                                                 <div class="fileinput-holder">
-                                                    <input class="system-input" placeholder="Fayl seç"/>
+                                                    <input class="system-input file-len" placeholder="Fayl seç"/>
                                                     <i class="fas fa-file"></i>
                                                     <div class="your-file mt-2"></div>
                                                 </div>
@@ -174,9 +185,10 @@
                                             for(var file=0; file < files.length; file++) {
                                                 fileNames.push(files[file].name)
                                                 }
-                                                document.getElementsByClassName('your-file')[0].innerHTML = fileNames
-                                        }
+                                                // document.getElementsByClassName('your-file')[0].innerHTML = files.length
+                                                document.getElementsByClassName('file-len')[0].placeholder = `${files.length} fayl əlavə edildi`;
 
+                                        }
                                     </script>
                                 </div>
                             </div>
@@ -185,14 +197,14 @@
                             <div class="block--title">Nömrə Əlavə Et</div>
                             <div class="segment-holder">
                                 <div class="segment mt-4">
-                                    <div class="prex">
+                                    {{-- <div class="prex">
                                         <select class="js-example-placeholder-single js-states form-control" lang="az">
                                             <option>051</option>
                                             <option>050</option>
                                             <option>070</option>
                                         </select>
-                                    </div>
-                                    {{-- <div style="width: 124px; height: 47px">
+                                    </div> --}}
+                                    <div style="width: 124px; height: 47px">
                                         <div class="my-select myselec-2 prefix">
                                             <select name="" class="" id="">
                                                 <option value="Prefix" class="selected">Prefix</option>
@@ -204,7 +216,7 @@
                                             <div class="clone-select"></div>
                                             <div class="clone-option"></div>
                                         </div>
-                                    </div> --}}
+                                    </div>
                                     <label for="" class="num-label">
                                         <input name="top" type="number" class="insert-number ms-2" maxlength="3" pattern="[0-9]" name="">
                                         <input name="middle" type="number" class="insert-number index0 ms-2" maxlength="2" pattern="[0-9]" name="">
@@ -223,16 +235,19 @@
                                         <input type="text" class="system-input">
                                     </label>
                                     <div class="d-flex mt-3">
-                                        <label class="checkbox-holder">Zəif
+                                        <label class="checkbox-holder">
                                             <input type="radio" name="level">
+                                            <span>Zəif</span>
                                             <span class="checkmark"></span>
                                         </label>
-                                        <label class="checkbox-holder ms-5">Yaxşı
+                                        <label class="checkbox-holder ms-5">
                                             <input type="radio" name="level">
+                                            <span>Yaxşı</span>
                                             <span class="checkmark"></span>
                                         </label>
-                                        <label class="checkbox-holder ms-5">Əla
+                                        <label class="checkbox-holder ms-5">
                                             <input type="radio" name="level">
+                                            <span>Əla</span>
                                             <span class="checkmark"></span>
                                         </label>
                                     </div>
@@ -270,7 +285,7 @@
                                     </div>
 
                                     <div class="d-flex flex-column w-50 ms-0 ms-sm-3">
-                                        <div class="label-text text-center text-lg-start">Şəhər</div>
+                                        <div class="label-text text-center text-lg-start">Rayon və qəsəbə</div>
                                         <div class="mt-3">
                                             <select class="js-example-placeholder-single js-states form-control" lang="az">
                                                 <option>Bakı</option>
@@ -343,7 +358,7 @@
                                             </div> --}}
                                         </div>
                                         <div class="d-flex flex-column w-50 ms-0 ms-sm-3">
-                                            <div class="label-text text-center text-lg-start">Şəhər</div>
+                                            <div class="label-text text-center text-lg-start">Rayon və qəsəbə</div>
                                             {{-- <div style="width: 200px; height: 47px; position: relative" class="mt-3">
                                                 <input type="text" class="hidden-search-input" autofocus="true" placeholder="axtar">
                                                 <div class="my-select myselec-2 living">

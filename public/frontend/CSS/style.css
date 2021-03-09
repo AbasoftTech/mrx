@@ -247,6 +247,7 @@ background-color: unset !important;
     color: #A9A9A9 !important;
     font-size: 12px !important;
     padding-top: 8px !important;
+    padding-right: 0 !important;
 }
 .select2-container--open .select2-selection__rendered {
     color: red !important
@@ -527,6 +528,7 @@ button {
     font-family: Poppins_i;
     font-size: 12px;
     line-height: 16px;
+    letter-spacing: 1px;
 }
 .system-input:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16);
@@ -779,6 +781,7 @@ a.next-page {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    letter-spacing: 1px;
 }
 .checkbox-holder:hover{
     color:#0074E1
@@ -801,7 +804,6 @@ a.next-page {
     left: 0;
     height: 14px;
     width: 14px;
-    background-color: #eee;
     border-radius: 50%;
     border: 1px solid #A9A9A9;
 }
@@ -822,12 +824,19 @@ a.next-page {
     position: absolute;
     display: none;
 }
-
 /* Show the indicator (dot/circle) when checked */
-.checkbox-holder input:checked~.checkmark:after {
+.checkbox-holder input:checked ~ .checkmark:after {
     display: block;
+    top: 2px;
+    left: 2px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #0074E1;
 }
-
+.checkbox-holder input:checked ~ span {
+    color: #0074E1;
+}
 /* Style the indicator (dot/circle) */
 .checkbox-holder .checkmark:after {
     top: 2px;
@@ -835,7 +844,7 @@ a.next-page {
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background: #A9A9A9;
+    /* background: ; */
 }
 
 /*------- custom file input =-------*/
@@ -1091,10 +1100,10 @@ section#contractRes {
 
 .hover-holder {
     height: 75px;
-    position: fixed;
-    width: 10%;
-    top: 85px;
-    right: 15px;
+    position: absolute;
+    /* width: 10%; */
+    top: 36px;
+    right: 0;
     z-index: 111;
 }
 
@@ -1567,7 +1576,7 @@ section#indexContent {
     justify-content: space-between;
 }
 .media-card {
-    transition: .6s ease-in-out all;
+    transition: .3s ease all;
 }
 .media-card:hover {
     transform:translateY(-8px);
@@ -2331,12 +2340,10 @@ section#news {
     font-family: Poppins_r;
     color: #7A7A7A
 }
-.contract-grid-head div,.contract-grid-body div {
+.contract-grid-head >div,.contract-grid-body >div {
     height: 48px;
     display: flex;
     align-items: center;
-}
-.contract-space {
     padding: 0 14px
 }
 .done, .remove-contract {
@@ -2347,8 +2354,8 @@ section#news {
 }
 .done div, .remove-contract div {
     position: absolute;
-    left: 10px;
-    top: 12px;
+    left: -25px;
+    top: -15px;
     width:80px;
     visibility: hidden;
     opacity: .0;
@@ -2488,7 +2495,17 @@ section#news {
 }
 .bd-calendar-holder {
     position: relative;
-    /* border: 0 !important */
+    height: 47px;
+    cursor: pointer;
+    border-radius: 4px;
+    border: 1px solid #C7C7C7
+}
+.flatpickr-input[readonly] {
+    font-family: Poppins_i;
+    font-size: 12px;
+}
+.bd-calendar-holder.active {
+    border: 0
 }
 .bd-calendar-holder input {
     height: 100%;
@@ -2505,8 +2522,8 @@ section#news {
     border: 1px solid #0074E1;
     background-color: #F2F7FF;
 }
-.flatpickr-calendar {
-    /* left: 514px !important; */
+.bd .flatpickr-calendar {
+    left: 514px !important;
 }
 .flatpickr-monthDropdown-months, .flatpickr-current-month input.cur-year {
     font-size: 12px !important;
@@ -2516,19 +2533,34 @@ section#news {
 .dayContainer {
     max-width: 238.875px !important;
     min-width: 235.875px !important;
+    height: 115px;
+}
+.flatpickr-months {
+    border-bottom: 1px solid #FAFAFA;
+    padding: 5px 0;
+    margin-bottom: 5px;
+}
+
+.flatpickr-weekdays {
+    display: none !important
 }
 .flatpickr-day {
-    width: 30px !important;
-    height: 32px !important;
-    line-height: 32px !important;
+    width: 25px !important;
+    height: 23px !important;
+    line-height: 16px !important;
     color: #414141 !important;
     font-size: 12px !important;
+    border: 0 !important;
+    font-family: Poppins_r !important;
+}
+.nextMonthDay {
+    color: lightgray !important;
 }
 .flatpickr-weekdays {
     width: 78% !important;
 }
 .flatpickr-calendar {
-    width: 260px !important;
+    width: 245px !important;
 }
 .flatpickr-calendar:before, .flatpickr-calendar:after {
     content: unset !important
@@ -2544,12 +2576,27 @@ section#news {
     background-color: unset !important;
     color: #0074E1 !important;
 }
+.flatpickr-current-month {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+}
+.flatpickr-months .flatpickr-prev-month svg, .flatpickr-months .flatpickr-next-month svg {
+    width: 10px;
+    height: 10px;
+}
+.flatpickr-months .flatpickr-prev-month:hover svg, .flatpickr-months .flatpickr-next-month:hover svg {
+    fill: gray !important;
+}
 .bd-calendar-holder i {
     position: absolute;
     color: #C7C7C7;
     right: 21px;
     font-size: 16px;
     top: 15px;
+}
+.bd-calendar-holder i.active {
+    color: gray;
 }
 .hidden-search-input {
     display: none;
@@ -2570,6 +2617,9 @@ section#news {
 }
 .hidden-search-input.active {
     display: inline-block;
+}
+.chng-pss {
+    width: 386px;
 }
 /*========= myinfo =========*/
 /*========= add contract =========*/
@@ -2622,7 +2672,7 @@ section#addContract {
     font-size: 12px;
 }
 .add-goon .payment-way-holder {
-    width: 765px;
+    width: 845px;
 }
 .add-goon .caution {
     width: 550px;
@@ -2783,10 +2833,10 @@ input[type=number] {
     width: 480px;
 }
 
-.insert-number:focus,
+/* .insert-number:focus,
 .log-reg-left .text-input:focus {
     box-shadow: 1px 1px 15px #c5b3b3;
-}
+} */
 
 .custom-checkbox {
     display: block;
@@ -3052,7 +3102,7 @@ input[type=number] {
 }
 
 .serial-card {
-    margin-top: 48px;
+    margin-top: 28px;
 }
 
 .card-serial-title {
@@ -3262,6 +3312,9 @@ section#contact {
     }
     .owl-rieltor-carousel .owl-dots, .owl-news-detail-carousel .owl-dots {
         bottom: -40px;
+    }
+    .owl-rieltor-count {
+        display: none;
     }
     /*========= news detail =========*/
     /*========= contact =========*/
@@ -3818,6 +3871,12 @@ section#contact {
         /* width: 114px; */
         width: 46%;
     }
+    .chng-pss {
+        width: 100%;
+    }
+    .profile-tab {
+        font-size: 11px;
+    }
     /*========= my info =========*/
     /*========= website pagination =========*/
     a.next-page{
@@ -3885,6 +3944,9 @@ section#contact {
 }
 @media(max-width: 476px) {
 
+    .grid-profile-linklist {
+        width: 230%;
+    }
     /*========= rieltors and newsdetail owl =========*/
     /* .owl-news-detail-img {
         height: auto;
@@ -3912,6 +3974,12 @@ section#contact {
     }
 
     /*========= about =========*/
+    /*========= account =========*/
+    .account-sidebar-tab {
+        font-size: 12px;
+    }
+    /*========= account =========*/
+
 }
 
 @media (max-width: 350px) {

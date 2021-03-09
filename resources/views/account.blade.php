@@ -18,7 +18,7 @@
             </div>
         </div>
     </div>
-    <div class="container mt-5">
+    <div class="container mt-3 mt-sm-3">
         <div class="d-flex justify-content-between flex-column flex-lg-row">
             <div class="bg-decored account">
                 <div class="d-flex align-items-center justify-content-between flex-column flex-sm-row">
