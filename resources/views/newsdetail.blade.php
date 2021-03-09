@@ -3,9 +3,9 @@
 <section id="news">
     <div class="container">
         <div class="breadcrumb-mrx">
-            <a href="{{route("home")}}" class="breadcrumb-mrx-link">Ana Səhifə</a>
+            <a href="{{url('/')}}" class="breadcrumb-mrx-link">Ana Səhifə</a>
             <span class="me-3"><img src="{{asset('frontend/IMAGE/icons/breadcrumb-arrow.svg')}}" alt=""></span>
-            <a href="{{route("account")}}" class="breadcrumb-mrx-link">Hesab</a>
+            <a href="" class="breadcrumb-mrx-link">Hesab</a>
             <span class="me-3"><img src="{{asset('frontend/IMAGE/icons/breadcrumb-arrow.svg')}}" alt=""></span>
             <a class="breadcrumb-mrx-link breadcrumb-mrx-link-current">Xəbərin detalı</a>
         </div>
@@ -18,7 +18,7 @@
                     “Çoxları müharibənin əyləncə olduğunu düşünürdü" - Jirayr Libaridyan, Ermənistanın məğlubiyyəti və Qarabağın gələcəyi barədə</h1>
                 <div class="d-flex mt-4">
                     <div class="news-head-date">2 Dekabr 2020</div>
-                    <div class="media-category media-c-3 ms-4"><a href="{{route("newsdetail")}}"><img src="{{asset("frontend/IMAGE/icons/media-dot-3.svg")}}" alt="">Kateqoriya 1</a></div>
+                    <div class="media-category media-c-3 ms-4"><a href=""><img src="{{asset("frontend/IMAGE/icons/media-dot-3.svg")}}" alt="">Kateqoriya 1</a></div>
                 </div>
                 <div class="news-img">
                     <img src="{{asset('frontend/IMAGE/news-head.png')}}" width="100%" alt="news-main">
@@ -109,9 +109,9 @@
             <div class="owl-carousel owl-news-detail-carousel">
                 <div class="item">
                     <div class="media-card">
-                        <div class="owl-news-detail-img"><a href="{{route("newsdetail")}}"><img src="{{asset('frontend/IMAGE/similar-news.png')}}" alt=""></a></a></div>
+                        <div class="owl-news-detail-img"><a href=""><img src="{{asset('frontend/IMAGE/similar-news.png')}}" alt=""></a></a></div>
                         <div class="owl-news-detail-info">
-                            <a href="{{route("newsdetail")}}" class="news-sidebar-title">Azərbaycanda və Ermənistanda
+                            <a href="" class="news-sidebar-title">Azərbaycanda və Ermənistanda
                             Covid-19 niyə bu qədər yayıldı?</a>
                             <div class="owl-news-detail-intro">
                                 Çindən dünyaya yayılmış Covid-19 pandemiyasının səbəbləri barədə məlumatlar indiyədək bir mənalı dəyərləndirilmir.
@@ -125,9 +125,9 @@
                 </div>
                 <div class="item">
                     <div class="media-card">
-                        <div class="owl-news-detail-img"><a href="{{route("newsdetail")}}"><img src="{{asset('frontend/IMAGE/similar-news.png')}}" alt=""></a></a></div>
+                        <div class="owl-news-detail-img"><a href=""><img src="{{asset('frontend/IMAGE/similar-news.png')}}" alt=""></a></a></div>
                         <div class="owl-news-detail-info">
-                            <a href="{{route("newsdetail")}}" class="news-sidebar-title">Azərbaycanda və Ermənistanda
+                            <a href="" class="news-sidebar-title">Azərbaycanda və Ermənistanda
                             Covid-19 niyə bu qədər yayıldı?</a>
                             <div class="owl-news-detail-intro">
                                 Çindən dünyaya yayılmış Covid-19 pandemiyasının səbəbləri barədə məlumatlar indiyədək bir mənalı dəyərləndirilmir.
@@ -141,9 +141,9 @@
                 </div>
                 <div class="item">
                     <div class="media-card">
-                        <div class="owl-news-detail-img"><a href="{{route("newsdetail")}}"><img src="{{asset('frontend/IMAGE/similar-news.png')}}" alt=""></a></a></div>
+                        <div class="owl-news-detail-img"><a href=""><img src="{{asset('frontend/IMAGE/similar-news.png')}}" alt=""></a></a></div>
                         <div class="owl-news-detail-info">
-                            <a href="{{route("newsdetail")}}" class="news-sidebar-title">Azərbaycanda və Ermənistanda
+                            <a href="" class="news-sidebar-title">Azərbaycanda və Ermənistanda
                             Covid-19 niyə bu qədər yayıldı?</a>
                             <div class="owl-news-detail-intro">
                                 Çindən dünyaya yayılmış Covid-19 pandemiyasının səbəbləri barədə məlumatlar indiyədək bir mənalı dəyərləndirilmir.
@@ -157,9 +157,9 @@
                 </div>
                 <div class="item">
                     <div class="media-card">
-                        <div class="owl-news-detail-img"><a href="{{route("newsdetail")}}"><img src="{{asset('frontend/IMAGE/similar-news.png')}}" alt=""></a></a></div>
+                        <div class="owl-news-detail-img"><a href=""><img src="{{asset('frontend/IMAGE/similar-news.png')}}" alt=""></a></a></div>
                         <div class="owl-news-detail-info">
-                            <a href="{{route("newsdetail")}}" class="news-sidebar-title">Azərbaycanda və Ermənistanda
+                            <a href="" class="news-sidebar-title">Azərbaycanda və Ermənistanda
                             Covid-19 niyə bu qədər yayıldı?</a>
                             <div class="owl-news-detail-intro">
                                 Çindən dünyaya yayılmış Covid-19 pandemiyasının səbəbləri barədə məlumatlar indiyədək bir mənalı dəyərləndirilmir.
@@ -173,9 +173,9 @@
                 </div>
                 <div class="item">
                     <div class="media-card">
-                        <div class="owl-news-detail-img"><a href="{{route("newsdetail")}}"><img src="{{asset('frontend/IMAGE/similar-news.png')}}" alt=""></a></a></div>
+                        <div class="owl-news-detail-img"><a href=""><img src="{{asset('frontend/IMAGE/similar-news.png')}}" alt=""></a></a></div>
                         <div class="owl-news-detail-info">
-                            <a href="{{route("newsdetail")}}" class="news-sidebar-title">Azərbaycanda və Ermənistanda
+                            <a href="" class="news-sidebar-title">Azərbaycanda və Ermənistanda
                             Covid-19 niyə bu qədər yayıldı?</a>
                             <div class="owl-news-detail-intro">
                                 Çindən dünyaya yayılmış Covid-19 pandemiyasının səbəbləri barədə məlumatlar indiyədək bir mənalı dəyərləndirilmir.
@@ -189,9 +189,9 @@
                 </div>
                 <div class="item">
                     <div class="media-card">
-                        <div class="owl-news-detail-img"><a href="{{route("newsdetail")}}"><img src="{{asset('frontend/IMAGE/similar-news.png')}}" alt=""></a></a></div>
+                        <div class="owl-news-detail-img"><a href=""><img src="{{asset('frontend/IMAGE/similar-news.png')}}" alt=""></a></a></div>
                         <div class="owl-news-detail-info">
-                            <a href="{{route("newsdetail")}}" class="news-sidebar-title">Azərbaycanda və Ermənistanda
+                            <a href="" class="news-sidebar-title">Azərbaycanda və Ermənistanda
                             Covid-19 niyə bu qədər yayıldı?</a>
                             <div class="owl-news-detail-intro">
                                 Çindən dünyaya yayılmış Covid-19 pandemiyasının səbəbləri barədə məlumatlar indiyədək bir mənalı dəyərləndirilmir.

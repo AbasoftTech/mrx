@@ -42,7 +42,14 @@
                            <form action="{{route('logout')}}" method="post">
                                @csrf
                                <div>
-                                <a href="{{route('myinfo')}}">
+                                @php
+                                $menu = $menu->where('widget','myinfo');
+                                $url = '';
+                                foreach ($menu as $m) {
+                                    $url = $m->getTranslatedAttribute('slug');
+                                }
+                            @endphp
+                                <a href="{{url($url)}}">
                                     {{-- {{ Auth::guard('normal_users')->user()->fullname}} --}}
                                     <img src="{{asset('frontend/IMAGE/logout-avatar.png')}}" class="logout-img" alt=""></a>
                                 <button class="logout-btn">Çıxış</button>
@@ -78,7 +85,14 @@
                         </ul>
                         <div class="area--contract">
                             <div class="send--contract">
-                                <a href="" class="system-clickable system-clickable-color-1">Müqavilə Göndər</a>
+                                @php
+                                    $menu = $menu->where('widget','addcontract');
+                                    $url = '';
+                                    foreach ($menu as $m) {
+                                        $url = $m->getTranslatedAttribute('slug');
+                                    }
+                                @endphp
+                                <a href="{{url($url)}}" class="system-clickable system-clickable-color-1">Müqavilə Göndər</a>
                             </div>
                             <button type="button" class="search--contract" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fas fa-search text-white"></i></button>
                             <div class="hover-holder">
@@ -128,7 +142,14 @@
                     <form action="{{route('logout')}}" method="post">
                         @csrf
                         <div>
-                            <a href="{{route('myinfo')}}"><img src="{{asset('frontend/IMAGE/logout-avatar.png')}}" class="logout-img" alt=""></a>
+                            @php
+                            $menu = $menu->where('widget','myinfo');
+                            $url = '';
+                            foreach ($menu as $m) {
+                                $url = $m->getTranslatedAttribute('slug');
+                            }
+                        @endphp
+                            <a href="{{url($url)}}"><img src="{{asset('frontend/IMAGE/logout-avatar.png')}}" class="logout-img" alt=""></a>
                             <button class="logout-btn">Çıxış</button>
                         </div>
                     </form>

@@ -23,7 +23,7 @@
                     </ul>
                 </div>
                @endif
-                <form action="" method="POST" class="log-reg-form">
+                <form action="{{route('getLoged')}}" method="POST" class="log-reg-form">
                  @csrf
                     <div class="d-flex flex-column">
                         <div class="mt-4 d-flex flex-column flex-sm-column flex-lg-column flex-row justify-content-between justify-content-lg-start">
@@ -42,7 +42,7 @@
                                         </div> --}}
                                         <div style="width: 127px;height: 47px">
                                             <div class="my-select">
-                                                <select name="" id="">
+                                                <select name="prefix" id="">
                                                     <option value="prefix" selected>prefix</option>
                                                     <option value="050">050</option>
                                                     <option value="051">051</option>
@@ -91,7 +91,7 @@
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.
                 </p>
                 <div class="mt-5">
-                    <a href="" class="system-clickable system-clickable-color-1">Qeydiyyatdan Keç!</a>
+                    <a href="{{route('register')}}" class="system-clickable system-clickable-color-1">Qeydiyyatdan Keç!</a>
                 </div>
             </div>
         </div>

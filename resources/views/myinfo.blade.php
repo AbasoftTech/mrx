@@ -1,24 +1,9 @@
 @extends('layouts.master')
 @section('content')
 <section id="myinfo">
+    @include('includes.breadcrumbs')
     <div class="container">
-        <div class="breadcrumb-mrx">
-            <a href="" class="breadcrumb-mrx-link">Ana Səhifə</a>
-            <span class="me-3"><img src="{{asset('frontend/IMAGE/icons/breadcrumb-arrow.svg')}}" alt=""></span>
-            <a href="" class="breadcrumb-mrx-link">Hesab</a>
-            <span class="me-3"><img src="{{asset('frontend/IMAGE/icons/breadcrumb-arrow.svg')}}" alt=""></span>
-            <a class="breadcrumb-mrx-link breadcrumb-mrx-link-current">Profil məlumatları</a>
-        </div>
-    </div>
-    <div class="container">
-        <div class="grid-profile-linklist-holder">
-            <div class="grid-profile-linklist">
-                <a href="" class="grid-profile-link grid-profile-link-active">Profil Məlumatları</a>
-                <a href="" class="grid-profile-link">Müqavilələrim</a>
-                <a href="" class="grid-profile-link">Foto Qalareya</a>
-                <a href="{{route("account")}}" class="grid-profile-link">Hesab</a>
-            </div>
-        </div>
+        @include('includes.nav-info')
         <div class="d-flex flex-column flex-lg-row mt-2 mt-sm-3">
             <div class="profile-sidebar">
                 <div class="profile-tablist tablist">

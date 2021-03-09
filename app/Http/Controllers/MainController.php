@@ -11,7 +11,9 @@ use Illuminate\Support\Facades\Session;
 class MainController extends Controller
 {
 
-  
+//   public function __construct() {
+     
+//   }
 
     public function locale($locale){
 		if(in_array($locale, ['az', 'en', 'ru'])):
@@ -97,26 +99,29 @@ class MainController extends Controller
         if($slug1 !== null):
 
             $data = Slug::whereTranslation('slug', $slug1)->withTranslation('en', 'ru')->get();
-
+           
             if(count($data)==0):
             	abort(404);
             else:
+                
                 $widget = $data[0]->widget;
                 $lang = $data[0]->where('slug', $slug1)->get();
                 if(count($lang)>0):
+                    
                     $lang = 'az';
                 else:
                     $lang = $data[0]->translations->where('value', $slug1);
                     foreach($lang as $l)
                         $lang = $l->locale;
                 endif;
-
+                
                 if($slug2 !== null && $slug3 == null):
                     return $this->$widget($lang, $slug2);
                 elseif($slug3 !== null):
                     return $this->$widget($lang, $slug2, $slug3);
                 else:
                     return $this->$widget($lang);
+                   
                 endif;
             endif;
         else:
@@ -141,8 +146,11 @@ class MainController extends Controller
         return view("about");
     }
 
-    public function media()
+    public function media($locale,$slug = null)
     {
+        if ($slug != null ) {
+            return view("newsdetail");
+        }
         $news = Post::latest()->with('category')->get();
         return view("news",compact('news'));
     }

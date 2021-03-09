@@ -84,10 +84,19 @@ $arr = ['fddf', 'ed', 'ds', 'ds'];
             <div class="owl-carousel owl-media-carousel" dots="true">
                 <div class="item">
                     <div class="media-card">
+                        @php
+                                        $var = $menu->where('widget','media');
+                                        $url = '';
+                                     
+                                        foreach ($var as $v) {
+                                            $url = $v->getTranslatedAttribute('slug');
+                                        }
+                                    @endphp
                         <div class="media-header">
                             <div class="media-img">
                                 <img src="{{asset("frontend/IMAGE/media-img.png")}}" alt="media-img">
-                                <div class="media-title"><a href="">Gələn il ünvanlı sosial yardım üçün 257 000 manat ayrılacaq</a></div>
+                                <div class="media-title"><a href="{{url($url . '/' . 'xx')}}">Gələn il ünvanlı sosial yardım 
+                                    üçün 257 000 manat ayrılacaq</a></div>
                             </div>
                         </div>
                         <div class="media-body">
@@ -96,7 +105,10 @@ $arr = ['fddf', 'ed', 'ds', 'ds'];
                                 <div class="fade-box"></div>
                             </p>
                             <div class="media-footer">
-                                <div class="media-category media-c-1"><a href=""><i class="fas fa-circle me-2"></i>Kateqoriya 1</a></div>
+                                <div class="media-category media-c-1">
+                                    
+                                    <a href=""><i class="fas fa-circle me-2"></i>
+                                    Kateqoriya 1</a></div>
                                 <div class="media-more-details"><a href="">Ətraflı</a></div>
                             </div>
                         </div>
@@ -127,7 +139,7 @@ $arr = ['fddf', 'ed', 'ds', 'ds'];
                         <div class="media-header">
                             <div class="media-img">
                                 <img src="{{asset("frontend/IMAGE/media-img-3.png")}}" alt="media-img">
-                                <div class="media-title"><a href="">Gələn il ünvanlı sosial yardım üçün 257 000 manat ayrılacaq</a></div>
+                                <div class="media-title"><a href="{{url($url . '/' . 'xx')}}">Gələn il ünvanlı sosial yardım üçün 257 000 manat ayrılacaq</a></div>
                             </div>
                         </div>
                         <div class="media-body">
@@ -137,7 +149,7 @@ $arr = ['fddf', 'ed', 'ds', 'ds'];
                             </p>
                             <div class="media-footer">
                                 <div class="media-category media-c-3"><a href="" style="color: #07DACF"><i class="fas fa-circle me-2"></i>Kateqoriya 3</a></div>
-                                <div class="media-more-details"><a href="">Ətraflı</a></div>
+                                <div class="media-more-details"><a href="{{url($url . '/' . 'xx')}}">Ətraflı</a></div>
                             </div>
                         </div>
                     </div>
@@ -147,7 +159,7 @@ $arr = ['fddf', 'ed', 'ds', 'ds'];
                         <div class="media-header">
                             <div class="media-img">
                                 <img src="{{asset("frontend/IMAGE/media-img-3.png")}}" alt="media-img">
-                                <div class="media-title"><a href="">Gələn il ünvanlı sosial yardım üçün 257 000 manat ayrılacaq</a></div>
+                                <div class="media-title"><a href="{{url($url . '/' . 'xx')}}">Gələn il ünvanlı sosial yardım üçün 257 000 manat ayrılacaq</a></div>
                             </div>
                         </div>
                         <div class="media-body">
@@ -157,7 +169,7 @@ $arr = ['fddf', 'ed', 'ds', 'ds'];
                             </p>
                             <div class="media-footer">
                                 <div class="media-category media-c-3"><a href="" style="color: #07DACF"><i class="fas fa-circle me-2"></i>Kateqoriya 3</a></div>
-                                <div class="media-more-details"><a href="">Ətraflı</a></div>
+                                <div class="media-more-details"><a href="{{url($url . '/' . 'xx')}}">Ətraflı</a></div>
                             </div>
                         </div>
                     </div>
@@ -167,7 +179,7 @@ $arr = ['fddf', 'ed', 'ds', 'ds'];
                         <div class="media-header">
                             <div class="media-img">
                                 <img src="{{asset("frontend/IMAGE/media-img-3.png")}}" alt="media-img">
-                                <div class="media-title"><a href="">Gələn il ünvanlı sosial yardım üçün 257 000 manat ayrılacaq</a></div>
+                                <div class="media-title"><a href={{url($url . '/' . 'xx')}}">Gələn il ünvanlı sosial yardım üçün 257 000 manat ayrılacaq</a></div>
                             </div>
                         </div>
                         <div class="media-body">
@@ -177,7 +189,7 @@ $arr = ['fddf', 'ed', 'ds', 'ds'];
                             </p>
                             <div class="media-footer">
                                 <div class="media-category media-c-3"><a href="" style="color: #FDB330"><i class="fas fa-circle me-2"></i>Kateqoriya 3</a></div>
-                                <div class="media-more-details"><a href="">Ətraflı</a></div>
+                                <div class="media-more-details"><a href="{{url($url . '/' . 'xx')}}">Ətraflı</a></div>
                             </div>
                         </div>
                     </div>

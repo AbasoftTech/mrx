@@ -25,6 +25,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         $slugs = Slug::where('menu_order', null)->get();
-        view()->share(['slugs' => $slugs]);
+        $menu = Slug::withTranslation('en','ru')->get();
+        view()->share(['slugs' => $slugs,'menu'=>$menu]);
     }
 }

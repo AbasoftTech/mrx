@@ -51,7 +51,14 @@
                 </form>
             </div>
             <div class="mt-5 w-c-">
-                <a href="" class="system-clickable system-clickable-color-2">Davam Et!
+                @php
+                                    $menu = $menu->where('widget','addgoon');
+                                    $url = '';
+                                    foreach ($menu as $m) {
+                                        $url = $m->getTranslatedAttribute('slug');
+                                    }
+                                @endphp
+                <a href="{{url($url)}}" class="system-clickable system-clickable-color-2">Davam Et!
                     <img src="{{asset('frontend/IMAGE/icons/arrow-long-right.svg')}}" class="hv-ms ms-2" alt="">
                 </a>
             </div>
